@@ -3,7 +3,7 @@ Features:
 1. Ability to compare stats.
 1. Graphs?
 1. Traffic light (?) highlighting system for questions which score lower than difficulty --> could indicate teaching issues.
-1. Form --> update database.
+1. Form (each question type) --> update database.
 
 # TODO
-1. Whenever a package is installed, use pip freeze > requirements.txt
+1. Whenever a package is installed, use `pip freeze > requirements.txt`
