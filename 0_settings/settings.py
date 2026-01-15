@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '.herokuapp',
-    '127.0.0.1'
+    '.127.0.0.1'
 ]
 
 
