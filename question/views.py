@@ -6,4 +6,3 @@ from .models import Question
 
 class QuestionList(generic.ListView):
     queryset = Question.objects.all()
-    template_name = "question/index.html"

@@ -60,7 +60,7 @@ class Question(models.Model):
 
     class Meta:
         ordering = ["id"]
-        filtering = ["lo", "type", "author", "warning"]
+        #filtering = ["lo", "type", "author", "warning"]
 
     def __str__(self):
         return self.id
