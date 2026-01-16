@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views import generic
+from .models import Question
 
 
-def index(request):
-    return HttpResponse("Hello, World!")
+class QuestionList(generic.ListView):
+    queryset = Question.objects.all()
+    template_name = "question/index.html"

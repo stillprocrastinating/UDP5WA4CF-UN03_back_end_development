@@ -57,3 +57,10 @@ class Question(models.Model):
     )
     author = models.ForeignKey(User, on_delete=models.SET(str(User.username)))
     warning = models.IntegerField(choices=WARNING, default=0)
+
+    class Meta:
+        ordering = ["id"]
+        filtering = ["lo", "type", "author", "warning"]
+
+    def __str__(self):
+        return self.id
