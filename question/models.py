@@ -3,7 +3,6 @@ from django.db import models
 
 
 LO = (
-    (0, "Please select learning objective"),
     (1, "LO1"),
     (2, "LO2"),
     (3, "LO3"),
@@ -17,7 +16,6 @@ LO = (
 )
 
 Q_TYPE = (
-    (0, "Please select question type"),
     (1, "Diagram"),
     (2, "Drag & drop"),
     (3, "Multiple choice"),
@@ -41,10 +39,9 @@ class Question(models.Model):
     id = models.CharField(max_length=20, primary_key=True)
     lo = models.IntegerField(
         choices=LO,
-        default=0,
         verbose_name="learning objective"
     )
-    type = models.IntegerField(choices=Q_TYPE, default=0)
+    type = models.IntegerField(choices=Q_TYPE)
     number = models.IntegerField(verbose_name="number of Qs of that LO & type")
     #question = models.TextField()
     #image = models.ImageField(blank=True)
