@@ -40,3 +40,6 @@
     - [Non-essential, implement later] Examiners list page contains contacts and links to course sign-up.
     - Test details are always a list until only a specific test question has been selected.
     - Specific test question pages show percentage data over time.
+1. What are the learning objectives? --> question/models.py
+1. What are the names of the question types? --> question/models.py
+1. Do you want the questions themselves to be stored? --> question/models.py (remember to migrate if 'yes')

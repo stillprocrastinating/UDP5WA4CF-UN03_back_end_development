@@ -5,12 +5,16 @@
 
 |Key|Name|Type|
 |-|-|-|
-||id|CharField(20)|
+|PrimaryKey|id|CharField(20)|
 ||learning_objective|IntegerField(choices)|
 ||type|IntegerField(choices)|
 ||number|IntegerField()|
-||answer_number|IntegerField()|
-||correct_answer|IntegerField()|
+|TBC|question|TextField()|
+|TBC|image|CloudinaryField('image')|
+||sub_number|IntegerField()|
+||sub_answer_number_individual|IntegerField()|
+||sub_correct_answer_individual|IntegerField()|
+|ForeignKey|author|User, related_name="question_author"|
 ||warning|IntegerField(choices)|
 
 
@@ -18,7 +22,7 @@
 
 |Key|Name|Type|
 |-|-|-|
-||id|CharField(20)|
+|PrimaryKey|id|CharField(20)|
 ||date|DateTimeField()|
 ||type|IntegerField(choices)|
 ||participant_number|IntegerField()|
