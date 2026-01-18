@@ -39,3 +39,76 @@
 ||correct_option_frequency|IntegerField()|
 ||incorrect_option_frequency|IntegerField()|
 |ForeignKey|tester|User, related_name="tester"|
+
+---
+
+
+### Entity relationship diagram
+
+Master table columns:
+- question_type
+- answer_options
+- correct_answer
+- test_date
+- test_type
+- participant_number
+- correct_choice_frequency
+- incorrect_choice_frequency
+- [calculation] correct_choice_percentage
+- [calculation] incorrect_choice_percentage
+
+
+#### Tables
+
+questions
+- id
+- learning_objective
+- type
+- answer_number
+- correct_answer
+
+tests
+- id
+- date
+- type
+- participant_number
+
+~~participants~~ --> GDPR
+
+answers
+- id
+- [FK] question_id
+- [FK] test_id
+- option
+- correct_option_frequency
+- incorrect_option_frequency
+
+[CTE] flagging
+- [questions] learning_objective
+- [questions] type
+- [answers] option
+- [answers] correct_option_frequency
+- [answers] incorrect_option_frequency
+- [tests] participant_number
+- [calculation] correct_option_percentage
+- [calculation] incorrect_option_percentage
+- [calculation] flag
+
+
+### URL patterns
+
+1. include('questions.urls')
+1. include('tests.urls')
+1. admin.site.urls
+
+
+#### questions/urls.py
+
+1. views.QuestionList.as_view()
+1. views.AnswerList.as_view()     // dependent on structural availability
+
+
+#### tests/urls.py
+
+1. views.TestList.as_view()
+1. views.FlagList.as_view()     // dependent on structural availability & CTE functionality
