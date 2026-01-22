@@ -23,6 +23,12 @@
 
 
 :root {
+    --color-primary: #983bfe;
+    --color-secondary: #38d8ff;
+    --color-light: #9876b0;
+    --color-dark: #2f1c48;
+    --color-white: #ffffff;
+    --color-black: #000000;
     --font: 'UCLSans', sans-serif;
     --font-b: 'UCLSans-Bold', sans-serif;
     --font-i: 'UCLSans-Italic', sans-serif;
