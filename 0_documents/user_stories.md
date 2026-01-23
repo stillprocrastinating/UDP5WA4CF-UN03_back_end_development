@@ -2,12 +2,12 @@
 
 | # | Description | Goal(s) |
 |-|-|-|
-| 1 | As a Dungeons and Dragons player, I want to be able to play online without needing my physical dice sets, they're heavy! | Build a dice roller capable of rolling dice types: d2, d4, d6, d8, d10, d12, d20, and d100. |
+| 1 | As an admin, I want CRUD functionality for test questions. | Build a Question() class to model CRUD functions for admins. |
 
 
 ## Progress
 
 | Complete | # | Goal |
 |-|-|-|
-| :ballot_box_with_check: | 1.1 | Build a dice roller capable of rolling dice types: d2, d4, d6, d8, d10, d12, d20, and d100.
+| :ballot_box_with_check: | 1.1 | Build a Question() class to model CRUD functions for admins. |
 | :white_square_button: |
