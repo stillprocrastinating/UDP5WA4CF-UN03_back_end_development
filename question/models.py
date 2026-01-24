@@ -2,18 +2,18 @@ from django.contrib.auth.models import User
 from django.db import models
 
 
-#LO = (
-#    (LO1, "LO1"),
-#    (LO2, "LO2"),
-#    (LO3, "LO3"),
-#    (LO4, "LO4"),
-#    (LO5, "LO5"),
-#    (LO6, "LO6"),
-#    (LO7, "LO7"),
-#    (LO8, "LO8"),
-#    (LO9, "LO9"),
-#    (LO10, "LO10"),
-#)
+LO = (
+    (1, "LO1"),
+    (2, "LO2"),
+    (3, "LO3"),
+    (4, "LO4"),
+    (5, "LO5"),
+    (6, "LO6"),
+    (7, "LO7"),
+    (8, "LO8"),
+    (9, "LO9"),
+    (10, "LO10"),
+)
 
 Q_TYPE = (
     (1, "Diagram"),
@@ -36,21 +36,9 @@ class Question(models.Model):
     Stores each question
     """
 
-    class LO(models.TextChoices):
-        LO1 = "LO1", "LO1 blahblah"
-        LO2 = "LO2", "LO2 blahblah"
-        LO3 = "LO3", "LO3 blahblah"
-        LO4 = "LO4", "LO4 blahblah"
-        LO5 = "LO5", "LO5 blahblah"
-        LO6 = "LO6", "LO6 blahblah"
-        LO7 = "LO7", "LO7 blahblah"
-        LO8 = "LO8", "LO8 blahblah"
-        LO9 = "LO9", "LO9 blahblah"
-        LO10 = "LO10", "LO10 blahblah"
-
     id = models.CharField(max_length=20, primary_key=True)
-    lo = models.CharField(
-        choices=LO.choices,
+    lo = models.IntegerField(
+        choices=LO,
         verbose_name="learning objective"
     )
     type = models.IntegerField(choices=Q_TYPE)
