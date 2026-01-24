@@ -1,3 +1,6 @@
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +12,7 @@
 
     <title>PiL certification</title>
 
-    <link rel="stylesheet" href="0_static/css/styles.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 </head>
 
@@ -20,7 +23,7 @@
         <ul></ul>
     </nav>
 
-    <main class="center">
+    <main class="narrow">
         {% block question %}
             <p>Oops! The questions haven't loaded!</p>
         {% endblock question %}
