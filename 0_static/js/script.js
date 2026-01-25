@@ -12,6 +12,13 @@ let lo = {
     LO10: "LO10 blahblah"
 };
 
+/** Dictionary of warnings */
+let warning = {
+    w0: "None",
+    w1: "Warning",
+    w2: "Flag"
+};
+
 
 /**
  * Changes the textContent of the LO from the table integer to a human-readable "verbose" string.
@@ -54,11 +61,33 @@ function loVerbose () {
     }
 }
 
+/**
+ * Changes the textContent of the WARNING from the table integer to a human-readable "verbose" string.
+ * @return {String} "None / Warning / Flag"
+ */
+function warningVerbose () {
+    let warningN = document.getElementsByClassName("q-warning");
+
+    for (i = 0; i < warningN.length; i++) {
+        if (warningN[i].textContent == "0") {
+            warningN[i].innerHTML = warning.w0;
+        }
+        else if (warningN[i].textContent == "1") {
+            warningN[i].innerHTML = warning.w1;
+        }
+        else if (warningN[i].textContent == "2") {
+            warningN[i].innerHTML = warning.w2;
+        }
+    }
+}
+
 
 /**
  * On DOM load:
  * - Run loVerbose()
+ * - Run warningVerbose()
  */
 document.addEventListener("DOMContentLoaded", function () {
     loVerbose();
+    warningVerbose();
 });
