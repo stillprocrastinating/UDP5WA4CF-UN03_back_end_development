@@ -13,6 +13,8 @@
 1. Use CSS classes for each "traffic light" difficulty & understanding and utilise django conditioning to activate them (text colours for stated calculated numbers).
 1. Use different CSS classes for each "traffic light" validity... django conditioning... (text-decoration: underline; text-transform: uppercase OR icons of coloured flags OR border-color).
 
+1. Remove unused fonts.
+
 
 ## To ask KD
 1. What, if any, logo(s)/colour schemes to use?
