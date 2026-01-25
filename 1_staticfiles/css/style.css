@@ -1,23 +1,32 @@
 @font-face {
-    font-family: UCLSans;
-    src: url(0_static\css\UCLSans\UCLSans-Regular.otf);
+    font-family: "UCLSans";
+    src:
+        local("UCLSans-Regular"),
+        url("UCLSans/UCLSans-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: UCLSans-Bold;
-    src: url(0_static\css\UCLSans\UCLSans-Bold.otf);
+    font-family: "UCLSans";
+    src:
+        local("UCLSans-Bold"),
+        url("UCLSans/UCLSans-Bold.otf") format("opentype");
     font-weight: bold;
 }
 
 @font-face {
-    font-family: UCLSans-Italic;
-    src: url(0_static\css\UCLSans\UCLSans-Italic.otf);
+    font-family: "UCLSans";
+    src:
+        local("UCLSans-Italic"),
+        url("UCLSans/UCLSans-Italic.otf") format("opentype");
     font-style: italic;
 }
 
 @font-face {
-    font-family: UCLSans-BoldItalic;
-    src: url(0_static\css\UCLSans\UCLSans-BoldItalic.otf);
+    font-family: "UCLSans";
+    src:
+        local("UCLSans-BoldItalic"),
+        url("UCLSans/UCLSans-BoldItalic.otf") format("opentype");
+    font-weight: bold;
     font-style: italic;
 }
 
@@ -30,9 +39,9 @@
     --color-white: #ffffff;
     --color-black: #000000;
     --font: 'UCLSans', sans-serif;
-    --font-b: 'UCLSans-Bold', sans-serif;
+    /*--font-b: 'UCLSans-Bold', sans-serif;
     --font-i: 'UCLSans-Italic', sans-serif;
-    --font-bi: 'UCLSans-BoldItalic', sans-serif;
+    --font-bi: 'UCLSans-BoldItalic', sans-serif;*/
 }
 
 
@@ -43,7 +52,7 @@
 }
 
 
-/* Flex */
+/* flex */
 
 .flex-page {
     display: flex;
@@ -63,4 +72,11 @@
     justify-content: center;
     background-color: #f2f2f2;
     padding: 10px;
+}
+
+
+/* font */
+
+.font {
+    font-family: var(--font);
 }
