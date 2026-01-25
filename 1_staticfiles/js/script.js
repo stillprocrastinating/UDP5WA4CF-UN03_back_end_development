@@ -2,7 +2,7 @@
 let lo = {
     LO1: "LO1 blah",
     LO2: "LO2 blahblah"
-}
+};
 
 
 /**
@@ -14,7 +14,16 @@ function loVerbose () {
 
     for (i = 0; i < loN.length; i++) {
         if (loN[i].textContent == "1") {
-            loN[i].textContent == lo.LO1;
+            loN[i].innerHTML = lo.LO1;
         }
     }
 }
+
+
+/**
+ * On DOM load:
+ * - Run loVerbose()
+ */
+document.addEventListener("DOMContentLoaded", function () {
+    loVerbose();
+});
