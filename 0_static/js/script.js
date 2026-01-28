@@ -83,6 +83,20 @@ function warningVerbose () {
 
 
 /**
+ * Calculates the Q_DIFFICULTY of the Question from the correct_option_frequency of the Answers.
+ * @return {Integer} "1 / 2 / 3"
+ */
+function calculateQuestionDifficulty () {}
+
+
+/**
+ * Calculates the T_DIFFICULTY of the Test from the Q_DIFFUCULTY of the Question.
+ * @return {Integer} "1 / 2 / 3"
+ */
+function calculateTestDifficulty () {}
+
+
+/**
  * On DOM load:
  * - Run loVerbose()
  * - Run warningVerbose()
@@ -90,4 +104,5 @@ function warningVerbose () {
 document.addEventListener("DOMContentLoaded", function () {
     loVerbose();
     warningVerbose();
+    calculateTestDifficulty();
 });

@@ -1,8 +1,8 @@
 {% load static %}
 
-<!--{% url 'question' as question_url %}
-{% url 'test' as test_url %}
-{% url 'answer' as answer_url %}-->
+{% url 'questions' as question_url %}
+{% url 'tests' as test_url %}
+<!--{% url 'answers' as answer_url %}-->
 
 
 <!DOCTYPE html>
@@ -26,13 +26,26 @@
 
     <nav class="flex-nav">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/201108_zebrafish.png?20170707160639" alt="a digital rendering of a zebrafish">
-        <ul class="nav-list"></ul>
+        <ul class="nav-list">
+            <li>
+                <a class="nav-item {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
+            </li>
+            <li>
+                <a class="nav-item {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
+            </li>
+        </ul>
     </nav>
 
     <main class="narrow">
+
         {% block question %}
             <p>Oops! The questions haven't loaded!</p>
         {% endblock question %}
+
+        {% block test %}
+            <p>Oops! The tests haven't loaded!</p>
+        {% endblock test %}
+        
     </main>
 
     <footer class="flex-footer"></footer>

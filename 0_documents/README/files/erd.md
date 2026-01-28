@@ -15,6 +15,7 @@
 ||sub_answer_number_individual|IntegerField()|
 ||sub_correct_answer_individual|IntegerField()|
 |ForeignKey|author|User, related_name="question_author"|
+||difficulty|IntegerField(choices)|
 ||warning|IntegerField(choices)|
 
 
@@ -27,6 +28,7 @@
 ||type|IntegerField(choices)|
 ||participant_number|IntegerField()|
 |ForeignKey|tester|User, related_name="tester"|
+||difficulty|IntegerField(choices)|
 
 
 ## Answers

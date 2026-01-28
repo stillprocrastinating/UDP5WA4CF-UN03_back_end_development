@@ -24,6 +24,13 @@ Q_TYPE = (
     (6, "True/false")
 )
 
+Q_DIFFICULTY = (
+    (0, "Error in calculation"),
+    (1, "Easy"),
+    (2, "Optimal"),
+    (3, "Difficult")
+)
+
 WARNING = (
     (0, "None"),
     (1, "Warning"),
@@ -53,6 +60,9 @@ class Question(models.Model):
         verbose_name="which answer for subquestion is correct"
     )
     author = models.ForeignKey(User, on_delete=models.SET(str(User.username)))
+    q_difficulty = models.IntegerField(
+        choices=Q_DIFFICULTY, default=0, verbose_name="question difficulty"
+    )
     warning = models.IntegerField(choices=WARNING, default=0)
 
     class Meta:
