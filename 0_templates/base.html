@@ -39,11 +39,15 @@
     <main class="narrow">
 
         {% block question %}
-            <p>Oops! The questions haven't loaded!</p>
+            {% if request.path == question_url %}
+                <p>Oops! The questions haven't loaded!</p>
+            {% endif %}
         {% endblock question %}
 
         {% block test %}
-            <p>Oops! The tests haven't loaded!</p>
+            {% if request.path == test_url %}
+                <p>Oops! The tests haven't loaded!</p>
+            {% endif %}
         {% endblock test %}
         
     </main>

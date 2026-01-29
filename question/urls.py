@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.QuestionList.as_view(), name='index'),
+    path('', views.QuestionList.as_view(), name='questions'),
 ]
