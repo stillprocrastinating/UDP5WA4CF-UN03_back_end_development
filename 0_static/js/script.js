@@ -104,5 +104,6 @@ function calculateTestDifficulty () {}
 document.addEventListener("DOMContentLoaded", function () {
     loVerbose();
     warningVerbose();
+    calculateQuestionDifficulty();
     calculateTestDifficulty();
 });
