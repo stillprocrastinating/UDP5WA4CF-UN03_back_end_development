@@ -22,5 +22,7 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test/', include('test.urls'), name='test-urls'),
+    #path('answer/', include('answer.urls'), name='t-answer-urls'),
+    #path('answer/<slug:slug>/', views.AnswerDetail.as_view(), name='q-answer-urls'),     # in answer/urls.py
     path('', include('question.urls'), name='question-urls'),
 ]
