@@ -22,6 +22,7 @@ class Test(models.Model):
     """
 
     id = models.CharField(max_length=20, primary_key=True)
+    slug = models.SlugField(max_length=20, unique=True)
     date = models.DateTimeField()
     type = models.IntegerField(choices=T_TYPE)
     participant_number = models.IntegerField()
