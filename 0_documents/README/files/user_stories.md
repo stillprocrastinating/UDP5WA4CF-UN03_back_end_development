@@ -3,7 +3,7 @@
 | # | Description | Goal(s) |
 |-|-|-|
 | 1 | As an admin, I want edit functionality for test questions. | Build a Question() class to model CRUD functions for admins. |
-| 2 | As a tester, I want edit functionality for tests I host. | Build a Test() class to model CRUD functions. Utilise django.allauth to manage login capabilities for Test(). |
+| 2 | As a tester, I want edit functionality for tests I host. | Build a Test() class to model CRUD functions.<br>Utilise django.allauth to manage login capabilities for Test(). |
 
 
 ## Progress
