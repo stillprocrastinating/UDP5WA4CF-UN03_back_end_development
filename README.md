@@ -154,9 +154,11 @@ UPDATE with only used colours & list `aria-label`s in accessibility.md
 
 
 ### Images
+_Files can be found under `static/images/base`._
 
-The [zebrafish image](https://upload.wikimedia.org/wikipedia/commons/6/61/201108_zebrafish.png?20170707160639) was sourced from [wikimedia.org](https://commons.wikimedia.org/wiki/File:201108_zebrafish.png).  
-_Files can be found under `assets/images/base`._
+>The [zebrafish image](https://upload.wikimedia.org/wikipedia/commons/6/61/201108_zebrafish.png?20170707160639) was sourced from [wikimedia.org](https://commons.wikimedia.org/wiki/File:201108_zebrafish.png).
+
+The [REAL Rating 1 - Automation image](https://www.realgoodai.org/real-rating) was sourced from [REAL Good AI](https://www.realgoodai.org). The rating indicates that my pages were assisted by AI automation (for example, automatic completion of standard code), but no idea-generation or copy-pasting from a generative AI was used.
 
 
 #### Favicon
