@@ -25,7 +25,7 @@
 <body class="flex-page font">
 
     <nav class="flex-nav">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/201108_zebrafish.png?20170707160639" alt="a digital rendering of a zebrafish">
+        <img src="{% static 'images/base/zebrafish.jpg' %}" alt="a digital sketch of a zebrafish">
         <ul class="nav-list">
             <li>
                 <a class="nav-item {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
@@ -53,7 +53,7 @@
     </main>
 
     <footer class="flex-footer">
-        <img src="{% static 'images/1_real_rating.png' %}" alt="REAL Rating 1 - Automation. For more information, please visit REAL Good AI and navigate to their Rating page.">
+        <img src="{% static 'images/base/1_real_rating.png' %}" alt="REAL Rating 1 - Automation. For more information, please visit REAL Good AI and navigate to their Rating page.">
     </footer>
 </body>
 
