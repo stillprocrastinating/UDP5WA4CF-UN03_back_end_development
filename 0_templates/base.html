@@ -26,12 +26,21 @@
 
     <nav class="dark-white flex-nav">
         <img class="zf-logo" src="{% static 'images/base/zebrafish.jpg' %}" alt="a digital sketch of a zebrafish">
-        <ul class="nav-list">
+        <ul class="nav-list nav-list-pages">
             <li>
                 <a class="nav-item {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
             </li>
             <li>
                 <a class="nav-item {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
+            </li>
+        </ul>
+        <div class="nav-list nav-list-spacer"></div>
+        <ul class="nav-list nav-list-auth">
+            <li>
+                <a class="nav-item {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Login</a>
+            </li>
+            <li>
+                <a class="nav-item {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Signup</a>
             </li>
         </ul>
     </nav>

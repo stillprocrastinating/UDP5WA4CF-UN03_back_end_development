@@ -204,7 +204,7 @@
 /* nav */
 
 .zf-logo {
-    flex: 1 2 300px;
+    flex: 2 1 300px;
     max-width: 596px;
 }
 
@@ -213,10 +213,12 @@
 }
 
 .nav-list {
-    flex: 2 1 5000px;
+    flex: 1 2 5000px;
     flex-flow: row nowrap;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav-item {
-    list-style-image: none;
 }
