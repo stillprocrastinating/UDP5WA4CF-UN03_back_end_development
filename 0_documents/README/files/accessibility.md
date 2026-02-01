@@ -41,4 +41,5 @@ Each stated ratio is the contrast ratio between the background and font colours 
 
 | Object | Method | Description |
 |-|-|-|
-| .nav-item | aria-current | page |
+| `.nav-item` | `aria-current` | page |
+| `.footer-item` | `aria-label` | [link description] (opens in a new tab) |
