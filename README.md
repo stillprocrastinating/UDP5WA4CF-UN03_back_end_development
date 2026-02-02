@@ -136,9 +136,7 @@ For a video tutorial by [AKRITI GOSWAMI](https://www.youtube.com/@akritigoswamiL
 
 ### Libraries
 
-UPDATE
-
-Inspiration for much of the code was modified directly from the [Code Institute](https://codeinstitute.net) "Love Maths" (repo [here](https://github.com/stillprocrastinating/UDP5WA4CF-TU_love_maths)) and "Simon Game" (repo [here](https://github.com/stillprocrastinating/UDP5WA4CF-TU_simon_game)) walkthrough projects.
+Inspiration for much of the code was modified directly from the [Code Institute](https://codeinstitute.net) "Django Blog" (repo [here](https://github.com/stillprocrastinating/UDP5WA4CF-TU_django_blog)) walkthrough project.
 
 
 ### Accessibility

@@ -4,6 +4,10 @@
 {% url 'tests' as test_url %}
 <!--{% url 'answers' as answer_url %}-->
 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,25 +37,38 @@
     <nav class="dark-white flex-nav">
         <img class="zf-logo" src="{% static 'images/base/zebrafish.jpg' %}" alt="a digital sketch of a zebrafish">
         <ul class="nav-list nav-list-pages">
-            <li>
-                <a class="nav-item {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
+            <li class="nav-item">
+                <a class="nav-link {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
             </li>
-            <li>
-                <a class="nav-item {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
+            <li class="nav-item">
+                <a class="nav-link {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
             </li>
         </ul>
         <div class="nav-list nav-list-spacer"></div>
         <ul class="nav-list nav-list-auth">
-            <li>
-                <a class="nav-item {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Login</a>
-            </li>
-            <li>
-                <a class="nav-item {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Signup</a>
-            </li>
+            {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
+                        href="{% url 'account_signup' %}">Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
+                </li>
+            {% endif %}
         </ul>
     </nav>
 
     <main class="narrow">
+
+        {% block content %}
+            {% if request.path == login_url | request.path == logout_url | request.path == signup_url %}
+                <p>Oops! The authentication page hasn't loaded!</p>
+            {% endif %}
+        {% endblock content %}
 
         {% block question %}
             {% if request.path == question_url %}
