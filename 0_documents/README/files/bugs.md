@@ -6,4 +6,3 @@
 | 4 | 2026-01-28 | __404__ Reverse for 'questions' not found. 'questions' is not a valid view function or pattern name. | 2026-01-29 | _app / urls.py_ `path(name)` needed to match _base.html_ url reference | [main 7801f0c] BUGFIX Reverse for 'questions' not found. |
 | 5 | 2026-01-30 | __404__ Deployed page doesn't load
 | 6 | 2026-02-01 | `.footer-item {height: 100px;}` doesn't function
-| 7 | 2026-02-02 | _base.html_ `{% if request.path == login_url | request.path == logout_url | request.path == signup_url %}` not functional

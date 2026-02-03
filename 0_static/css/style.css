@@ -219,7 +219,7 @@
 /*  |||  |||||  ||||   |   |||||  |||  |   |  |||  */
 
 
-/* nav */
+/* nav.dark-white.flex-nav */
 
 .zf-logo {
     flex: 2 1 300px;
@@ -238,11 +238,8 @@
     justify-content: space-around;
 }
 
-.nav-item {
-}
 
-
-/* footer */
+/* footer.flex-footer */
 
 .footer-item {
     height: 100px;

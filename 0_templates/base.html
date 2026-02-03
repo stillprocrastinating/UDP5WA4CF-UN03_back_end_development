@@ -38,25 +38,25 @@
         <img class="zf-logo" src="{% static 'images/base/zebrafish.jpg' %}" alt="a digital sketch of a zebrafish">
         <ul class="nav-list nav-list-pages">
             <li class="nav-item">
-                <a class="nav-link {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
+                <a class="dark-white nav-link {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
+                <a class="dark-white nav-link {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
             </li>
         </ul>
         <div class="nav-list nav-list-spacer"></div>
         <ul class="nav-list nav-list-auth">
             {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                    <a class="dark-white nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
                 </li>
             {% else %}
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
+                    <a class="dark-white nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
                         href="{% url 'account_signup' %}">Signup</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
+                    <a class="dark-white nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
                 </li>
             {% endif %}
         </ul>
@@ -65,8 +65,14 @@
     <main class="narrow">
 
         {% block content %}
-            {% if request.path == login_url | request.path == logout_url | request.path == signup_url %}
-                <p>Oops! The authentication page hasn't loaded!</p>
+            {% if request.path == login_url %}
+                <p>Oops! The login page hasn't loaded!</p>
+            {% endif %}
+            {% if request.path == logout_url %}
+                <p>Oops! The logout page hasn't loaded!</p>
+            {% endif %}
+            {% if request.path == signup_url %}
+                <p>Oops! The signup page hasn't loaded!</p>
             {% endif %}
         {% endblock content %}
 
@@ -86,7 +92,7 @@
 
     <footer class="flex-footer">
         <a class=".footer-link" href="https://www.ucl.ac.uk" target="_blank" rel="noopener" aria-label="Welcome to UCL page (opens in a new tab)" title="Welcome to UCL page (opens in a new tab)">
-            <img class=".footer-item" src="{% static 'images/base/ucl_social_icon_square_1080x1080px.jpg' %}" alt="The University College London icon, demonstrating a purple outline of the main building.">
+            <img class=".footer-item" src="{% static 'images/base/ucl_social_icon_square_380x380px.jpg' %}" alt="The University College London icon, demonstrating a purple outline of the main building.">
         </a>
         <a class=".footer-link" href="https://www.realgoodai.org/real-rating#:~:text=Specialized%20AI%20tools,sound%2C%20or%20video)." target="_blank" rel="noopener" aria-label="REAL Good AI - REAL Rating 1 Automation description (opens in a new tab)" title="REAL Good AI - REAL Rating 1 Automation description (opens in a new tab)">
             <img class=".footer-item" src="{% static 'images/base/1_real_rating.png' %}" alt="REAL Rating 1 - Automation. For more information, please visit REAL Good AI following the link attached to this image.">

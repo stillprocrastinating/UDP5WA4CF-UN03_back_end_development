@@ -201,7 +201,33 @@
 }
 
 
-/* nav */
+/*  |||  ||||  ||||| |||||  |||| |||||  |||
+/* |   | |   |   |   |     |       |   |
+/* |   | ||||    |   |||   |       |    |||
+/* |   | |   |   |   |     |       |       |
+/*  |||  ||||  |||   |||||  ||||   |    |||  */
+
+.btn {} /* 0_templates/login.html */
+
+/*.form {} /* 0_templates/login.html rename of .login if it doesn't actually do anything & 0_templates/signup.html rename of .signup... */
+
+
+/*  |||  |||||  |||| ||||| |||||  |||  |   |  |||
+/* |     |     |       |     |   |   | ||  | |
+/*  |||  |||   |       |     |   |   | | | |  |||
+/*     | |     |       |     |   |   | |  ||     |
+/*  |||  |||||  ||||   |   |||||  |||  |   |  |||  */
+
+
+/* nav.dark-white.flex-nav */
+
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
 
 .zf-logo {
     flex: 2 1 300px;
@@ -220,11 +246,8 @@
     justify-content: space-around;
 }
 
-.nav-item {
-}
 
-
-/* footer */
+/* footer.flex-footer */
 
 .footer-item {
     height: 100px;
