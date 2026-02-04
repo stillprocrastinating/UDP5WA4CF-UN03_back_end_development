@@ -119,10 +119,10 @@
     background-color: var(--color-light);
 }*/
 
-/*.primary-dark {
+.primary-dark {
     border-color: var(--color-primary);
     background-color: var(--color-dark);
-}*/
+}
 
 /*.secondary-dark {
     color: var(--color-secondary);
@@ -180,16 +180,25 @@
 }
 
 .flex-nav {
+    flex: 0 0 100px;
     display: flex;
     justify-content: space-between;
-    /*background-color: #f2f2f2;*/
     padding: 10px;
 }
 
+.flex-main {
+    flex: 2 0;
+}
+
+.page-spacer {
+    flex: 9 9 0px;
+    background-color: #38d8ff;     /* delete */
+}
+
 .flex-footer {
+    flex: 0 0 100px;
     display: flex;
-    justify-content: center;
-    background-color: #f2f2f2;
+    justify-content: space-evenly;
     padding: 10px;
 }
 
@@ -223,7 +232,7 @@
 
 .zf-logo {
     flex: 2 1 300px;
-    max-width: 596px;
+    max-height: 100px;
 }
 
 .active {
@@ -239,7 +248,7 @@
 }
 
 
-/* footer.flex-footer */
+/* footer.flex-footer.primary-dark */
 
 .footer-item {
     height: 100px;
