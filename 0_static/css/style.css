@@ -213,6 +213,10 @@
     font-family: var(--font);
 }
 
+.font-size-xl {
+    font-size: x-large;
+}
+
 
 /*  |||  ||||  ||||| |||||  |||| |||||  |||
 /* |   | |   |   |   |     |       |   |
