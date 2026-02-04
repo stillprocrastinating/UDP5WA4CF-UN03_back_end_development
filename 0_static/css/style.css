@@ -47,6 +47,10 @@
 
 /* align */
 
+.margin-0 {
+    margin: 0px;
+}
+
 .narrow {
     margin: 0% 10%;
 }
