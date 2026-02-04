@@ -243,16 +243,16 @@
     max-height: 100px;
 }
 
-.active {
-    color: var(--color-black);
-}
-
 .nav-list {
     flex: 1 2 5000px;
     flex-flow: row nowrap;
     list-style-type: none;
     display: flex;
     justify-content: space-around;
+}
+
+.active {
+    color: var(--color-primary);
 }
 
 
