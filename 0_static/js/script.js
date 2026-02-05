@@ -41,7 +41,7 @@ function navbarFold () {
                         .classList.remove("show");     // Collapse navbar
                 }
             })
-    })
+        })
 }
 
 

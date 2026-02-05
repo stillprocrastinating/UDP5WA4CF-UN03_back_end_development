@@ -36,10 +36,7 @@
 
     <nav class="dark-white flex-nav font-size-xl">
         <img class="zf-logo" src="{% static 'images/base/zebrafish.jpg' %}" alt="a digital sketch of a zebrafish">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
-        </button>
-        <div class="collapse navbar navbar-collapse">
+        <div id="navbarNav" class="collapse navbar navbar-collapse">
             <ul class="nav-list nav-list-pages">
                 <li class="nav-item">
                     <a class="dark-white nav-link {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
@@ -65,6 +62,9 @@
                 {% endif %}
             </ul>
         </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+        </button>
     </nav>
 
     <main class="flex-main narrow">
