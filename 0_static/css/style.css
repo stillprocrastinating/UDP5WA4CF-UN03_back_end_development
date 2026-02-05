@@ -251,13 +251,19 @@
     justify-content: space-around;
 }
 
+.nav-link {
+    padding: 10px;
+}
+
 .active {
     color: var(--color-primary);
 }
 
 .nav-link:hover {
+    transition: 1s;
     color: var(--color-secondary);
-    /*text-shadow: 1px -1px 10px var(--color-black);*/
+    background-color: var(--color-black);
+    border-radius: 50%;
 }
 
 
