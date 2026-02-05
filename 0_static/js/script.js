@@ -21,6 +21,31 @@ let warning = {
 
 
 /**
+ * Folding navbar on small screens.
+ */
+function navbarFold () {
+    document
+        .querySelectorAll(".narbar-collapse .nav-link")
+        .forEach((link) => {
+            link.addEventListener("click", function (e) {
+                let section = document.querySelector(e.target.getAttribute("href"));
+                if (section) {
+                    e.preventDefault();     // Prevent default anchor click behaviour
+                    let navbarHeight = document.querySelector(".navbar-toggler").offsetHeight;
+                    window.scroll({
+                        top: section.offsetTop - navbarHeight,     // Adjust for navbar height
+                        behavior: "smooth",
+                    });
+                    document
+                        .querySelector(".navbar-collapse")
+                        .classList.remove("show");     // Collapse navbar
+                }
+            })
+    })
+}
+
+
+/**
  * Changes the textContent of the LO from the table integer to a human-readable "verbose" string.
  * @return {String} "LOx [the learning objective]."
  */
@@ -98,10 +123,14 @@ function calculateTestDifficulty () {}
 
 /**
  * On DOM load:
+ * - Run navbarFold()
  * - Run loVerbose()
  * - Run warningVerbose()
+ * - Run calculateQuestionDifficulty()
+ * - Run calculateTestDifficulty()
  */
 document.addEventListener("DOMContentLoaded", function () {
+    navbarFold();
     loVerbose();
     warningVerbose();
     calculateQuestionDifficulty();

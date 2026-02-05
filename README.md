@@ -169,11 +169,7 @@ _Files can be found under `0_static/images/favicon`._
 
 #### Icons
 
-UPDATE
-
-The saves area image SVGs were sourced from [Lucide](https://lucide.dev).  
-_Files can be found under `assets/images/saves-area`._
-- The edit image was [square-pen](https://lucide.dev/icons/square-pen).
+The navbar [hamburger icon SVG](https://lucide.dev/icons/menu) was sourced from [Lucide](https://lucide.dev).
 
 
 ### Fonts

@@ -36,30 +36,35 @@
 
     <nav class="dark-white flex-nav font-size-xl">
         <img class="zf-logo" src="{% static 'images/base/zebrafish.jpg' %}" alt="a digital sketch of a zebrafish">
-        <ul class="nav-list nav-list-pages">
-            <li class="nav-item">
-                <a class="dark-white nav-link {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
-            </li>
-            <li class="nav-item">
-                <a class="dark-white nav-link {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
-            </li>
-        </ul>
-        <div class="nav-list nav-list-spacer"></div>
-        <ul class="nav-list nav-list-auth">
-            {% if user.is_authenticated %}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+        </button>
+        <div class="collapse navbar navbar-collapse">
+            <ul class="nav-list nav-list-pages">
                 <li class="nav-item">
-                    <a class="dark-white nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
-                </li>
-            {% else %}
-                <li class="nav-item">
-                    <a class="dark-white nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
-                        href="{% url 'account_signup' %}">Signup</a>
+                    <a class="dark-white nav-link {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="dark-white nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
+                    <a class="dark-white nav-link {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
                 </li>
-            {% endif %}
-        </ul>
+            </ul>
+            <div class="nav-list nav-list-spacer"></div>
+            <ul class="nav-list nav-list-auth">
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="dark-white nav-link {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="dark-white nav-link {% if request.path == signup_url %}active" aria-current="page{% endif %}"
+                            href="{% url 'account_signup' %}">Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dark-white nav-link {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
     </nav>
 
     <main class="flex-main narrow">

@@ -240,13 +240,16 @@
 
 .zf-logo {
     flex: 2 1 300px;
-    max-height: 100px;
+    max-width: 500px;
 }
 
-.nav-list {
+.navbar {
     flex: 1 2 5000px;
     flex-flow: row nowrap;
     list-style-type: none;
+}
+
+.nav-list {
     display: flex;
     justify-content: space-around;
 }
