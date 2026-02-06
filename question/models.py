@@ -19,8 +19,8 @@ Q_TYPE = (
     (1, "Diagram"),
     (2, "Drag & drop"),
     (3, "Multiple choice"),
-    (4, "MTC"),     # Match the cards
-    (5, "MW"),     # Many word
+    (4, "Matching"),
+    (5, "Missing word"),
     (6, "True/false")
 )
 
