@@ -13,7 +13,7 @@ LO = (
     (8, "LO8"),
     (9, "LO9"),
     (10, "LO10"),
-)
+)     # use the blue ones - test_format_master_2024
 
 Q_TYPE = (
     (1, "Diagram"),
@@ -51,7 +51,7 @@ class Question(models.Model):
     )
     type = models.IntegerField(choices=Q_TYPE)
     number = models.IntegerField(verbose_name="number of Qs of that LO & type")
-    #question = models.TextField()
+    #question = models.TextField()     # extend.ucl.ac.uk
     #image = models.ImageField(blank=True)
     sub_number = models.IntegerField(verbose_name="number of subquestions")
     sub_answer_number_individual = models.IntegerField(
