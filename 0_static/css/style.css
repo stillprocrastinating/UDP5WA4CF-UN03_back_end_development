@@ -201,8 +201,9 @@
 
 .flex-footer {
     flex: 0 0 100px;
+    max-height: 10vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 10px;
 }
 
@@ -241,6 +242,7 @@
 .zf-logo {
     flex: 2 1 300px;
     max-width: 500px;
+    max-height: 15vh;
 }
 
 .navbar {
@@ -271,11 +273,16 @@
     border-radius: 50%;
 }
 
+.navbar-toggler {
+    display: none;
+}
+
 
 /* footer.flex-footer.primary-dark */
 
 .footer-item {
     height: 100px;
+    max-height: 95%;
 }
 
 
@@ -285,4 +292,16 @@
 /*     | |     | |   |     |     |  ||     |
 /*  |||   |||| |  || ||||| ||||| |   |  |||  */
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 992px) {
+    .collapse {
+        display: none;
+    }
+    
+    .navbar-toggler {
+        display: block;
+    }
+
+    .zf-logo {
+        max-width: 60%;
+    }
+}
