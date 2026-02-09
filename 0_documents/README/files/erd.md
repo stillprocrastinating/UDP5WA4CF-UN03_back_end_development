@@ -1,15 +1,34 @@
 # Entity Relationship Diagram
 
 
+## Modules
+
+|Key|Name|Type|
+|-|-|-|
+|PrimaryKey|id|CharField(20)|
+||number|IntegerField()|
+||description|TextField()|
+
+
+## Objectives
+
+|Key|Name|Type|
+|-|-|-|
+|PrimaryKey|id|CharField(20)|
+|ForeignKey|module|Module, related_name="module_objective"|
+||number|IntegerField()|
+||description|TextField()|
+
+
 ## Questions
 
 |Key|Name|Type|
 |-|-|-|
 |PrimaryKey|id|CharField(20)|
-||learning_objective|IntegerField(choices)|
+|ForeignKey|learning_objective|Objective, related_name="objective_question"|
 ||type|IntegerField(choices)|
 ||number|IntegerField()|
-|TBC|question|TextField()|
+||question|TextField()|
 |TBC|image|CloudinaryField('image')|
 ||sub_number|IntegerField()|
 ||sub_answer_number_individual|IntegerField()|
@@ -45,7 +64,7 @@
 ---
 
 
-### Entity relationship diagram
+## Entity relationship diagram
 
 Master table columns:
 - question_type
@@ -60,7 +79,7 @@ Master table columns:
 - [calculation] incorrect_choice_percentage
 
 
-#### Tables
+### Tables
 
 questions
 - id
@@ -97,20 +116,24 @@ answers
 - [calculation] flag
 
 
-### URL patterns
+## URL patterns
 
+1. include('modules.urls')
+1. include('objectives.urls')
 1. include('questions.urls')
 1. include('tests.urls')
+1. include('answers.urls')
 1. admin.site.urls
+1. _include('allauth.urls')_
 
 
-#### questions/urls.py
+### questions/urls.py
 
 1. views.QuestionList.as_view()
 1. views.AnswerList.as_view()     // dependent on structural availability
 
 
-#### tests/urls.py
+### tests/urls.py
 
 1. views.TestList.as_view()
 1. views.FlagList.as_view()     // dependent on structural availability & CTE functionality

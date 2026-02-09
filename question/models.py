@@ -1,19 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
+from .models import Objective
 
-
-LO = (
-    (1, "LO1"),
-    (2, "LO2"),
-    (3, "LO3"),
-    (4, "LO4"),
-    (5, "LO5"),
-    (6, "LO6"),
-    (7, "LO7"),
-    (8, "LO8"),
-    (9, "LO9"),
-    (10, "LO10"),
-)     # use the blue ones - test_format_master_2024
 
 Q_TYPE = (
     (1, "Diagram"),
@@ -45,10 +33,7 @@ class Question(models.Model):
 
     id = models.CharField(max_length=20, primary_key=True)
     slug = models.SlugField(max_length=20, unique=True)
-    lo = models.IntegerField(
-        choices=LO,
-        verbose_name="learning objective"
-    )
+    lo = models.ForeignKey(Objective, related_name="objective_question")
     type = models.IntegerField(choices=Q_TYPE)
     number = models.IntegerField(verbose_name="number of Qs of that LO & type")
     #question = models.TextField()     # extend.ucl.ac.uk

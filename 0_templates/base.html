@@ -39,6 +39,12 @@
             <img class="zf-logo" src="{% static 'images/base/zebrafish.jpg' %}" alt="a digital sketch of a zebrafish">
             <ul class="nav-list nav-list-pages">
                 <li class="nav-item">
+                    <a class="{% if request.path == module_url %}active" aria-current="page{% endif %}" href="{% url 'modules' %}">Modules</a>
+                </li>
+                <li class="nav-item">
+                    <a class="{% if request.path == objective_url %}active" aria-current="page{% endif %}" href="{% url 'objectives' %}">Objectives</a>
+                </li>
+                <li class="nav-item">
                     <a class="{% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
                 </li>
                 <li class="nav-item">
