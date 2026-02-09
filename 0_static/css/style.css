@@ -243,6 +243,17 @@
 
 /*.form {} /* 0_templates/login.html rename of .login if it doesn't actually do anything & 0_templates/signup.html rename of .signup... */
 
+.link {
+    padding: 5px;
+}
+
+.link:hover {
+    transition: 1s;
+    color: var(--color-secondary);
+    background-color: var(--color-black);
+    border-radius: 50%;
+}
+
 
 /*  |||  |||||  |||| ||||| |||||  |||  |   |  |||
 /* |     |     |       |     |   |   | ||  | |
