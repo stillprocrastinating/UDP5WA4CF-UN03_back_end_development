@@ -269,6 +269,13 @@ button:hover {
 
 /*.form {} /* 0_templates/login.html rename of .login if it doesn't actually do anything & 0_templates/signup.html rename of .signup... */
 
+input {
+    border: 1px solid var(--color-dark);
+    border-radius: 5px;
+    padding: 3px;
+    background-color: var(--color-white);
+}
+
 
 /*  |||  |||||  |||| ||||| |||||  |||  |   |  |||
 /* |     |     |       |     |   |   | ||  | |
