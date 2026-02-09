@@ -324,6 +324,19 @@ input {
     max-height: 95%;
 }
 
+.footer-link {
+    padding: 0px;
+    color: var(--color-dark);
+    background-color: var(--color-transparent);
+}
+
+.footer-link:hover {
+    transition: none;
+    color: var(--color-secondary);
+    background-color: var(--color-transparent);
+    border-radius: 0%;
+}
+
 
 /*  |||   |||| ||||  ||||| ||||| |   |  |||
 /* |     |     |   | |     |     ||  | |
