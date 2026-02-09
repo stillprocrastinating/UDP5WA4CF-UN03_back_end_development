@@ -252,7 +252,20 @@ a:hover {
     border-radius: 50%;
 }
 
-.btn {} /* 0_templates/login.html */
+button {
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    font-size: large;
+    padding: 10px;
+}
+
+button:hover {
+    transition: 1s;
+    background-color: var(--color-secondary);
+    color: var(--color-black);
+}
 
 /*.form {} /* 0_templates/login.html rename of .login if it doesn't actually do anything & 0_templates/signup.html rename of .signup... */
 
