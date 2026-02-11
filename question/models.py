@@ -3,17 +3,17 @@ from django.db import models
 
 
 LO = (
-    (1, "LO1"),
-    (2, "LO2"),
-    (3, "LO3"),
-    (4, "LO4"),
-    (5, "LO5"),
-    (6, "LO6"),
-    (7, "LO7"),
-    (8, "LO8"),
-    (9, "LO9"),
-    (10, "LO10"),
-)     # use the blue ones - test_format_master_2024
+    (1, "LO1 To understand the historical framework of ASPA and the ethics behind it."),
+    (2, "LO2 To state what the ethical framework which underpins ASPA is and how programs of work are justified, by weighing likely adverse effects on the animals against the likely benefits."),
+    (3, "LO3 To define the 3Rs. Indicate what they are for and how these relate to ethical principles."),
+    (4, "LO4 To identify relevant sources of information relating to ethics and the 3Rs."),
+    (5, "LO5 To identify ethical and animal welfare issues in their own work."),
+    (6, "LO6 To explain the limits of what is considered permissible to do within a research establishment and how cultural, national, temporal, and institutional factors can differ."),
+    (7, "LO7 To discuss to what extent welfare issues, pain, suffering, distress, and lasting harm should be interpreted."),
+    (8, "LO8 To explain what a culture of care is, its importance, and how they may contribute."),
+    (9, "LO9 To recognise the importance of ethical responsibility and identify the consequences of their actions—connected to culture of care."),
+    (10, "LO10 To explain the purpose of the local AWERB."),
+)
 
 Q_TYPE = (
     (1, "Diagram"),

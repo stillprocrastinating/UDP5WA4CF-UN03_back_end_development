@@ -1,15 +1,15 @@
 /** Dictionary of learning objectives */
 let lo = {
-    LO1: "LO1 blah",
-    LO2: "LO2 blahblah",
-    LO3: "LO3 blahblah",
-    LO4: "LO4 blahblah",
-    LO5: "LO5 blahblah",
-    LO6: "LO6 blahblah",
-    LO7: "LO7 blahblah",
-    LO8: "LO8 blahblah",
-    LO9: "LO9 blahblah",
-    LO10: "LO10 blahblah"
+    LO1: "LO1 To understand the historical framework of ASPA and the ethics behind it.",
+    LO2: "LO2 To state what the ethical framework which underpins ASPA is and how programs of work are justified, by weighing likely adverse effects on the animals against the likely benefits.",
+    LO3: "LO3 To define the 3Rs. Indicate what they are for and how these relate to ethical principles.",
+    LO4: "LO4 To identify relevant sources of information relating to ethics and the 3Rs.",
+    LO5: "LO5 To identify ethical and animal welfare issues in their own work.",
+    LO6: "LO6 To explain the limits of what is considered permissible to do within a research establishment and how cultural, national, temporal, and institutional factors can differ.",
+    LO7: "LO7 To discuss to what extent welfare issues, pain, suffering, distress, and lasting harm should be interpreted.",
+    LO8: "LO8 To explain what a culture of care is, its importance, and how they may contribute.",
+    LO9: "LO9 To recognise the importance of ethical responsibility and identify the consequences of their actions—connected to culture of care.",
+    LO10: "LO10 To explain the purpose of the local AWERB."
 };
 
 /** Dictionary of warnings */
