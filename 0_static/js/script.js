@@ -14,9 +14,9 @@ let lo = {
 
 /** Dictionary of warnings */
 let warning = {
-    w0: "None",
-    w1: "Warning",
-    w2: "Flag"
+    w1: "None",
+    w2: "Warning",
+    w3: "Flag"
 };
 
 
@@ -97,15 +97,24 @@ function calculateTestDifficulty () {}
 
 
 /**
+ * Calculates the WARNING of the Question from the incorrect_option_frequency of the Answers.
+ * @return {Integer} "1 / 2 / 3"
+ */
+function calculateQuestionWarning () {}
+
+
+/**
  * On DOM load:
  * - Run loVerbose()
  * - Run warningVerbose()
  * - Run calculateQuestionDifficulty()
  * - Run calculateTestDifficulty()
+ * - Run calculateQuestionWarning()
  */
 document.addEventListener("DOMContentLoaded", function () {
     loVerbose();
     warningVerbose();
     calculateQuestionDifficulty();
     calculateTestDifficulty();
+    calculateQuestionWarning();
 });

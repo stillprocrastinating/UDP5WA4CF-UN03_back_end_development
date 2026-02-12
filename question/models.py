@@ -32,9 +32,10 @@ Q_DIFFICULTY = (
 )
 
 WARNING = (
-    (0, "None"),
-    (1, "Warning"),
-    (2, "Flag")
+    (0, "Error in calculation"),
+    (1, "None"),
+    (2, "Warning"),
+    (3, "Flag")
 )
 
 
