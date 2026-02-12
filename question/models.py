@@ -52,7 +52,7 @@ class Question(models.Model):
     )
     type = models.IntegerField(choices=Q_TYPE)
     number = models.IntegerField(verbose_name="number of Qs of that LO & type")
-    #question = models.TextField()     # extend.ucl.ac.uk
+    question = models.TextField()     # extend.ucl.ac.uk
     #image = models.ImageField(blank=True)
     sub_number = models.IntegerField(verbose_name="number of subquestions")
     sub_answer_number_individual = models.IntegerField(
