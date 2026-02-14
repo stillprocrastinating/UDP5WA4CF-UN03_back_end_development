@@ -338,6 +338,34 @@ input {
 }
 
 
+/* ||||   |||   |||  |||||  |||
+/* |   | |   | |     |     |
+/* ||||  ||||| | ||| |||    |||
+/* |     |   | |  |  |         |
+/* |     |   |  |||  |||||  |||  */
+
+
+/* question_list.html */
+
+.q-link {
+    text-decoration: none;
+}
+
+.q-link:hover {
+    color: var(--color-dark);
+    background-color: var(--color-transparent);
+    border-radius: 0%;
+}
+
+.q-link:hover h2 {
+    display: inline-block;
+    transition: 1s;
+    color: var(--color-secondary);
+    background-color: var(--color-black);
+    border-radius: 50%;
+}
+
+
 /*  |||   |||| ||||  ||||| ||||| |   |  |||
 /* |     |     |   | |     |     ||  | |
 /*  |||  |     ||||  |||   |||   | | |  |||
