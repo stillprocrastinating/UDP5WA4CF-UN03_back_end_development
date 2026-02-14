@@ -9,7 +9,11 @@ let lo = {
     LO7: "LO7 To discuss to what extent welfare issues, pain, suffering, distress, and lasting harm should be interpreted.",
     LO8: "LO8 To explain what a culture of care is, its importance, and how they may contribute.",
     LO9: "LO9 To recognise the importance of ethical responsibility and identify the consequences of their actions—connected to culture of care.",
-    LO10: "LO10 To explain the purpose of the local AWERB."
+    LO10: "LO10 To explain the purpose of the local AWERB.",
+    LO11: "LO11",
+    LO12: "LO12",
+    LO13: "LO13",
+    LO14: "LO14",
 };
 
 /** Dictionary of warnings */
@@ -57,6 +61,18 @@ function loVerbose () {
         }
         else if (loN[i].textContent == "10") {
             loN[i].innerHTML = lo.LO10;
+        }
+        else if (loN[i].textContent == "11") {
+            loN[i].innerHTML = lo.LO11;
+        }
+        else if (loN[i].textContent == "12") {
+            loN[i].innerHTML = lo.LO12;
+        }
+        else if (loN[i].textContent == "13") {
+            loN[i].innerHTML = lo.LO13;
+        }
+        else if (loN[i].textContent == "14") {
+            loN[i].innerHTML = lo.LO14;
         }
     }
 }

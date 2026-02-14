@@ -13,6 +13,10 @@ LO = (
     (8, "LO8 To explain what a culture of care is, its importance, and how they may contribute."),
     (9, "LO9 To recognise the importance of ethical responsibility and identify the consequences of their actions—connected to culture of care."),
     (10, "LO10 To explain the purpose of the local AWERB."),
+    (11, "LO11"),
+    (12, "LO12"),
+    (13, "LO13"),
+    (14, "LO14"),
 )
 
 Q_TYPE = (
