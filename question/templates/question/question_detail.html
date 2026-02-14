@@ -2,11 +2,11 @@
 {% load static %}
 {% block question_detail %}
 
-<h1>{{ q.id }}</h1>
-<p class="q-lo">{{ q.lo }}</p>
-<p class="q-meta">{{ q.type }} {{ q.number }} | Created by {{ q.author }}</p>
-<p class="q-difficulty">Question difficulty: {{ q.q_difficulty }}</p>
-<p class="q-warning">Question warning: {{ q.warning }}</p>     <!-- Create modal -->
-<p class="q-question">{{ q.question }}</p>
+<h1>{{ question.id }}</h1>
+<p class="q-lo">{{ question.lo }}</p>
+<p class="q-meta">{{ question.type }} {{ question.number }} | Created by {{ question.author }}</p>
+<p class="q-difficulty">Question difficulty: {{ question.q_difficulty }}</p>
+<p class="q-warning">Question warning: {{ question.warning }}</p>     <!-- Create modal -->
+<p class="q-question">{{ question.question }}</p>
 
 {% endblock question_detail %}

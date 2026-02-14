@@ -84,6 +84,9 @@
             {% endif %}
         {% endblock question %}
 
+        {% block question_detail %}
+        {% endblock question_detail %}
+
         {% block test %}
             {% if request.path == test_url %}
                 <p>Oops! The tests haven't loaded!</p>
