@@ -6,5 +6,6 @@
 | 4 | 2026-01-28 | __404__ Reverse for 'questions' not found. 'questions' is not a valid view function or pattern name. | 2026-01-29 | _app / urls.py_ `path(name)` needed to match _base.html_ url reference | [main 7801f0c] BUGFIX Reverse for 'questions' not found. |
 | 5 | 2026-01-30 | __404__ Deployed page doesn't load
 | 6 | 2026-02-01 | `.footer-item {height: 100px;}` doesn't function | 2026-02-04 | ~~`<img class=".footer-item">`~~ `<img class="footer-item">` | [main 04f6c6a] .flex-page & related | :roll-eyes: |
-| 7 | _style.css_ `.q-link:hover{}` doesn't function
-| 8 | _style.css_ `.q-question-excerpt{text-overflow}` doesn't function
+| 7 | 2026-02-13 | __No HttpResponse__ | 2026-02-14 | _views.py_ `return render()` | [main 4eeabe2] BUGFIX question_detail.html ||
+| 8 | _style.css_ `.q-link:hover{}` doesn't function
+| 9 | _style.css_ `.q-question-excerpt{text-overflow}` doesn't function
