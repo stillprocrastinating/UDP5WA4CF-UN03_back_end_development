@@ -338,11 +338,11 @@ input {
 }
 
 
-/* ||||   |||   |||  |||||  |||
-/* |   | |   | |     |     |
-/* ||||  ||||| | ||| |||    |||
-/* |     |   | |  |  |         |
-/* |     |   |  |||  |||||  |||  */
+/* ||||  |      |||   |||| |  |   |||
+/* |   | |     |   | |     | |   |
+/* ||||  |     |   | |     ||     |||
+/* |   | |     |   | |     | |       |
+/* ||||  |||||  |||   |||| |  ||  |||  */
 
 
 /* question_list.html */
@@ -363,6 +363,12 @@ input {
     color: var(--color-secondary);
     background-color: var(--color-black);
     border-radius: 50%;
+}
+
+.q-question-excerpt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
