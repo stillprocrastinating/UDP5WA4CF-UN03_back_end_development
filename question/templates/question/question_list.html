@@ -5,10 +5,12 @@
 <h1>Questions list</h1>
 {% for q in question_list %}
     <a href="{% url 'question_detail' q.slug %}" class="q-link">
-        <h2>{{ q.id }}</h2>
-        <p class="q-lo">{{ q.lo }}</p>
-        <p class="q-question-excerpt">{{ q.question }}</p>
-        <p>Issue: <span class="q-warning">{{ q.warning }}</span></p>
+        <h2 class="h2"><span class="h2-text">{{ q.id }}</span></h2>
+        <div class="q-container">
+            <p class="q-lo">{{ q.lo }}</p>
+            <p class="q-question-excerpt">{{ q.question }}</p>
+            <p>Issue: <span class="q-warning">{{ q.warning }}</span></p>
+        </div>
     </a>
 {% endfor %}
 

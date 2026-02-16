@@ -269,6 +269,11 @@ button:hover {
 
 /*.form {} /* 0_templates/login.html rename of .login if it doesn't actually do anything & 0_templates/signup.html rename of .signup... */
 
+.h2 {
+    margin-block-end: 0px;
+    padding: 5px;
+}
+
 input {
     border: 1px solid var(--color-dark);
     border-radius: 5px;
@@ -347,6 +352,17 @@ input {
 
 /* question_list.html */
 
+.q-container {
+    padding: 5px;
+    margin: 2px;
+}
+
+.q-link:hover .q-container {
+    border: 2px solid var(--color-black);
+    border-radius: 0px 0px 10px 10px;
+    margin: 0px;
+}
+
 .q-link {
     text-decoration: none;
 }
@@ -357,12 +373,14 @@ input {
     border-radius: 0%;
 }
 
-.q-link:hover h2 {
-    display: inline-block;
+.q-link:hover .h2 {
+    background-color: var(--color-black);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.q-link:hover .h2-text {
     transition: 1s;
     color: var(--color-secondary);
-    background-color: var(--color-black);
-    border-radius: 50%;
 }
 
 .q-question-excerpt {
