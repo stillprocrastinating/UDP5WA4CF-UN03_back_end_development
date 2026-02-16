@@ -8,4 +8,4 @@
 | 6 | 2026-02-01 | `.footer-item {height: 100px;}` doesn't function | 2026-02-04 | ~~`<img class=".footer-item">`~~ `<img class="footer-item">` | [main 04f6c6a] .flex-page & related | :roll-eyes: |
 | 7 | 2026-02-13 | __No HttpResponse__ | 2026-02-14 | _views.py_ `return render()` | [main 4eeabe2] BUGFIX question_detail.html ||
 | 8 | 2026-02-14 | _style.css_ `.q-link:hover{}` doesn't function | 2026-02-16 | _style.css_ `h2{display:inline-block;}` | [main 7f1e513] BUGFIX .q-link:hover{} ||
-| 9 | 2026-02-14 | _style.css_ `.q-question-excerpt{text-overflow}` doesn't function
+| 9 | 2026-02-14 | _style.css_ `.q-question-excerpt{text-overflow}` doesn't function |||| Might be browser-related (functions in Chrome) |
