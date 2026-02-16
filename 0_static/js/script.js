@@ -17,6 +17,17 @@ let lo = {
 };
 
 
+/** Dictionary of question types */
+let q_type = {
+    qt1: "Diagram",
+    qt2: "Drag & drop",
+    qt3: "Multiple choice",
+    qt4: "Matching",
+    qt5: "Missing word",
+    qt6: "True/false"
+}
+
+
 /** Dictionary of warnings */
 let warning = {
     w1: "None",
@@ -29,21 +40,21 @@ let warning = {
  * Calculates the Q_DIFFICULTY of the Question from the correct_option_frequency of the Answers.
  * @return {Integer} "1 / 2 / 3"
  */
-function calculateQuestionDifficulty () {}
+function calculateDifficultyQuestion () {}
 
 
 /**
  * Calculates the T_DIFFICULTY of the Test from the Q_DIFFUCULTY of the Question.
  * @return {Integer} "1 / 2 / 3"
  */
-function calculateTestDifficulty () {}
+function calculateDifficultyTest () {}
 
 
 /**
  * Calculates the WARNING of the Question from the incorrect_option_frequency of the Answers.
  * @return {Integer} "1 / 2 / 3"
  */
-function calculateQuestionWarning () {}
+function calculateWarningQuestion () {}
 
 
 /**
@@ -101,6 +112,36 @@ function verboseLO () {
 
 
 /**
+ * Changes the textContent of the Q_TYPE from the table integer to a human-readable "verbose" string.
+ * @return {String} "[the question type]."
+ */
+function verboseTypeQuestion () {
+    let loN = document.getElementsByClassName("q-type");
+
+    for (i = 0; i < loN.length; i++) {
+        if (loN[i].textContent == "1") {
+            loN[i].innerHTML = q_type.qt1;
+        }
+        else if (loN[i].textContent == "2") {
+            loN[i].innerHTML = q_type.qt2;
+        }
+        else if (loN[i].textContent == "3") {
+            loN[i].innerHTML = q_type.qt3;
+        }
+        else if (loN[i].textContent == "4") {
+            loN[i].innerHTML = q_type.qt4;
+        }
+        else if (loN[i].textContent == "5") {
+            loN[i].innerHTML = q_type.qt5;
+        }
+        else if (loN[i].textContent == "6") {
+            loN[i].innerHTML = q_type.qt6;
+        }
+    }
+}
+
+
+/**
  * Changes the textContent of the WARNING from the table integer to a human-readable "verbose" string.
  * @return {String} "None / Warning / Flag"
  */
@@ -123,16 +164,18 @@ function verboseWarning () {
 
 /**
  * On DOM load:
- * - Run calculateDifficultyTest()
  * - Run calculateDifficultyQuestion()
+ * - Run calculateDifficultyTest()
  * - Run calculateWarningQuestion()
  * - Run verboseLO()
+ * - Run verboseTypeQuestion()
  * - Run verboseWarning()
  */
 document.addEventListener("DOMContentLoaded", function () {
-    calculateDifficultyTest();
     calculateDifficultyQuestion();
+    calculateDifficultyTest();
     calculateWarningQuestion();
     verboseLO();
+    verboseTypeQuestion();
     verboseWarning();
 });
