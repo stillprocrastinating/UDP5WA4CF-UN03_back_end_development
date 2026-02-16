@@ -57,6 +57,11 @@ class Question(models.Model):
     type = models.IntegerField(choices=Q_TYPE)
     number = models.IntegerField(verbose_name="number of Qs of that LO & type")
     question = models.TextField()     # extend.ucl.ac.uk
+    answer1 = models.TextField(blank=True)     # extend.ucl.ac.uk
+    answer2 = models.TextField(blank=True)     # extend.ucl.ac.uk
+    answer3 = models.TextField(blank=True)     # extend.ucl.ac.uk
+    answer4 = models.TextField(blank=True)     # extend.ucl.ac.uk
+    answer5 = models.TextField(blank=True)     # extend.ucl.ac.uk
     #image = models.ImageField(blank=True)
     sub_number = models.IntegerField(verbose_name="number of subquestions")
     sub_answer_number_individual = models.IntegerField(
@@ -72,7 +77,7 @@ class Question(models.Model):
     warning = models.IntegerField(choices=WARNING, default=0)
 
     class Meta:
-        ordering = ["id"]
+        ordering = ["lo", "type", "number"]
         #filtering = ["lo", "type", "author", "warning"]
 
     def __str__(self):
