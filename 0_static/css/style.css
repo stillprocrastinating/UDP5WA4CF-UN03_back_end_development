@@ -285,6 +285,10 @@ input {
     background-color: var(--color-white);
 }
 
+.padding-left-right {
+    padding: 0px 10px;
+}
+
 
 /*  |||  |||||  |||| ||||| |||||  |||  |   |  |||
 /* |     |     |       |     |   |   | ||  | |
