@@ -16,6 +16,7 @@ let lo = {
     LO14: "LO14",
 };
 
+
 /** Dictionary of warnings */
 let warning = {
     w1: "None",
@@ -25,10 +26,31 @@ let warning = {
 
 
 /**
+ * Calculates the Q_DIFFICULTY of the Question from the correct_option_frequency of the Answers.
+ * @return {Integer} "1 / 2 / 3"
+ */
+function calculateQuestionDifficulty () {}
+
+
+/**
+ * Calculates the T_DIFFICULTY of the Test from the Q_DIFFUCULTY of the Question.
+ * @return {Integer} "1 / 2 / 3"
+ */
+function calculateTestDifficulty () {}
+
+
+/**
+ * Calculates the WARNING of the Question from the incorrect_option_frequency of the Answers.
+ * @return {Integer} "1 / 2 / 3"
+ */
+function calculateQuestionWarning () {}
+
+
+/**
  * Changes the textContent of the LO from the table integer to a human-readable "verbose" string.
  * @return {String} "LOx [the learning objective]."
  */
-function loVerbose () {
+function verboseLO () {
     let loN = document.getElementsByClassName("q-lo");
 
     for (i = 0; i < loN.length; i++) {
@@ -77,11 +99,12 @@ function loVerbose () {
     }
 }
 
+
 /**
  * Changes the textContent of the WARNING from the table integer to a human-readable "verbose" string.
  * @return {String} "None / Warning / Flag"
  */
-function warningVerbose () {
+function verboseWarning () {
     let warningN = document.getElementsByClassName("q-warning");
 
     for (i = 0; i < warningN.length; i++) {
@@ -99,38 +122,17 @@ function warningVerbose () {
 
 
 /**
- * Calculates the Q_DIFFICULTY of the Question from the correct_option_frequency of the Answers.
- * @return {Integer} "1 / 2 / 3"
- */
-function calculateQuestionDifficulty () {}
-
-
-/**
- * Calculates the T_DIFFICULTY of the Test from the Q_DIFFUCULTY of the Question.
- * @return {Integer} "1 / 2 / 3"
- */
-function calculateTestDifficulty () {}
-
-
-/**
- * Calculates the WARNING of the Question from the incorrect_option_frequency of the Answers.
- * @return {Integer} "1 / 2 / 3"
- */
-function calculateQuestionWarning () {}
-
-
-/**
  * On DOM load:
- * - Run loVerbose()
- * - Run warningVerbose()
- * - Run calculateQuestionDifficulty()
- * - Run calculateTestDifficulty()
- * - Run calculateQuestionWarning()
+ * - Run calculateDifficultyTest()
+ * - Run calculateDifficultyQuestion()
+ * - Run calculateWarningQuestion()
+ * - Run verboseLO()
+ * - Run verboseWarning()
  */
 document.addEventListener("DOMContentLoaded", function () {
-    loVerbose();
-    warningVerbose();
-    calculateQuestionDifficulty();
-    calculateTestDifficulty();
-    calculateQuestionWarning();
+    calculateDifficultyTest();
+    calculateDifficultyQuestion();
+    calculateWarningQuestion();
+    verboseLO();
+    verboseWarning();
 });
