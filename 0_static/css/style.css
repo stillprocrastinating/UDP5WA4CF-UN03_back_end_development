@@ -354,6 +354,18 @@ input {
 /* ||||  |||||  |||   |||| |  ||  |||  */
 
 
+/* question_detail.html */
+
+.q-answers {
+    font-size: large;
+    padding-inline-start: 50px;
+}
+
+.q-answer {
+    margin-bottom: 5px;
+}
+
+
 /* question_list.html */
 
 .q-container {
