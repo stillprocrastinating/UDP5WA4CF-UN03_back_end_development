@@ -204,6 +204,11 @@
     padding: 10px;
 }
 
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .flex-main {
     flex: 2 0;
 }
@@ -283,6 +288,13 @@ input {
     border-radius: 5px;
     padding: 3px;
     background-color: var(--color-white);
+}
+
+.new-button {
+    font-size: large;
+    height: 3em;
+    padding: 0px 15px;
+    margin-top: 10px;
 }
 
 .padding-left-right {
