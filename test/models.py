@@ -1,3 +1,4 @@
+from autoslug import AutoSlugField
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -22,7 +23,7 @@ class Test(models.Model):
     """
 
     id = models.CharField(max_length=20, primary_key=True)
-    slug = models.SlugField(max_length=20, unique=True)
+    slug = AutoSlugField(max_length=20, unique=True, populate_from='id')
     date = models.DateTimeField()
     type = models.IntegerField(choices=T_TYPE)
     participant_number = models.IntegerField()

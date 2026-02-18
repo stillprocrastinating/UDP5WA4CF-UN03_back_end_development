@@ -1,3 +1,4 @@
+from autoslug import AutoSlugField
 from django.contrib.auth.models import User
 from django.db import models
 
@@ -49,7 +50,7 @@ class Question(models.Model):
     """
 
     id = models.CharField(max_length=20, primary_key=True)
-    slug = models.SlugField(max_length=20, unique=True)
+    slug = AutoSlugField(max_length=20, unique=True, populate_from='id')
     lo = models.IntegerField(
         choices=LO,
         verbose_name="learning objective"
