@@ -2,7 +2,7 @@
 
 {% url 'questions' as question_url %}
 {% url 'tests' as test_url %}
-<!--{% url 'answers' as answer_url %}-->
+<!--answers will be listed as a paginated section under 'question_detail' & 'test_detail'-->
 
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -88,6 +88,12 @@
         {% endblock question_detail %}
 
         {% block test %}
+            {% if request.path == test_url %}
+                <p>Oops! The tests haven't loaded!</p>
+            {% endif %}
+        {% endblock test %}
+
+        {% block test_new %}
             {% if request.path == test_url %}
                 <p>Oops! The tests haven't loaded!</p>
             {% endif %}
