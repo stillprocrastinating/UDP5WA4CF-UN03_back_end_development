@@ -6,7 +6,7 @@
 
 <section class="flex-header">
     <h1>Tests list</h1>
-    <a class="button new-button" href="{% url 'test_new' %}">New</a>
+    <a class="button header-button" href="{% url 'test_new' %}">New</a>
 </section>
 {% for t in test_list %}
     <h2>{{ t.id }}</h2>

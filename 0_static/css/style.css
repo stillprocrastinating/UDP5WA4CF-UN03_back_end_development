@@ -290,7 +290,7 @@ input {
     background-color: var(--color-white);
 }
 
-.new-button {
+.header-button {
     font-size: large;
     height: 3em;
     padding: 0px 15px;
