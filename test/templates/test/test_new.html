@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block test_new %}
+
+<section class="flex-header">
+    <h1>New test</h1>
+    <a class="button header-button" href="{% url 'tests' %}">Cancel</a>
+</section>
+<form method="post" id="testForm" class="form">
+    {{ test_form | crispy }}
+    {% csrf_token %}
+    <button type="submit" id="testSubmit" class="button">Submit</button>
+</form>
+
+{% endblock test_new %}
