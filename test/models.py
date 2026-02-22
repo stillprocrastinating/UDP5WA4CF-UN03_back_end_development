@@ -24,7 +24,7 @@ class Test(models.Model):
 
     id = models.CharField(max_length=20, primary_key=True)
     slug = AutoSlugField(max_length=20, unique=True, populate_from='id')
-    date = models.DateTimeField()
+    date = models.DateField()
     type = models.IntegerField(choices=T_TYPE)
     participant_number = models.IntegerField()
     tester = models.ForeignKey(User, on_delete=models.SET(str(User.username)))
