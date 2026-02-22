@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.views import generic
 from .forms import TestNew
 from .models import Test
@@ -8,6 +8,28 @@ from .models import Test
 class TestList(generic.ListView):
     queryset = Test.objects.all().order_by("-date")
     paginate_by = 12
+
+
+def test_detail(request, slug):
+    """
+    Display an individual :model:`test.Test`.
+
+    :param request: The requested test.
+    :param slug: The identification (slug) of the request.
+    """
+
+    queryset = Test.objects.all()
+    test = get_object_or_404(queryset, slug=slug)
+
+    context = {
+        "test": test
+    }
+
+    return render(
+        request,
+        "test/test_detail.html",
+        context
+    )
 
 
 def test_new(request):

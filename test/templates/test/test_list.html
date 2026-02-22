@@ -9,7 +9,7 @@
     <a class="button header-button" href="{% url 'test_new' %}">New</a>
 </section>
 {% for t in test_list %}
-    <a class="highlight-link">
+    <a href="{% url 'test_detail' t.slug %}" class="highlight-link">
         <h2 class="h2"><span class="h2-text">{{ t.id }}</span></h2>
         <div class="highlight-container">
             <p>Date performed: {{ t.date }}</p>
