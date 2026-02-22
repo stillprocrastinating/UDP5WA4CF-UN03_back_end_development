@@ -58,6 +58,21 @@ function calculateWarningQuestion () {}
 
 
 /**
+ * Edit the TestForm() form attributes.
+ */
+function formModifications () {
+    let inputIdId = document.getElementById("id_id");
+    inputIdId.placeholder = "Jan 26 Resit";
+    inputIdId.autofocus = true;
+    inputIdId.previousElementSibling.innerHTML = inputIdId.previousElementSibling.innerHTML + "<span class='form-hint'>( Month Year [Type] )</span>";
+    inputIdId.pattern = "^[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec] \s[00-99] ?\s[Resit|AB]?";
+
+    let inputIdDate = document.getElementById("id_date");
+    inputIdDate.type = "date";
+}
+
+
+/**
  * Changes the textContent of the LO from the table integer to a human-readable "verbose" string.
  * @return {String} "LOx [the learning objective]."
  */
@@ -167,6 +182,7 @@ function verboseWarning () {
  * - Run calculateDifficultyQuestion()
  * - Run calculateDifficultyTest()
  * - Run calculateWarningQuestion()
+ * - Run formModifications()
  * - Run verboseLO()
  * - Run verboseTypeQuestion()
  * - Run verboseWarning()
@@ -175,6 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
     calculateDifficultyQuestion();
     calculateDifficultyTest();
     calculateWarningQuestion();
+    formModifications();
     verboseLO();
     verboseTypeQuestion();
     verboseWarning();
