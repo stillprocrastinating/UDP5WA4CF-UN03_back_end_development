@@ -39,25 +39,25 @@
             <img class="zf-logo" src="{% static 'images/base/zebrafish.jpg' %}" alt="a digital sketch of a zebrafish">
             <ul class="nav-list nav-list-pages">
                 <li class="nav-item">
-                    <a class="a {% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
+                    <a class="{% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Questions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="a {% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
+                    <a class="{% if request.path == test_url %}active" aria-current="page{% endif %}" href="{% url 'tests' %}">Tests</a>
                 </li>
             </ul>
             <div class="nav-list nav-list-spacer"></div>
             <ul class="nav-list nav-list-auth">
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="a {% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="{% if request.path == logout_url %}active" aria-current="page{% endif %}" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="a {% if request.path == signup_url %}active" aria-current="page{% endif %}"
+                        <a class="{% if request.path == signup_url %}active" aria-current="page{% endif %}"
                             href="{% url 'account_signup' %}">Signup</a>
                     </li>
                     <li class="nav-item">
-                        <a class="a {% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
+                        <a class="{% if request.path == login_url %}active" aria-current="page{% endif %}" href="{% url 'account_login' %}">Login</a>
                     </li>
                 {% endif %}
             </ul>
