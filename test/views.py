@@ -1,5 +1,7 @@
+from django.contrib import messages
 from django.shortcuts import render
 from django.views import generic
+from .forms import TestNew
 from .models import Test
 
 
@@ -8,7 +10,40 @@ class TestList(generic.ListView):
     paginate_by = 12
 
 
-#def test_new(request):
-#    """
-#    Display the form which creates a new test.
-#    """
+def test_new(request):
+    """
+    Display the form which creates a new :model:`test.Test`.
+
+    **Context**
+
+    ``test_new``
+        An instance of :form:`test.TestNew`.
+
+    **Template**
+
+    :template:`test/test_new.html`.
+    """
+
+    if request.method == "POST":
+        test_new = TestNew(data=request.POST)
+        if test_new.is_valid():
+            test_new.save()
+            messages.add_message(
+                request,
+                messages.SUCCESS,
+                "New test created"
+            )
+
+    test = Test()
+    test_new = TestNew()
+
+    context = {
+        "test": test,
+        "test_new": test_new
+    }
+
+    return render(
+        request,
+        "test/test_new.html",
+        context
+    )

@@ -2,7 +2,7 @@ from django import forms
 from .models import Test
 
 
-class TestForm(forms.ModelForm):
+class TestNew(forms.ModelForm):
     """
     Generates the form to create Tests
     """

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
+
 {% block test_new %}
 
 <section class="flex-header">
@@ -7,7 +9,7 @@
     <a class="button header-button" href="{% url 'tests' %}">Cancel</a>
 </section>
 <form method="post" id="testForm" class="form">
-    {{ test_form | crispy }}
+    {{ test_new | crispy }}
     {% csrf_token %}
     <button type="submit" id="testSubmit" class="button">Submit</button>
 </form>
