@@ -378,6 +378,37 @@ input {
 /* |   | |     |   | |     | |       |
 /* ||||  |||||  |||   |||| |  ||  |||  */
 
+.highlight-container {
+    padding: 5px;
+    margin: 2px;
+}
+
+.highlight-link:hover .highlight-container {
+    border: 2px solid var(--color-black);
+    border-radius: 0px 0px 10px 10px;
+    margin: 0px;
+}
+
+.highlight-link {
+    text-decoration: none;
+}
+
+.highlight-link:hover {
+    color: var(--color-dark);
+    background-color: var(--color-transparent);
+    border-radius: 0%;
+}
+
+.highlight-link:hover .h2 {
+    background-color: var(--color-black);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.highlight-link:hover .h2-text {
+    transition: 1s;
+    color: var(--color-secondary);
+}
+
 
 /* test_new.html */
 
@@ -413,37 +444,6 @@ input {
 
 
 /* question_list.html */
-
-.q-container {
-    padding: 5px;
-    margin: 2px;
-}
-
-.q-link:hover .q-container {
-    border: 2px solid var(--color-black);
-    border-radius: 0px 0px 10px 10px;
-    margin: 0px;
-}
-
-.q-link {
-    text-decoration: none;
-}
-
-.q-link:hover {
-    color: var(--color-dark);
-    background-color: var(--color-transparent);
-    border-radius: 0%;
-}
-
-.q-link:hover .h2 {
-    background-color: var(--color-black);
-    border-radius: 10px 10px 0px 0px;
-}
-
-.q-link:hover .h2-text {
-    transition: 1s;
-    color: var(--color-secondary);
-}
 
 .q-question-excerpt {
     white-space: nowrap;

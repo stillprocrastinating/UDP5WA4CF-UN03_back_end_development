@@ -9,9 +9,13 @@
     <a class="button header-button" href="{% url 'test_new' %}">New</a>
 </section>
 {% for t in test_list %}
-    <h2>{{ t.id }}</h2>
-    <p>Date performed: {{ t.date }}</p>
-    <p>Difficulty: {{ t.t_difficulty }}</p>
+    <a class="highlight-link">
+        <h2 class="h2"><span class="h2-text">{{ t.id }}</span></h2>
+        <div class="highlight-container">
+            <p>Date performed: {{ t.date }}</p>
+            <p>Difficulty: {{ t.t_difficulty }}</p>
+        </div>
+    </a>
 {% endfor %}
 
 {% endblock test %}

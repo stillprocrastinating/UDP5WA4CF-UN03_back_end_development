@@ -4,9 +4,9 @@
 
 <h1>Questions list</h1>
 {% for q in question_list %}
-    <a href="{% url 'question_detail' q.slug %}" class="q-link">
+    <a href="{% url 'question_detail' q.slug %}" class="highlight-link">
         <h2 class="h2"><span class="h2-text">{{ q.id }}</span></h2>
-        <div class="q-container">
+        <div class="highlight-container">
             <p class="q-lo">{{ q.lo }}</p>
             <p class="q-question-excerpt">{{ q.question }}</p>
             <p>Issue: <span class="q-warning">{{ q.warning }}</span></p>
