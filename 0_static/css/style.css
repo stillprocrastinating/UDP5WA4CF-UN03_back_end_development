@@ -252,20 +252,20 @@
 /* |   | |   |   |   |     |       |       |
 /*  |||  ||||  |||   |||||  ||||   |    |||  */
 
-a {
+.a {
     padding: 10px;
     color: var(--color-dark);
     background-color: var(--color-transparent);
 }
 
-a:hover {
+.a:hover {
     transition: 1s;
     color: var(--color-secondary);
     background-color: var(--color-black);
     border-radius: 50%;
 }
 
-button {
+.button {
     border: none;
     border-radius: 10px;
     background-color: var(--color-dark);
@@ -274,7 +274,7 @@ button {
     padding: 10px;
 }
 
-button:hover {
+.button:hover {
     transition: 1s;
     background-color: var(--color-secondary);
     color: var(--color-black);
@@ -300,9 +300,10 @@ input {
 
 .header-button {
     font-size: large;
-    height: 3em;
-    padding: 0px 15px;
+    height: 1.5em;
+    padding: 10px;
     margin-top: 10px;
+    text-decoration: none;
 }
 
 .padding-left-right {
