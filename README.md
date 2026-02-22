@@ -158,7 +158,7 @@ The original [zebrafish image](https://www.istockphoto.com/vector/zebrafish-gm47
 
 The [UCL social icon](https://imagestore.ucl.ac.uk/imagestore/pcache/10034/0e/l_icon_square_1080x1080px_e51db.jpg) was sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7). The icon indicates that I am affiliated with University College London.
 
-The [REAL Rating](https://www.realgoodai.org/real-rating) 1 - Automation image was sourced from [REAL Good AI](https://www.realgoodai.org). The rating indicates that my pages were assisted by AI automation (for example, automatic completion of standard code), but no idea-generation or copy-pasting from a generative AI was used (there are other ratings to indicate as such).
+The [REAL Rating](https://www.realgoodai.org/real-rating) 1 - Automation image was sourced from [REAL Good AI](https://www.realgoodai.org). The Reported Engagement with AI Level (REAL) rating indicates that my pages were assisted by Artificial Intelligence (AI) automation (for example, automatic completion of standard code), but no idea-generation or copy-pasting from a generative AI was used (there are other ratings to indicate as such).
 
 
 #### Favicon
