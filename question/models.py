@@ -63,7 +63,7 @@ class Question(models.Model):
     answer3 = models.TextField(blank=True)     # extend.ucl.ac.uk
     answer4 = models.TextField(blank=True)     # extend.ucl.ac.uk
     answer5 = models.TextField(blank=True)     # extend.ucl.ac.uk
-    #image = models.ImageField(blank=True)
+    #image = models.ImageField(blank=True)     # not needed for this iteration of the app
     sub_number = models.IntegerField(verbose_name="number of subquestions")
     sub_answer_number_individual = models.IntegerField(
         verbose_name="number of answers for subquestion"
