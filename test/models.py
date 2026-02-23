@@ -1,19 +1,20 @@
 from autoslug import AutoSlugField
 from django.contrib.auth.models import User
 from django.db import models
+from question.models import Question
 
-
-T_TYPE = (
-    (0, "Test"),
-    (1, "Resit"),
-    (2, "AB")
-)
 
 T_DIFFICULTY = (
     (0, "Error in calculation"),
     (1, "Easy"),
     (2, "Optimal"),
     (3, "Difficult")
+)
+
+T_TYPE = (
+    (0, "Test"),
+    (1, "Resit"),
+    (2, "AB")
 )
 
 
@@ -31,6 +32,11 @@ class Test(models.Model):
     t_difficulty = models.IntegerField(
         choices=T_DIFFICULTY, default=0, verbose_name="test difficulty"
     )
+    #t_question_e1_1 = models.ForeignKey(Question, on_delete=models.PROTECT)
+    #t_question_e1_2 = models.ForeignKey(Question.id, on_delete=models.PROTECT)
+    #t_question_e1_3 = models.ForeignKey(Question.id, on_delete=models.PROTECT)
+    #t_question_e1_4 = models.ForeignKey(Question.id, on_delete=models.PROTECT)
+    #t_question_e1_5 = models.ForeignKey(Question.id, on_delete=models.PROTECT)
 
     class Meta:
         ordering = ["date"]

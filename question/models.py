@@ -28,6 +28,13 @@ Q_CORRECT = (
     (5, "Answer5")
 )
 
+Q_DIFFICULTY = (
+    (0, "Error in calculation"),
+    (1, "Easy"),
+    (2, "Optimal"),
+    (3, "Difficult")
+)
+
 Q_TYPE = (
     (1, "Diagram"),
     (2, "Drag & drop"),
@@ -35,13 +42,6 @@ Q_TYPE = (
     (4, "Matching"),
     (5, "Missing word"),
     (6, "True/false")
-)
-
-Q_DIFFICULTY = (
-    (0, "Error in calculation"),
-    (1, "Easy"),
-    (2, "Optimal"),
-    (3, "Difficult")
 )
 
 WARNING = (
