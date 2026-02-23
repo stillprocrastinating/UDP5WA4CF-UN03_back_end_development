@@ -20,6 +20,14 @@ LO = (
     (14, "LO14"),
 )
 
+Q_CORRECT = (
+    (1, "Answer1"),
+    (2, "Answer2"),
+    (3, "Answer3"),
+    (4, "Answer4"),
+    (5, "Answer5")
+)
+
 Q_TYPE = (
     (1, "Diagram"),
     (2, "Drag & drop"),
@@ -69,6 +77,7 @@ class Question(models.Model):
         verbose_name="number of answers for subquestion"
     )
     sub_correct_answer_individual = models.IntegerField(
+        choices=Q_CORRECT,
         verbose_name="which answer for subquestion is correct"
     )
     author = models.ForeignKey(User, on_delete=models.SET(str(User.username)))
