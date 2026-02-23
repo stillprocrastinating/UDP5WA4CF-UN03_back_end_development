@@ -3,7 +3,7 @@
 {% block test_detail %}
 
 <h1>{{ test.id }}</h1>
-<h3 class="center t-meta"><span class="t-type">{{ test.type }}</span> <span class="t-date">{{ test.date }}</span> <span class="padding-left-right">|</span> Examined by {{ test.author }}</h3>
+<h3 class="center t-meta"><span class="t-type">{{ test.type }}</span> <span class="t-date">{{ test.date }}</span> <span class="padding-left-right">|</span> Examined by {{ test.tester }}</h3>
 <p class="center t-difficulty">Test difficulty: {{ test.t_difficulty }}</p>
 <p class="center t-warning">Question warnings: {{ test.warnings }}</p>
 {% for q in test_detail %}
