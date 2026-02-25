@@ -1,5 +1,7 @@
 # Visual accessibility
 
+>[Entire colour palette](https://www.ucl.ac.uk/brand-and-experience/brand/ucl200/bicentenary-colours#colour-palette)
+
 [WebAIM](https://webaim.org/resources/contrastchecker/) was used to check colour contrast between backgrounds and font colours.  
 Each stated ratio is the contrast ratio between the background and font colours used. Then the pass/fail mode for Web Content Accessibility Guidelines. Each link should provide full details.
 
