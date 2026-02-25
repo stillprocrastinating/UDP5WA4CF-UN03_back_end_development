@@ -27,16 +27,14 @@ class Test(models.Model):
     slug = AutoSlugField(max_length=20, unique=True, populate_from='id')
     date = models.DateField()
     type = models.IntegerField(choices=T_TYPE)
-    participant_number = models.IntegerField()
+    participant_number = models.IntegerField(
+        verbose_name="number of participants"
+    )
     tester = models.ForeignKey(User, on_delete=models.SET(str(User.username)))
     t_difficulty = models.IntegerField(
         choices=T_DIFFICULTY, default=0, verbose_name="test difficulty"
     )
-    #t_question_e1_1 = models.ForeignKey(Question, on_delete=models.PROTECT)
-    #t_question_e1_2 = models.ForeignKey(Question.id, on_delete=models.PROTECT)
-    #t_question_e1_3 = models.ForeignKey(Question.id, on_delete=models.PROTECT)
-    #t_question_e1_4 = models.ForeignKey(Question.id, on_delete=models.PROTECT)
-    #t_question_e1_5 = models.ForeignKey(Question.id, on_delete=models.PROTECT)
+    t_questions = models.ManyToManyField(to=Question)
 
     class Meta:
         ordering = ["date"]
