@@ -195,4 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
     verboseLO();
     verboseTypeQuestion();
     verboseWarning();
+
+    // if (document == "/test/new") {
+    //     formModifications();
+    // }     // etc for each page to avoid console errors
 });
