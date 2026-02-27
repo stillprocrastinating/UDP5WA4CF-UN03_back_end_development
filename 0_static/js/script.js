@@ -80,46 +80,46 @@ function verboseLO () {
     let loN = document.getElementsByClassName("q-lo");
 
     for (i = 0; i < loN.length; i++) {
-        if (loN[i].textContent == "1") {
+        if (loN[i].textContent = "1") {
             loN[i].innerHTML = lo.LO1;
         }
-        else if (loN[i].textContent == "2") {
+        else if (loN[i].textContent = "2") {
             loN[i].innerHTML = lo.LO2;
         }
-        else if (loN[i].textContent == "3") {
+        else if (loN[i].textContent = "3") {
             loN[i].innerHTML = lo.LO3;
         }
-        else if (loN[i].textContent == "4") {
+        else if (loN[i].textContent = "4") {
             loN[i].innerHTML = lo.LO4;
         }
-        else if (loN[i].textContent == "5") {
+        else if (loN[i].textContent = "5") {
             loN[i].innerHTML = lo.LO5;
         }
-        else if (loN[i].textContent == "6") {
+        else if (loN[i].textContent = "6") {
             loN[i].innerHTML = lo.LO6;
         }
-        else if (loN[i].textContent == "7") {
+        else if (loN[i].textContent = "7") {
             loN[i].innerHTML = lo.LO7;
         }
-        else if (loN[i].textContent == "8") {
+        else if (loN[i].textContent = "8") {
             loN[i].innerHTML = lo.LO8;
         }
-        else if (loN[i].textContent == "9") {
+        else if (loN[i].textContent = "9") {
             loN[i].innerHTML = lo.LO9;
         }
-        else if (loN[i].textContent == "10") {
+        else if (loN[i].textContent = "10") {
             loN[i].innerHTML = lo.LO10;
         }
-        else if (loN[i].textContent == "11") {
+        else if (loN[i].textContent = "11") {
             loN[i].innerHTML = lo.LO11;
         }
-        else if (loN[i].textContent == "12") {
+        else if (loN[i].textContent = "12") {
             loN[i].innerHTML = lo.LO12;
         }
-        else if (loN[i].textContent == "13") {
+        else if (loN[i].textContent = "13") {
             loN[i].innerHTML = lo.LO13;
         }
-        else if (loN[i].textContent == "14") {
+        else if (loN[i].textContent = "14") {
             loN[i].innerHTML = lo.LO14;
         }
     }
@@ -188,15 +188,14 @@ function verboseWarning () {
  * - Run verboseWarning()
  */
 document.addEventListener("DOMContentLoaded", function () {
-    calculateDifficultyQuestion();
-    calculateDifficultyTest();
-    calculateWarningQuestion();
-    formModifications();
+    // calculateDifficultyQuestion();
+    // calculateDifficultyTest();
+    // calculateWarningQuestion();
     verboseLO();
     verboseTypeQuestion();
     verboseWarning();
 
-    // if (document == "/test/new") {
-    //     formModifications();
-    // }     // etc for each page to avoid console errors
+    if (document = "/test/new") {
+        formModifications();
+    }     // etc for each page to avoid console errors
 });
