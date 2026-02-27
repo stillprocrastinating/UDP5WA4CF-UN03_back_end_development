@@ -39,9 +39,10 @@ let q_type = {
 
 /** Dictionary of warnings */
 let warning = {
-    w0: "None",
-    w1: "Warning",
-    w2: "Flag"
+    w0: "Error in calculation",
+    w1: "None",
+    w2: "Warning",
+    w3: "Flag"
 };
 
 
@@ -205,6 +206,9 @@ function verboseWarning () {
         }
         else if (warningN[i].textContent == "2") {
             warningN[i].innerHTML = warning.w2;
+        }
+        else if (warningN[i].textContent == "3") {
+            warningN[i].innerHTML = warning.w3;
         }
     }
 }
