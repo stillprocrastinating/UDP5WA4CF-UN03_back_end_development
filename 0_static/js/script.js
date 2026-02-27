@@ -13,7 +13,7 @@ let lo = {
     LO11: "LO11",
     LO12: "LO12",
     LO13: "LO13",
-    LO14: "LO14",
+    LO14: "LO14"
 };
 
 
@@ -34,7 +34,7 @@ let q_type = {
     qt4: "Matching",
     qt5: "Missing word",
     qt6: "True/false"
-}
+};
 
 
 /** Dictionary of warnings */
