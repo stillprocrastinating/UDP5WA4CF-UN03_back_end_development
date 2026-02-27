@@ -17,6 +17,15 @@ let lo = {
 };
 
 
+/** Dictionary of test difficulties */
+let t_difficulty = {
+    td0: "Error in calculation",
+    td1: "Easy",
+    td2: "Optimal",
+    td3: "Difficult"
+};
+
+
 /** Dictionary of question types */
 let q_type = {
     qt1: "Diagram",
@@ -127,6 +136,30 @@ function verboseLO () {
 
 
 /**
+ * Changes the textContent of the T_DIFFICULTY from the table integer to a human-readable "verbose" string.
+ * @return {String} "Error in calculation / Easy / Optimal / Difficult"
+ */
+function verboseDifficultyTest () {
+    let N = document.getElementsByClassName("t-difficulty");
+
+    for (i = 0; i < N.length; i++) {
+        if (N[i].textContent == "0") {
+            N[i].innerHTML = t_difficulty.td0;
+        }
+        else if (N[i].textContent == "1") {
+            N[i].innerHTML = t_difficulty.td1;
+        }
+        else if (N[i].textContent == "2") {
+            N[i].innerHTML = t_difficulty.td2;
+        }
+        else if (N[i].textContent == "3") {
+            N[i].innerHTML = t_difficulty.td3;
+        }
+    }
+}
+
+
+/**
  * Changes the textContent of the Q_TYPE from the table integer to a human-readable "verbose" string.
  * @return {String} "[the question type]."
  */
@@ -192,6 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // calculateDifficultyTest();
     // calculateWarningQuestion();
     verboseLO();
+    verboseDifficultyTest();
     verboseTypeQuestion();
     verboseWarning();
 
