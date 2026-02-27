@@ -37,12 +37,12 @@ Each stated ratio is the contrast ratio between the background and font colours 
 | :heavy_check_mark: | --color-dark | --color-secondary | 9 : 1 | pass | pass | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=2F1C48&bcolor=38D8FF) |
 | :heavy_multiplication_x: | --color-white | --color-secondary | 1.68 : 1 | fail | fail | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=38D8FF) |
 | :heavy_check_mark: | --color-black | --color-secondary | 12.43 : 1 | pass | pass | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=38D8FF) |
-| :heavy_minus_sign: | --color-primary | --color-background | 3.3 : 1 | fail | fail | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=983BFE&bcolor=DBD4E0) |
-| :heavy_multiplication_x: | --color-secondary | --color-background | 1.16 : 1 | fail | fail | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=38D8FF&bcolor=DBD4E0) |
-| :heavy_multiplication_x: | --color-light | --color-background | 2.61 : 1 | fail | fail | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=9876B0&bcolor=DBD4E0) |
-| :heavy_check_mark: | --color-dark | --color-background | 10.5 : 1 | pass | pass | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=2F1C48&bcolor=DBD4E0) |
-| :heavy_multiplication_x: | --color-white | --color-background | 1.44 : 1 | fail | fail | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=DBD4E0) |
-| :heavy_check_mark: | --color-black | --color-background | 14.5 : 1 | pass | pass | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=DBD4E0) |
+| :heavy_minus_sign: | --color-primary | --color-background | 3.72 : 1 | fail | fail | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=9A3AFF&bcolor=EFDDFF) |
+| :heavy_multiplication_x: | --color-secondary | --color-background | 1.32 : 1 | fail | fail | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=38D8FF&bcolor=EFDDFF) |
+| :heavy_multiplication_x: | --color-light | --color-background | 2.96 : 1 | fail | fail | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=9876B0&bcolor=EFDDFF) |
+| :heavy_check_mark: | --color-dark | --color-background | 11.92 : 1 | pass | pass | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=2F1C48&bcolor=EFDDFF) |
+| :heavy_multiplication_x: | --color-white | --color-background | 1.27 : 1 | fail | fail | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=EFDDFF) |
+| :heavy_check_mark: | --color-black | --color-background | 16.45 : 1 | pass | pass | [Permalink](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=EFDDFF) |
 
 
 # Auditory accessibility
