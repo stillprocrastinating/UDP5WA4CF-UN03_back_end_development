@@ -39,9 +39,9 @@ let q_type = {
 
 /** Dictionary of warnings */
 let warning = {
-    w1: "None",
-    w2: "Warning",
-    w3: "Flag"
+    w0: "None",
+    w1: "Warning",
+    w2: "Flag"
 };
 
 
