@@ -11,7 +11,7 @@
 <form method="post" id="testForm" class="form">
     {{ test_new | crispy }}
     {% csrf_token %}
-    <button type="submit" id="testSubmit" class="button">Submit</button>
+    <button type="submit" id="testSubmit" class="button mb-3">Submit</button>
 </form>
 
 {% endblock test_new %}
