@@ -54,6 +54,10 @@
     --font-bi: 'UCLSans-BoldItalic', sans-serif;*/
 }
 
+*:focus-visible {
+    outline: auto 1px var(--color-secondary);
+}
+
 
 /* align */
 
