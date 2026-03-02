@@ -280,6 +280,7 @@ a:hover {
     color: var(--color-white);
     font-size: large;
     padding: 10px;
+    cursor: pointer;
 }
 
 .button:hover {
