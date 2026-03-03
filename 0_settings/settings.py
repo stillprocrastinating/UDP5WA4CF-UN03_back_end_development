@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'question',
-    'test'
+    'test',
+    'answer'
 ]
 
 SITE_ID = 1
