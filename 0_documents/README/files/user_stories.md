@@ -13,6 +13,6 @@
 |-|-|-|
 | :ballot_box_with_check: | 1.1 | Build a `Question()` class to model CRUD functions for admins. |
 | :ballot_box_with_check: | 2.1 | Build a `Test()` class to model CRUD functions. |
-| :white_square_button: | 2.2 | Utilise `django.allauth` to manage login capabilities for `Test()`. |
+| :ballot_box_with_check: | 2.2 | Utilise `django.allauth` to manage login capabilities for `Test()`. |
 | :white_square_button: | 3.1 | Build an `Answer()` class to model CRUD functions. |
 | :white_square_button: | 3.2 | Utilise `django.allauth` to manage login capabilities for `Answer()`. |

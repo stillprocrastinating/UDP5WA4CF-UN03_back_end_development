@@ -14,3 +14,6 @@ class TestNew(forms.ModelForm):
     class Meta:
         model = Test
         fields = ('id', 'date', 'type', 'participant_number',)
+
+    def __str__(self):
+        return Question.question

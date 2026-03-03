@@ -6,10 +6,11 @@
 |Key|Name|Type|
 |-|-|-|
 |PrimaryKey|id|CharField(20)|
+|Slug|slug|AutoSlugField()|
 ||learning_objective|IntegerField(choices)|
 ||type|IntegerField(choices)|
 ||number|IntegerField()|
-|TBC|question|TextField()|
+||question|TextField()|
 |TBC|image|CloudinaryField('image')|
 ||sub_number|IntegerField()|
 ||sub_answer_number_individual|IntegerField()|
@@ -24,28 +25,34 @@
 |Key|Name|Type|
 |-|-|-|
 |PrimaryKey|id|CharField(20)|
-||date|DateTimeField()|
+|Slug|slug|AutoSlugField()|
+||date|DateField()|
 ||type|IntegerField(choices)|
 ||participant_number|IntegerField()|
 |ForeignKey|tester|User, related_name="tester"|
 ||difficulty|IntegerField(choices)|
+|ForeignKey(ManyToMany)|t_questions|Question|
 
 
 ## Answers
 
 |Key|Name|Type|
 |-|-|-|
+|PrimaryKey|id|PrimaryKey()|
 |ForeignKey|question_id|Question, related_name="question_answers"|
-|ForeignKey|test_id|Test, related_name="test_amswers"|
+|ForeignKey|test_id|Test, related_name="test_answers"|
 ||option|IntegerField()|
 ||correct_option_frequency|IntegerField()|
 ||incorrect_option_frequency|IntegerField()|
 |ForeignKey|tester|User, related_name="tester"|
 
 ---
+---
+
+# Initial plans
 
 
-### Entity relationship diagram
+## Entity relationship diagram
 
 Master table columns:
 - question_type
@@ -60,7 +67,7 @@ Master table columns:
 - [calculation] incorrect_choice_percentage
 
 
-#### Tables
+### Tables
 
 questions
 - id
@@ -97,20 +104,20 @@ answers
 - [calculation] flag
 
 
-### URL patterns
+## URL patterns
 
 1. include('questions.urls')
 1. include('tests.urls')
 1. admin.site.urls
 
 
-#### questions/urls.py
+### questions/urls.py
 
 1. views.QuestionList.as_view()
 1. views.AnswerList.as_view()     // dependent on structural availability
 
 
-#### tests/urls.py
+### tests/urls.py
 
 1. views.TestList.as_view()
 1. views.FlagList.as_view()     // dependent on structural availability & CTE functionality
