@@ -38,7 +38,7 @@
 
 |Key|Name|Type|
 |-|-|-|
-|PrimaryKey|id|PrimaryKey()|
+|PrimaryKey|id|AutoField()|
 |ForeignKey|question_id|Question, related_name="question_answers"|
 |ForeignKey|test_id|Test, related_name="test_answers"|
 ||option|IntegerField()|
