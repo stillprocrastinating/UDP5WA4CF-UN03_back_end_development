@@ -4,6 +4,14 @@ from question.models import Question
 from test.models import Test
 
 
+TEACHING_WARNING = (
+    (0, "Error in calculation"),
+    (1, "None"),
+    (2, "Warning"),
+    (3, "Flagged to revise teaching method")
+)
+
+
 class Answer(models.Model):
     """
     Stores each answer
@@ -33,7 +41,7 @@ class Answer(models.Model):
     correct_option_frequency = models.IntegerField()
     incorrect_option_frequency = models.IntegerField()
     tester = models.ForeignKey(User, on_delete=models.SET(str(User.username)))
-    # implement warning for individual tester
+    teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
 
     class Meta:
         ordering = ["date"]
