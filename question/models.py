@@ -48,7 +48,7 @@ WARNING = (
     (0, "Error in calculation"),
     (1, "None"),
     (2, "Warning"),
-    (3, "Flag")
+    (3, "Flagged to revise question wording")
 )
 
 
