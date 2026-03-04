@@ -19,13 +19,15 @@ class Answer(models.Model):
             "sub_answer_number_individual"
             "sub_correct_answer_individual"
         ],
-        related_name="question_answers"
+        related_name="question_answers",
+        on_delete=models.SET(str(Question.question))
     )
     test_id = models.ForeignObject(
         to=Test,
         from_fields=["id"],
         to_fields=["participant_number"],
-        related_name="test_answers"
+        related_name="test_answers",
+        on_delete=models.SET(str(Test.id))
     )
     option = models.IntegerField()
     correct_option_frequency = models.IntegerField()
