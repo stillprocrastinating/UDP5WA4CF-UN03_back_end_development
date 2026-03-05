@@ -91,4 +91,4 @@ class Question(models.Model):
         #filtering = ["lo", "type", "author", "warning"]
 
     def __str__(self):
-        return self.id
+        return self.question

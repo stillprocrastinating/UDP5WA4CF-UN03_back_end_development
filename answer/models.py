@@ -18,33 +18,24 @@ class Answer(models.Model):
     """
 
     id = models.AutoField(primary_key=True)
-    question_id = models.ForeignObject(
+    question_id = models.ForeignKey(
         to=Question,
-        from_fields=["id"],
-        to_fields=[
-            "question",
-            "sub_answer",
-            "sub_answer_number_individual"
-            "sub_correct_answer_individual"
-        ],
         related_name="question_answers",
         on_delete=models.SET(str(Question.question))
     )
-    test_id = models.ForeignObject(
+    test_id = models.ForeignKey(
         to=Test,
-        from_fields=["id"],
-        to_fields=["participant_number"],
         related_name="test_answers",
         on_delete=models.SET(str(Test.id))
     )
-    option = models.IntegerField()
+    # option = models.IntegerField()
     correct_option_frequency = models.IntegerField()
     incorrect_option_frequency = models.IntegerField()
     tester = models.ForeignKey(User, on_delete=models.SET(str(User.username)))
     teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
 
     class Meta:
-        ordering = ["date"]
+        ordering = ["question_id"]
 
     def __str__(self):
         return self.id

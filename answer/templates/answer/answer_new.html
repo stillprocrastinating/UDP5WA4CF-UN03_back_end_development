@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block answer_new %}
+
+<section class="flex-header">
+    <h1>New answer</h1>
+    <a class="button header-button" href="{% url 'answers' %}">Cancel</a>
+</section>
+<form method="post" id="answerForm" class="form">
+    {{ answer_new | crispy }}
+    {% csrf_token %}
+    <button type="submit" id="answerSubmit" class="button mb-3">Submit</button>
+</form>
+
+{% endblock answer_new %}
