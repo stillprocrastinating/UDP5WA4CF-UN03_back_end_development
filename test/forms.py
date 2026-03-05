@@ -1,5 +1,5 @@
 from django import forms
-from .models import Test, Question
+from .models import Question, Test
 
 
 class TestNew(forms.ModelForm):
