@@ -242,6 +242,23 @@
     padding: 10px;
 }
 
+.flex-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flex-accommodate {
+    flex-shrink: 9;
+    order: 1;
+}
+
+.flex-stubborn {
+    flex: 2 1 100%;
+    order: 3;
+    justify-self: left;
+}
+
 
 /* font */
 
@@ -466,6 +483,17 @@ input {
 /*  |||  |     ||||  |||   |||   | | |  |||
 /*     | |     | |   |     |     |  ||     |
 /*  |||   |||| |  || ||||| ||||| |   |  |||  */
+
+@media screen and (max-width: 768px) {
+    .flex-accommodate,
+    .flex-stubborn {
+        order: initial;
+    }
+    
+    .font-medium {
+        font-size: medium;
+    }
+}
 
 @media screen and (max-width: 992px) {
     .navbar {
