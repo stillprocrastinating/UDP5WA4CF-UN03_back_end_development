@@ -20,7 +20,8 @@
     <li class="q-answer">{{ question.answer5 }}</li>
 </ol>
 
-{% block answer_summary %}
-{% endblock answer_summary %}
+<section class="answer-section">
+    {{ answer.question_answers }}
+</section>
 
 {% endblock question_detail %}
