@@ -68,6 +68,17 @@ function calculateWarningQuestion () {}
 
 
 /**
+ * Calculates the WARNING of the Test from the calculateWarningQuestion() of the Questions.
+ * @return {Integer} "1 / 2 / 3"
+ */
+function calculateWarningTestQuestions () {
+    let warningN = document.getElementsByClassName("q-warning q-warnings");
+
+    verboseWarning();
+}
+
+
+/**
  * Edit the TestForm() form attributes.
  */
 function formModifications () {
@@ -219,6 +230,7 @@ function verboseWarning () {
  * - Run calculateDifficultyQuestion()
  * - Run calculateDifficultyTest()
  * - Run calculateWarningQuestion()
+ * - Run calculateWarningTestQuestions()
  * - Run formModifications()
  * - Run verboseLO()
  * - Run verboseTypeQuestion()
@@ -228,6 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
     // calculateWarningQuestion();
+    // calculateWarningTestQuestions();
     verboseLO();
     verboseDifficultyTest();
     verboseTypeQuestion();
