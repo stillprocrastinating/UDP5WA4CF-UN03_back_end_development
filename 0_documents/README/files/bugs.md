@@ -10,4 +10,3 @@
 | 8 | 2026-02-14 | _style.css_ `.q-link:hover{}` doesn't function | 2026-02-16 | _style.css_ `h2{display:inline-block;}` | [main 7f1e513] BUGFIX .q-link:hover{} ||
 
 test.warnings
-q-lo
