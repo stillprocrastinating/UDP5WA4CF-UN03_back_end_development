@@ -17,6 +17,17 @@ let lo = {
 };
 
 
+/** Dictionary of question types */
+let q_type = {
+    qt1: "Diagram",
+    qt2: "Drag & drop",
+    qt3: "Multiple choice",
+    qt4: "Matching",
+    qt5: "Missing word",
+    qt6: "True/false"
+};
+
+
 /** Dictionary of test difficulties */
 let t_difficulty = {
     td0: "Error in calculation",
@@ -26,14 +37,11 @@ let t_difficulty = {
 };
 
 
-/** Dictionary of question types */
-let q_type = {
-    qt1: "Diagram",
-    qt2: "Drag & drop",
-    qt3: "Multiple choice",
-    qt4: "Matching",
-    qt5: "Missing word",
-    qt6: "True/false"
+/** Dictionary of test types */
+let t_type = {
+    tt1: "Test",
+    tt2: "Resit",
+    tt3: "AB"
 };
 
 
@@ -176,26 +184,47 @@ function verboseDifficultyTest () {
  * @return {String} "[the question type]."
  */
 function verboseTypeQuestion () {
-    let loN = document.getElementsByClassName("q-type");
+    let testN = document.getElementsByClassName("q-type");
 
-    for (i = 0; i < loN.length; i++) {
-        if (loN[i].textContent == "1") {
-            loN[i].innerHTML = q_type.qt1;
+    for (i = 0; i < testN.length; i++) {
+        if (testN[i].textContent == "1") {
+            testN[i].innerHTML = q_type.qt1;
         }
-        else if (loN[i].textContent == "2") {
-            loN[i].innerHTML = q_type.qt2;
+        else if (testN[i].textContent == "2") {
+            testN[i].innerHTML = q_type.qt2;
         }
-        else if (loN[i].textContent == "3") {
-            loN[i].innerHTML = q_type.qt3;
+        else if (testN[i].textContent == "3") {
+            testN[i].innerHTML = q_type.qt3;
         }
-        else if (loN[i].textContent == "4") {
-            loN[i].innerHTML = q_type.qt4;
+        else if (testN[i].textContent == "4") {
+            testN[i].innerHTML = q_type.qt4;
         }
-        else if (loN[i].textContent == "5") {
-            loN[i].innerHTML = q_type.qt5;
+        else if (testN[i].textContent == "5") {
+            testN[i].innerHTML = q_type.qt5;
         }
-        else if (loN[i].textContent == "6") {
-            loN[i].innerHTML = q_type.qt6;
+        else if (testN[i].textContent == "6") {
+            testN[i].innerHTML = q_type.qt6;
+        }
+    }
+}
+
+
+/**
+ * Changes the textContent of the T_TYPE from the table integer to a human-readable "verbose" string.
+ * @return {String} "[the test type]."
+ */
+function verboseTypeTest () {
+    let testN = document.getElementsByClassName("t-type");
+
+    for (i = 0; i < testN.length; i++) {
+        if (testN[i].textContent == "0") {
+            testN[i].innerHTML = t_type.tt1;
+        }
+        else if (testN[i].textContent == "1") {
+            testN[i].innerHTML = t_type.tt2;
+        }
+        else if (testN[i].textContent == "2") {
+            testN[i].innerHTML = t_type.tt3;
         }
     }
 }
@@ -234,6 +263,7 @@ function verboseWarning () {
  * - Run formModifications()
  * - Run verboseLO()
  * - Run verboseTypeQuestion()
+ * - Run verboseTypeTest()
  * - Run verboseWarning()
  */
 document.addEventListener("DOMContentLoaded", function () {
@@ -244,6 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
     verboseLO();
     verboseDifficultyTest();
     verboseTypeQuestion();
+    verboseTypeTest();
     verboseWarning();
 
     if (document = "/test/new") {
