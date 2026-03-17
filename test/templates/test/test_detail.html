@@ -17,7 +17,8 @@
 </section>
 
 <section class="answer-section">
-    {{ answer.test_answers }}
+    {% block test_answer_detail %}
+    {% endblock test_answer_detail %}
 </section>
 
 {% endblock test_detail %}

@@ -1,7 +1,29 @@
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .forms import AnswerNew
-from .models import Answer
+from .models import Answer, Question, Test
+
+
+def answer_detail(request, slug):
+    """
+    Display all :model:`question.Question` per individual :model:`test.Test`.
+
+    :param request: The requested test.
+    :param slug: The identification (slug) of the request.
+    """
+
+    queryset = Answer.objects.filter(Test.t_questions)
+    answers = get_object_or_404(queryset, slug=slug)
+
+    context = {
+        "answers": answers
+    }
+
+    return render(
+        request,
+        "answer/answer_detail.html",
+        context
+    )
 
 
 def answer_new(request):

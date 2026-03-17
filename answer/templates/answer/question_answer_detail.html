@@ -1,0 +1,8 @@
+{% extends 'question/question_detail.html' %}
+{% load static %}
+{% block question_answer_detail %}
+
+<p>Number of participants: {{ test.participant_number }}</p>
+<div class="answers-list"></div>
+
+{% endblock question_answer_detail %}

@@ -21,7 +21,8 @@
 </ol>
 
 <section class="answer-section">
-    {{ answer.question_answers }}
+    {% block question_answer_detail %}
+    {% endblock question_answer_detail %}
 </section>
 
 {% endblock question_detail %}
