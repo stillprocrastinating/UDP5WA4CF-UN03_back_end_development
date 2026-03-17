@@ -16,7 +16,9 @@ def answer_detail(request, slug):
     answers = get_object_or_404(queryset, slug=slug)
 
     context = {
-        "answers": answers
+        "answers": answers,
+        "test": answers.test,
+        "question": answers.question,
     }
 
     return render(
