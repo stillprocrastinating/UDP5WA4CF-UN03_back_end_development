@@ -8,12 +8,16 @@
     <p>Examined by {{ test.tester }}</p>
 </section>
 <p class="center t-meta"><span class="t-date">{{ test.date }}</span></p>
-<p class="center t-difficulty">Test difficulty: {{ test.t_difficulty }}</p>
-<p class="center t-warning">Question warnings: {{ test.warnings }}</p>
+<p class="center">Test difficulty: <span class="t-difficulty">{{ test.t_difficulty }}</span></p>
+<p class="center">Question warnings: <span class="q-warning q-warnings">0</span></p>
 <section class="t-questions">
     <h2 class="t-question-id">{{ question.id }}</h2>
     <p class="t-question">{{ question.question }}</p>
     <p class="t-answer">{{ test.answer_success }}</p>
+</section>
+
+<section class="answer-section">
+    {{ answer.test_answers }}
 </section>
 
 {% endblock test_detail %}

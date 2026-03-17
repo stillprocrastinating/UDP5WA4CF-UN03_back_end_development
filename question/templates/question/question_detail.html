@@ -9,8 +9,8 @@
     <p class="flex-accommodate margin-0">Created by {{ question.author }}</p>
 </section>
 <p class="center q-meta"><span class="q-type">{{ question.type }}</span> #{{ question.number }}</p>
-<p class="center q-difficulty">Question difficulty: {{ question.q_difficulty }}</p>
-<p class="center q-warning">Question warning: {{ question.warning }}</p>     <!-- Create modal -->
+<p class="center">Question difficulty: <span class="q-difficulty">{{ question.q_difficulty }}</span></p>
+<p class="center">Question warning: <span class="q-warning">{{ question.warning }}</span></p>     <!-- Create modal -->
 <h2 class="q-question">{{ question.question }}</h2>
 <ol class="q-answers">
     <li class="q-answer">{{ question.answer1 }}</li>
@@ -19,5 +19,9 @@
     <li class="q-answer">{{ question.answer4 }}</li>
     <li class="q-answer">{{ question.answer5 }}</li>
 </ol>
+
+<section class="answer-section">
+    {{ answer.question_answers }}
+</section>
 
 {% endblock question_detail %}

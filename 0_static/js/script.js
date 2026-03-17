@@ -17,6 +17,26 @@ let lo = {
 };
 
 
+/** Dictionary of question types */
+let q_type = {
+    qt1: "Diagram",
+    qt2: "Drag & drop",
+    qt3: "Multiple choice",
+    qt4: "Matching",
+    qt5: "Missing word",
+    qt6: "True/false"
+};
+
+
+/** Dictionary of test difficulties */
+let q_difficulty = {
+    qd0: "Error in calculation",
+    qd1: "Easy",
+    qd2: "Optimal",
+    qd3: "Difficult"
+};
+
+
 /** Dictionary of test difficulties */
 let t_difficulty = {
     td0: "Error in calculation",
@@ -26,14 +46,11 @@ let t_difficulty = {
 };
 
 
-/** Dictionary of question types */
-let q_type = {
-    qt1: "Diagram",
-    qt2: "Drag & drop",
-    qt3: "Multiple choice",
-    qt4: "Matching",
-    qt5: "Missing word",
-    qt6: "True/false"
+/** Dictionary of test types */
+let t_type = {
+    tt1: "Test",
+    tt2: "Resit",
+    tt3: "AB"
 };
 
 
@@ -68,6 +85,17 @@ function calculateWarningQuestion () {}
 
 
 /**
+ * Calculates the WARNING of the Test from the calculateWarningQuestion() of the Questions.
+ * @return {Integer} "1 / 2 / 3"
+ */
+function calculateWarningTestQuestions () {
+    let warningN = document.getElementsByClassName("q-warning q-warnings");
+
+    verboseWarning();
+}
+
+
+/**
  * Edit the TestForm() form attributes.
  */
 function formModifications () {
@@ -90,47 +118,71 @@ function verboseLO () {
     let loN = document.getElementsByClassName("q-lo");
 
     for (i = 0; i < loN.length; i++) {
-        if (loN[i].textContent = "1") {
+        if (loN[i].textContent == "1") {
             loN[i].innerHTML = lo.LO1;
         }
-        else if (loN[i].textContent = "2") {
+        else if (loN[i].textContent == "2") {
             loN[i].innerHTML = lo.LO2;
         }
-        else if (loN[i].textContent = "3") {
+        else if (loN[i].textContent == "3") {
             loN[i].innerHTML = lo.LO3;
         }
-        else if (loN[i].textContent = "4") {
+        else if (loN[i].textContent == "4") {
             loN[i].innerHTML = lo.LO4;
         }
-        else if (loN[i].textContent = "5") {
+        else if (loN[i].textContent == "5") {
             loN[i].innerHTML = lo.LO5;
         }
-        else if (loN[i].textContent = "6") {
+        else if (loN[i].textContent == "6") {
             loN[i].innerHTML = lo.LO6;
         }
-        else if (loN[i].textContent = "7") {
+        else if (loN[i].textContent == "7") {
             loN[i].innerHTML = lo.LO7;
         }
-        else if (loN[i].textContent = "8") {
+        else if (loN[i].textContent == "8") {
             loN[i].innerHTML = lo.LO8;
         }
-        else if (loN[i].textContent = "9") {
+        else if (loN[i].textContent == "9") {
             loN[i].innerHTML = lo.LO9;
         }
-        else if (loN[i].textContent = "10") {
+        else if (loN[i].textContent == "10") {
             loN[i].innerHTML = lo.LO10;
         }
-        else if (loN[i].textContent = "11") {
+        else if (loN[i].textContent == "11") {
             loN[i].innerHTML = lo.LO11;
         }
-        else if (loN[i].textContent = "12") {
+        else if (loN[i].textContent == "12") {
             loN[i].innerHTML = lo.LO12;
         }
-        else if (loN[i].textContent = "13") {
+        else if (loN[i].textContent == "13") {
             loN[i].innerHTML = lo.LO13;
         }
-        else if (loN[i].textContent = "14") {
+        else if (loN[i].textContent == "14") {
             loN[i].innerHTML = lo.LO14;
+        }
+    }
+}
+
+
+/**
+ * Changes the textContent of the T_DIFFICULTY from the table integer to a human-readable "verbose" string.
+ * @return {String} "Error in calculation / Easy / Optimal / Difficult"
+ */
+function verboseDifficultyQuestion () {
+    let N = document.getElementsByClassName("q-difficulty");
+
+    for (i = 0; i < N.length; i++) {
+        if (N[i].textContent == "0") {
+            N[i].innerHTML = q_difficulty.qd0;
+        }
+        else if (N[i].textContent == "1") {
+            N[i].innerHTML = q_difficulty.qd1;
+        }
+        else if (N[i].textContent == "2") {
+            N[i].innerHTML = q_difficulty.qd2;
+        }
+        else if (N[i].textContent == "3") {
+            N[i].innerHTML = q_difficulty.qd3;
         }
     }
 }
@@ -165,26 +217,47 @@ function verboseDifficultyTest () {
  * @return {String} "[the question type]."
  */
 function verboseTypeQuestion () {
-    let loN = document.getElementsByClassName("q-type");
+    let testN = document.getElementsByClassName("q-type");
 
-    for (i = 0; i < loN.length; i++) {
-        if (loN[i].textContent == "1") {
-            loN[i].innerHTML = q_type.qt1;
+    for (i = 0; i < testN.length; i++) {
+        if (testN[i].textContent == "1") {
+            testN[i].innerHTML = q_type.qt1;
         }
-        else if (loN[i].textContent == "2") {
-            loN[i].innerHTML = q_type.qt2;
+        else if (testN[i].textContent == "2") {
+            testN[i].innerHTML = q_type.qt2;
         }
-        else if (loN[i].textContent == "3") {
-            loN[i].innerHTML = q_type.qt3;
+        else if (testN[i].textContent == "3") {
+            testN[i].innerHTML = q_type.qt3;
         }
-        else if (loN[i].textContent == "4") {
-            loN[i].innerHTML = q_type.qt4;
+        else if (testN[i].textContent == "4") {
+            testN[i].innerHTML = q_type.qt4;
         }
-        else if (loN[i].textContent == "5") {
-            loN[i].innerHTML = q_type.qt5;
+        else if (testN[i].textContent == "5") {
+            testN[i].innerHTML = q_type.qt5;
         }
-        else if (loN[i].textContent == "6") {
-            loN[i].innerHTML = q_type.qt6;
+        else if (testN[i].textContent == "6") {
+            testN[i].innerHTML = q_type.qt6;
+        }
+    }
+}
+
+
+/**
+ * Changes the textContent of the T_TYPE from the table integer to a human-readable "verbose" string.
+ * @return {String} "[the test type]."
+ */
+function verboseTypeTest () {
+    let testN = document.getElementsByClassName("t-type");
+
+    for (i = 0; i < testN.length; i++) {
+        if (testN[i].textContent == "0") {
+            testN[i].innerHTML = t_type.tt1;
+        }
+        else if (testN[i].textContent == "1") {
+            testN[i].innerHTML = t_type.tt2;
+        }
+        else if (testN[i].textContent == "2") {
+            testN[i].innerHTML = t_type.tt3;
         }
     }
 }
@@ -219,18 +292,25 @@ function verboseWarning () {
  * - Run calculateDifficultyQuestion()
  * - Run calculateDifficultyTest()
  * - Run calculateWarningQuestion()
+ * - Run calculateWarningTestQuestions()
  * - Run formModifications()
  * - Run verboseLO()
+ * - Run verboseDifficultyQuestion()
+ * - Run verboseDifficultyTest()
  * - Run verboseTypeQuestion()
+ * - Run verboseTypeTest()
  * - Run verboseWarning()
  */
 document.addEventListener("DOMContentLoaded", function () {
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
     // calculateWarningQuestion();
+    // calculateWarningTestQuestions();
     verboseLO();
+    verboseDifficultyQuestion();
     verboseDifficultyTest();
     verboseTypeQuestion();
+    verboseTypeTest();
     verboseWarning();
 
     if (document = "/test/new") {
