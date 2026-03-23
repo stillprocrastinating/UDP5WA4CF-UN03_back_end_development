@@ -4,7 +4,7 @@ from .forms import AnswerNew
 from .models import Answer, Question, Test
 
 
-def answer_detail(request, slug):
+def answer_detail_test(request, slug):
     """
     Display all :model:`question.Question` per individual :model:`test.Test`.
 
