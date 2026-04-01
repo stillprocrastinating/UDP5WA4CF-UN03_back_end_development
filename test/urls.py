@@ -7,3 +7,4 @@ urlpatterns = [
     path('<slug:slug>/', views.test_detail, name='test_detail'),
     path('', views.TestList.as_view(), name='tests'),
 ]
+# tests
