@@ -38,7 +38,7 @@ class Answer(models.Model):
     teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
 
     class Meta:
-        ordering = ["question_id"]
+        ordering = ["question"]
 
     def __str__(self):
         return str(self.id)

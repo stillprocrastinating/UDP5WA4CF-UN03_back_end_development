@@ -1,5 +1,5 @@
 from django import forms
-from .models import Answer, Question, Test
+from .models import Answer
 
 
 class AnswerNew(forms.ModelForm):
@@ -14,7 +14,4 @@ class AnswerNew(forms.ModelForm):
     class Meta:
         model = Answer
         # fields = ('question_id', 'test_id', 'option', 'correct_option_frequency', 'incorrect_option_frequency')
-        fields = ('id',)
-
-    def __str__(self):
-        return Answer.correct_option_frequency
+        fields = ('test', 'question', 'answer1', 'answer2', 'answer3','answer4', 'answer5', 'tester', 'teaching_warning',)

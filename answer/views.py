@@ -1,7 +1,8 @@
 from django.contrib import messages
-from django.shortcuts import get_object_or_404, render
+from django.http import Http404
+from django.shortcuts import render
 from .forms import AnswerNew
-from .models import Answer, Question, Test
+from .models import Answer
 
 
 def answer_detail_test(request, slug):
@@ -12,18 +13,18 @@ def answer_detail_test(request, slug):
     :param slug: The identification (slug) of the request.
     """
 
-    queryset = Answer.objects.filter(test__slug=slug)
-    answers = get_object_or_404(queryset, slug=slug)
+    answers = Answer.objects.filter(test__slug=slug)
+    if not answers.exists():
+        raise Http404
 
     context = {
         "answers": answers,
-        "test": answers.test,
-        "question": answers.question,
+        "test": answers.first().test,
     }
 
     return render(
         request,
-        "answer/answer_detail.html",
+        "answer/test_answer_detail.html",
         context
     )
 
