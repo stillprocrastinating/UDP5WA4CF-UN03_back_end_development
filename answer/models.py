@@ -15,12 +15,13 @@ TEACHING_WARNING = (
 class Answer(models.Model):
     """
     Stores each answer
+
+    ToDo
+    Add inputs and outputs (all docstrings)
     """
 
-    id = models.AutoField(primary_key=True)
-    question_id = models.ForeignKey(Question, related_name="question_answers", on_delete=models.SET(str(Question.question)))
-    test_id = models.ForeignKey(Test, related_name="test_answers", on_delete=models.SET(str(Test.id)))
-    participants = Test.participant_number
+    question = models.ForeignKey(Question, related_name="question_answers", on_delete=models.CASCADE)
+    test = models.ForeignKey(Test, related_name="test_answers", on_delete=models.CASCADE)
     # option = models.IntegerField()
     answer1 = models.IntegerField(default=0)
     answer2 = models.IntegerField(default=0)
@@ -32,13 +33,20 @@ class Answer(models.Model):
     # answer3_percentage = models.Expression(answer3 / participants)
     # answer4_percentage = models.Expression(answer4 / participants)
     # answer5_percentage = models.Expression(answer5 / participants)
-    correct = Question.sub_correct_answer_individual
     # # Create a warning identifier using the highest percentage answer
-    tester = models.ForeignKey(User, on_delete=models.SET(str(User.username)))
+    tester = models.ForeignKey(User, on_delete=models.CASCADE)
     teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
 
     class Meta:
         ordering = ["question_id"]
 
     def __str__(self):
-        return self.id
+        return str(self.id)
+    
+    @property
+    def participants(self):
+        return self.test.participant_number
+
+    @property
+    def correct(self):
+        return self.question.sub_correct_answer_individual
