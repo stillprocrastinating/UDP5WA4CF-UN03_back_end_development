@@ -12,7 +12,7 @@ def answer_detail_test(request, slug):
     :param slug: The identification (slug) of the request.
     """
 
-    queryset = Answer.objects.filter(Test.t_questions)
+    queryset = Answer.objects.filter(test__slug=slug)
     answers = get_object_or_404(queryset, slug=slug)
 
     context = {
