@@ -239,7 +239,7 @@
     max-height: 10vh;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding-bottom: 5px;
 }
 
 .flex-section {
@@ -386,6 +386,8 @@ input {
 .footer-item {
     height: 100px;
     max-height: 95%;
+    padding: 5px;
+    box-sizing: border-box;
 }
 
 .footer-link {
@@ -399,6 +401,11 @@ input {
     color: var(--color-secondary);
     background-color: var(--color-transparent);
     border-radius: 0%;
+}
+
+#footer-ucl {
+    max-height: 100%;
+    padding: 0px;
 }
 
 
