@@ -16,7 +16,14 @@
     <p class="t-answer">{{ test.answer_success }}</p>
 </section>
 
+<hr class="hr">
+
 <section class="answer-section">
+    <section class="flex-section">
+        <h2 class="h2">Answers list</h3>
+        <a href="{% url 'answer_new' %}" class="button header-button">New</a>
+    </section>
+
     {% block test_answer_detail %}
         <p>No answers recorded for this test.</p>
     {% endblock test_answer_detail %}
