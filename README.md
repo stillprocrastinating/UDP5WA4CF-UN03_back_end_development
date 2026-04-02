@@ -107,7 +107,7 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 
 ## Credits
 
-[UCL brand resources](https://www.ucl.ac.uk/brand-and-experience/brand/brand-resources)
+[UCL brand resources](https://www.ucl.ac.uk/brand-and-experience/brand/brand-resources) directly influenced my colour theme, [Favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/favicon/favicon.svg), and footer image [banner](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/base/ucl200_stretch_banner_3000x2280mm_original.jpg).
 
 
 ### How to...
