@@ -154,16 +154,16 @@ UPDATE with only used colours & list `aria-label`s in accessibility.md
 ### Images
 _Files can be found under `0_static/images/base`._
 
-The original [zebrafish image](https://www.istockphoto.com/vector/zebrafish-gm479692688-68004101) was designed by [designdunja](https://www.istockphoto.com/portfolio/designdunja?mediatype=illustration) and sourced from [iStock by Getty Images](https://www.istockphoto.com). The image indicates that a subject of the PiL course tests are zebrafish.
+The original [zebrafish image](https://www.istockphoto.com/vector/zebrafish-gm479692688-68004101) was designed by [designdunja](https://www.istockphoto.com/portfolio/designdunja?mediatype=illustration) and sourced from [iStock by Getty Images](https://www.istockphoto.com). The image indicates that a subject of the PiL course tests is zebrafish. I edited the image to remove the background so that it looked more aesthetic in my header.
 
-The [UCL social icon](https://imagestore.ucl.ac.uk/imagestore/pcache/10034/0e/l_icon_square_1080x1080px_e51db.jpg) was sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7). The icon indicates that I am affiliated with University College London.
+The original [UCL stretch banner](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates/UCL200/UCL200%20Stretch%20Banners?fc=browse&column=7&listview=overview&view=preview&fileid=1&fuid=UCL200%20Stretch%20banner%203000x2280mm_02.pdf) was sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7). The banner indicates that I am affiliated with University College London. I edited the image to replace the background colour with `--color-dark: #2f1c48` to match the colour of the footer.
 
 The [REAL Rating](https://www.realgoodai.org/real-rating) 1 - Automation image was sourced from [REAL Good AI](https://www.realgoodai.org). The Reported Engagement with AI Level (REAL) rating indicates that my pages were assisted by Artificial Intelligence (AI) automation (for example, automatic completion of standard code), but no idea-generation or copy-pasting from a generative AI was used (there are other ratings to indicate as such).
 
 
 #### Favicon
 
-The favicon was generated from the [UCL social icon](https://imagestore.ucl.ac.uk/imagestore/pcache/10034/0e/l_icon_square_1080x1080px_e51db.jpg) using [RealFaviconGenerator](https://realfavicongenerator.net).  
+The favicon was generated from the [UCL social icon](https://imagestore.ucl.ac.uk/imagestore/pcache/10034/0e/l_icon_square_1080x1080px_e51db.jpg) (sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7)) using [RealFaviconGenerator](https://realfavicongenerator.net).  
 _Files can be found under `0_static/images/favicon`._
 
 
