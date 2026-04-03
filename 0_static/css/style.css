@@ -231,8 +231,9 @@
 
 .page-spacer {
     flex: 9 9 0px;
-    background-color: #38d8ff;     /* delete */
 }
+
+.answer-section {background-color: #38d8ff; min-height: 100px;}     /* delete */
 
 .flex-footer {
     flex: 0 0 100px;
