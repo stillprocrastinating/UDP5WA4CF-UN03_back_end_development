@@ -17,8 +17,19 @@
 </section>
 
 <section class="answer-section">
-    {% block test_answer_detail %}
-    {% endblock test_answer_detail %}
+    ... Loading ...     <!-- block test_answer_detail.html -->
 </section>
+
+<script>
+    window.onload = function() {
+        $.ajax({
+            url: {% url 'test_answer_detail' %},
+            method: 'GET',
+            success: function(response) {
+                $('#2').html(response);
+            }
+        })
+    }
+</script>
 
 {% endblock test_detail %}

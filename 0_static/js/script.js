@@ -111,6 +111,22 @@ function formModifications () {
 
 
 /**
+ * Load the Answer() in the test_detail.html page.
+ */
+// function loadTestAnswers () {
+//     window.onload = function() {
+//         $.ajax({
+//             url: {% url 'test_answer_detail' %},
+//             method: 'GET',
+//             success: function(response) {
+//                 $('#2').html(response);
+//             }
+//         })
+//     }
+// }
+
+
+/**
  * Changes the textContent of the LO from the table integer to a human-readable "verbose" string.
  * @return {String} "LOx [the learning objective]."
  */
@@ -316,4 +332,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document = "/test/new") {
         formModifications();
     }     // etc for each page to avoid console errors
+
+    else if (document = "/test/test_detail.html") {
+        loadTestAnswers();
+    }
 });
