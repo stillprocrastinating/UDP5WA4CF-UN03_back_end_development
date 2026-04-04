@@ -2,18 +2,27 @@
 {% load static %}
 {% block test_answer_detail %}
 
-<p>Number of participants: {{ test.participant_number }}</p>
-<div class="answers-list">
-    {% for answer in answers %}
-        <p>{{ answers.question }}</p>
-        <p>{{ answers.answer1 }}</p>
-        <p>{{ answers.answer2 }}</p>
-        <p>{{ answers.answer3 }}</p>
-        <p>{{ answers.answer4 }}</p>
-        <p>{{ answers.answer5 }}</p>
-        {% empty %}
-            <p>No answers recorded for this test.</p>
-    {% endfor %}
-</div>
+<hr class="hr">
+
+<section class="flex-section">
+    <h2 class="h2">Answers list</h3>
+    <a href="{% url 'answer_new' %}" class="button header-button">New</a>
+</section>
+
+<section class="test-answers">
+    <p>Number of participants: {{ test.participant_number }}</p>
+    <div class="answers-list">
+        {% for answer in answers %}     <!-- if specifically this bit doesn't work, try answer.question, etc. -->
+            <p>{{ answers.question }}</p>
+            <p>{{ answers.answer1 }}</p>
+            <p>{{ answers.answer2 }}</p>
+            <p>{{ answers.answer3 }}</p>
+            <p>{{ answers.answer4 }}</p>
+            <p>{{ answers.answer5 }}</p>
+            {% empty %}
+                <p>No answers recorded for this test.</p>
+        {% endfor %}
+    </div>
+</section>
 
 {% endblock test_answer_detail %}

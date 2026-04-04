@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.db import models
 from question.models import Question
 from test.models import Test
@@ -20,8 +20,12 @@ class Answer(models.Model):
     Add inputs and outputs (all docstrings)
     """
 
-    question = models.ForeignKey(Question, related_name="question_answers", on_delete=models.CASCADE)
-    test = models.ForeignKey(Test, related_name="test_answers", on_delete=models.CASCADE)
+    question = models.ForeignKey(
+        Question, related_name="question_answers", on_delete=models.CASCADE
+    )
+    test = models.ForeignKey(
+        Test, related_name="test_answers", on_delete=models.CASCADE
+    )
     # option = models.IntegerField()
     answer1 = models.IntegerField(default=0)
     answer2 = models.IntegerField(default=0)
@@ -34,7 +38,7 @@ class Answer(models.Model):
     # answer4_percentage = models.Expression(answer4 / participants)
     # answer5_percentage = models.Expression(answer5 / participants)
     # # Create a warning identifier using the highest percentage answer
-    tester = models.ForeignKey(User, on_delete=models.CASCADE)
+    # tester = models.ForeignKey(User, on_delete=models.CASCADE)
     teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
 
     class Meta:
@@ -42,7 +46,7 @@ class Answer(models.Model):
 
     def __str__(self):
         return str(self.id)
-    
+
     @property
     def participants(self):
         return self.test.participant_number
