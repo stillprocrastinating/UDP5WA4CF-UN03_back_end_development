@@ -3,15 +3,20 @@
 {% block test_detail %}
 
 <h1>{{ test.id }}</h1>
+
 <section class="flex-section">
     <h3 class="font-medium t-type">{{ test.type }}</h3>
     <p>Examined by {{ test.tester }}</p>
 </section>
-<p class="center t-meta"><span class="t-date">{{ test.date }}</span></p>
-<p class="center">Test difficulty: <span class="t-difficulty">{{ test.t_difficulty }}</span></p>
-<p class="center">Question warnings: <span class="q-warning q-warnings">0</span></p>
+
+<section class="meta">
+    <p class="center t-meta"><span class="t-date">{{ test.date }}</span></p>
+    <p class="center">Test difficulty: <span class="t-difficulty">{{ test.t_difficulty }}</span></p>
+    <p class="center">Question warnings: <span class="q-warning q-warnings">0</span></p>
+</section>
+
 <section class="t-questions">
-    section.t-questions     <!-- delete -->
+    <!-- delete -->section.t-questions
     {% for question in t_questions %}
         <h2 class="t-question-id">{{ question.id }}</h2>
         <p class="t-question">{{ question.question }}</p>
@@ -20,6 +25,7 @@
 </section>
 
 <section class="answer-section">
+    <!-- delete -->section.answer-section
     {% block test_answer_detail %}
         <section class="flex-section">
             <div class="spacer"></div>

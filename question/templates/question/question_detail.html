@@ -3,24 +3,32 @@
 {% block question_detail %}
 
 <h1>{{ question.id }}</h1>
+
 <section class="flex-section">
     <h3 class="flex-accommodate margin-0 q-module">Ethics 1</h3>
     <h3 class="flex-stubborn q-lo">{{ question.lo }}</h3>
     <p class="flex-accommodate margin-0">Created by {{ question.author }}</p>
 </section>
-<p class="center q-meta"><span class="q-type">{{ question.type }}</span> #{{ question.number }}</p>
-<p class="center">Question difficulty: <span class="q-difficulty">{{ question.q_difficulty }}</span></p>
-<p class="center">Question warning: <span class="q-warning">{{ question.warning }}</span></p>     <!-- Create modal -->
-<h2 class="q-question">{{ question.question }}</h2>
-<ol class="q-answers">
-    <li class="q-answer">{{ question.answer1 }}</li>
-    <li class="q-answer">{{ question.answer2 }}</li>
-    <li class="q-answer">{{ question.answer3 }}</li>
-    <li class="q-answer">{{ question.answer4 }}</li>
-    <li class="q-answer">{{ question.answer5 }}</li>
-</ol>
+
+<section class="meta">
+    <p class="center q-meta"><span class="q-type">{{ question.type }}</span> #{{ question.number }}</p>
+    <p class="center">Question difficulty: <span class="q-difficulty">{{ question.q_difficulty }}</span></p>
+    <p class="center">Question warning: <span class="q-warning">{{ question.warning }}</span></p>     <!-- Create modal -->
+</section>
+
+<section class="q-details">
+    <h2 class="q-question">{{ question.question }}</h2>
+    <ol class="q-answers">
+        <li class="q-answer">{{ question.answer1 }}</li>
+        <li class="q-answer">{{ question.answer2 }}</li>
+        <li class="q-answer">{{ question.answer3 }}</li>
+        <li class="q-answer">{{ question.answer4 }}</li>
+        <li class="q-answer">{{ question.answer5 }}</li>
+    </ol>
+</section>
 
 <section class="answer-section">
+    <!-- delete -->section.answer-section
     {% block question_answer_detail %}
     {% endblock question_answer_detail %}
 </section>
