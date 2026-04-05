@@ -58,6 +58,8 @@
     outline: auto 1px var(--color-secondary);
 }
 
+.answer-section {background-color: #38d8ff; min-height: 100px;}     /* delete */
+
 
 /* align */
 
@@ -232,8 +234,6 @@
 .page-spacer {
     flex: 9 9 0px;
 }
-
-.answer-section {background-color: #38d8ff; min-height: 100px;}     /* delete */
 
 .flex-footer {
     flex: 0 0 100px;
@@ -452,7 +452,7 @@ input {
 }
 
 
-/* test_new.html */
+/* answer_new.html question_new.html test_new.html */
 
 .form-hint {
     font-size: small;
