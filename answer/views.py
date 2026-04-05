@@ -7,7 +7,7 @@ from .models import Answer
 
 def test_answer_detail(request, slug):
     """
-    Display all :model:`question.Question` per individual :model:`test.Test`.
+    Display all :model:`question.Question` :model:`answer.Answer` per individual :model:`test.Test`.
 
     :param request: The requested test.
     :param slug: The identification (slug) of the request.

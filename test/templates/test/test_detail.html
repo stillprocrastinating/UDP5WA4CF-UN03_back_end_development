@@ -23,7 +23,7 @@
 <script>
     window.onload = function() {
         $.ajax({
-            url: {% url 'test_answer_detail' %},
+            url: {% url 'answer/test_answer_detail' %},
             method: 'GET',
             success: function(response) {
                 $('#2').html(response);
