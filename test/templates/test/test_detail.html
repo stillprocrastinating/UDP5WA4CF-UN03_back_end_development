@@ -11,9 +11,12 @@
 <p class="center">Test difficulty: <span class="t-difficulty">{{ test.t_difficulty }}</span></p>
 <p class="center">Question warnings: <span class="q-warning q-warnings">0</span></p>
 <section class="t-questions">
-    <h2 class="t-question-id">{{ question.id }}</h2>
-    <p class="t-question">{{ question.question }}</p>
-    <p class="t-answer">{{ test.answer_success }}</p>
+    section.t-questions     <!-- delete -->
+    {% for question in t_questions %}
+        <h2 class="t-question-id">{{ question.id }}</h2>
+        <p class="t-question">{{ question.question }}</p>
+        <p class="t-answer">{{ test.answer_success }}</p>
+    {% endfor %}
 </section>
 
 <section class="answer-section">
