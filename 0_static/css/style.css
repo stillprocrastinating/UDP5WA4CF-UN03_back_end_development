@@ -215,6 +215,11 @@
     min-height: 100vh;
 }
 
+.flex-pagination {
+    display: flex;
+    justify-content: center;
+}
+
 .flex-nav {
     flex: 0 0 100px;
     display: flex;
@@ -282,6 +287,7 @@ a {
     padding: 10px;
     color: var(--color-dark);
     background-color: var(--color-transparent);
+    text-decoration: none;
 }
 
 a:hover {
@@ -343,6 +349,11 @@ input {
 
 .padding-left-right {
     padding: 0px 10px;
+}
+
+.pag-marker {
+    list-style-type: none;
+    padding: 10px;
 }
 
 

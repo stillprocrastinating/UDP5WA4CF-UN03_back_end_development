@@ -9,7 +9,7 @@ from answer.models import Answer
 
 class TestList(generic.ListView):
     queryset = Test.objects.all().order_by("-date")
-    paginate_by = 12
+    paginate_by = 10
 
 
 def test_detail(request, slug):

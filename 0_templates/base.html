@@ -101,6 +101,21 @@
 
         {% block answer_new %}
         {% endblock answer_new %}
+
+        <div class="pagination">
+            <ul class="flex-pagination">
+                {% if page_obj.has_previous %}
+                    <li class="pag-marker">
+                        <a href="?page={{ page_obj.previous_page_number }}" class="button page-link">&laquo; prev</a>
+                    </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <li class="pag-marker">
+                        <a href="?page={{ page_obj.next_page_number }}" class="button page-link">next &raquo;</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
         
     </main>
 
