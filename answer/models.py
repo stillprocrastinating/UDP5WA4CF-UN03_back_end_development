@@ -77,3 +77,14 @@ class Answer(models.Model):
     def answer5_percentage(self):
         a5p = self.answer5 / self.test.participant_number
         return a5p
+
+    # @property
+    # def teaching_warning(self):
+        
+    #     ca = self.correct
+    #     map = max(self.answer1_percentage, self.answer2_percentage, self.answer3_percentage, self.answer4_percentage, self. answer5_percentage)
+
+    #     if (ca == 1):
+    #         good = self.answer1_percentage > map
+    #         if (good == True):
+    #             return "1"
