@@ -38,7 +38,6 @@ class Answer(models.Model):
     # answer4_percentage = models.Expression(answer4 / participants)
     # answer5_percentage = models.Expression(answer5 / participants)
     # # Create a warning identifier using the highest percentage answer
-    # tester = models.ForeignKey(User, on_delete=models.CASCADE)
     teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
 
     class Meta:
@@ -48,9 +47,13 @@ class Answer(models.Model):
         return str(self.id)
 
     @property
+    def correct(self):
+        return self.question.sub_correct_answer_individual
+
+    @property
     def participants(self):
         return self.test.participant_number
 
     @property
-    def correct(self):
-        return self.question.sub_correct_answer_individual
+    def tester(self):
+        return self.test.tester
