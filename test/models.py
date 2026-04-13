@@ -30,7 +30,7 @@ class Test(models.Model):
     participant_number = models.IntegerField(
         verbose_name="number of participants"
     )
-    tester = models.ForeignKey(User, on_delete=models.SET(str(User.username)))
+    tester = models.ForeignKey(User, on_delete=models.CASCADE)
     t_difficulty = models.IntegerField(
         choices=T_DIFFICULTY, default=0, verbose_name="test difficulty"
     )
