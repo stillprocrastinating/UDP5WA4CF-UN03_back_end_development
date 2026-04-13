@@ -32,12 +32,7 @@ class Answer(models.Model):
     answer3 = models.IntegerField(default=0)
     answer4 = models.IntegerField(default=0)
     answer5 = models.IntegerField(default=0)
-    # answer1_percentage = models.Expression(answer1 / participants)
-    # answer2_percentage = models.Expression(answer2 / participants)
-    # answer3_percentage = models.Expression(answer3 / participants)
-    # answer4_percentage = models.Expression(answer4 / participants)
-    # answer5_percentage = models.Expression(answer5 / participants)
-    # # Create a warning identifier using the highest percentage answer
+    # Create a warning identifier using the highest percentage answer
     teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
 
     class Meta:
@@ -57,3 +52,28 @@ class Answer(models.Model):
     @property
     def tester(self):
         return self.test.tester
+
+    @property
+    def answer1_percentage(self):
+        a1p = self.answer1 / self.test.participant_number
+        return a1p
+
+    @property
+    def answer2_percentage(self):
+        a2p = self.answer2 / self.test.participant_number
+        return a2p
+
+    @property
+    def answer3_percentage(self):
+        a3p = self.answer3 / self.test.participant_number
+        return a3p
+
+    @property
+    def answer4_percentage(self):
+        a4p = self.answer4 / self.test.participant_number
+        return a4p
+
+    @property
+    def answer5_percentage(self):
+        a5p = self.answer5 / self.test.participant_number
+        return a5p
