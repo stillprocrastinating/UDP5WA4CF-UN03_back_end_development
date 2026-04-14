@@ -14,8 +14,8 @@ def test_answer_detail(request, slug):
     """
 
     answers = Answer.objects.filter(test__slug=slug)
-    if not answers.exists():
-        raise Http404
+    # if not answers.exists():
+    #     raise Http404
 
     context = {
         "answers": answers,

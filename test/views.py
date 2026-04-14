@@ -1,10 +1,11 @@
+from answer.models import Answer
+from answer.views import test_answer_detail
 from django.contrib import messages
 # from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 from django.views import generic
 from .forms import TestNew
 from .models import Test
-from answer.models import Answer
 
 
 class TestList(generic.ListView):
@@ -15,7 +16,6 @@ class TestList(generic.ListView):
 def test_detail(request, slug):
     """
     Display an individual :model:`test.Test`.
-    And display the related :model:`answer.Answer`.
 
     :param request: The requested test.
     :param slug: The identification (slug) of the request.
@@ -24,13 +24,7 @@ def test_detail(request, slug):
     queryset = Test.objects.all()
     test = get_object_or_404(queryset, slug=slug)
 
-    answers = Answer.objects.filter(test__slug=slug)
-    # if not answers.exists():
-    #     raise Http404
-
     context = {
-        "answers": answers,
-        # "test_answers": answers.first().test,
         "test": test
     }
 
@@ -39,6 +33,21 @@ def test_detail(request, slug):
         "test/test_detail.html",
         context
     )
+
+
+def test_detail_page(request, slug):
+    """
+    Display the complete test_detail.html page using test_detail() and answer.test_answer_detail().
+
+    :param request: The requested test.
+    :param slug: The identification (slug) of the request.
+    """
+
+    answers = Answer.objects.filter(test__slug=slug)
+    if answers.exists():
+        return test_answer_detail(request, slug)
+
+    return test_detail(request, slug)
 
 
 def test_new(request):
