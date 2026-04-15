@@ -33,7 +33,7 @@ class Answer(models.Model):
     answer4 = models.IntegerField(default=0)
     answer5 = models.IntegerField(default=0)
     # Create a warning identifier using the highest percentage answer
-    teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
+    # teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
 
     class Meta:
         ordering = ["question"]
@@ -78,13 +78,46 @@ class Answer(models.Model):
         a5p = self.answer5 / self.test.participant_number
         return a5p
 
-    # @property
-    # def teaching_warning(self):
+    @property
+    def teaching_warning(self):
         
-    #     ca = self.correct
-    #     map = max(self.answer1_percentage, self.answer2_percentage, self.answer3_percentage, self.answer4_percentage, self. answer5_percentage)
+        ca = self.correct
+        map = max(self.answer1_percentage, self.answer2_percentage, self.answer3_percentage, self.answer4_percentage, self.answer5_percentage)
 
-    #     if (ca == 1):
-    #         good = self.answer1_percentage > map
-    #         if (good == True):
-    #             return "1"
+        et = "None."
+        ef = "Consider a learning objective teaching method audit."
+
+        if (ca == 1):
+            expected = self.answer1_percentage >= map
+            if (expected == True):
+                return et
+            else:
+                return ef
+
+        if (ca == 2):
+            expected = self.answer2_percentage >= map
+            if (expected == True):
+                return et
+            else:
+                return ef
+
+        if (ca == 3):
+            expected = self.answer3_percentage >= map
+            if (expected == True):
+                return et
+            else:
+                return ef
+
+        if (ca == 4):
+            expected = self.answer4_percentage >= map
+            if (expected == True):
+                return et
+            else:
+                return ef
+
+        if (ca == 5):
+            expected = self.answer5_percentage >= map
+            if (expected == True):
+                return et
+            else:
+                return ef
