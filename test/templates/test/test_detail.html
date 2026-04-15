@@ -29,7 +29,9 @@
     {% block test_answer_detail %}
         <section class="flex-section">
             <div class="spacer"></div>
-            <a href="{% url 'answer_new' %}" class="button header-button">New answers</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'answer_new' %}" class="button header-button">New answers</a>
+            {% endif %}
         </section>
     {% endblock test_answer_detail %}
 </section>
