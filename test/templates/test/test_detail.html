@@ -25,10 +25,11 @@
 </section>
 
 <section class="answer-section">
-    <!-- delete -->section.answer-section
     {% block test_answer_detail %}
         <section class="flex-section">
-            <div class="spacer"></div>
+            <p class="no-answers">
+                This test does not contain E1L multiple choice questions.
+            </p>
             {% if user.is_authenticated %}
                 <a href="{% url 'answer_new' %}" class="button header-button">New answers</a>
             {% endif %}
