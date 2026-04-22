@@ -10,10 +10,10 @@ let lo = {
     LO8: "LO8 To explain what a culture of care is, its importance, and how they may contribute.",
     LO9: "LO9 To recognise the importance of ethical responsibility and identify the consequences of their actions—connected to culture of care.",
     LO10: "LO10 To explain the purpose of the local AWERB.",
-    LO11: "LO11",
-    LO12: "LO12",
-    LO13: "LO13",
-    LO14: "LO14"
+    LO11: "LO11 To explain the Five Freedoms and how these apply to laboratory species.",
+    LO12: "LO12 To describe the concept of harms to animals including avoidable and unavoidable suffering, direct, contingent, and cumulative suffering.",
+    LO13: "LO13 To describe the importance of good animal welfare including its' effect on scientific outcomes as well as for societal and moral reasons.",
+    LO14: "LO14 To describe the responsibility of humans when working with research animals and recognise the importance of having a respectful and humane attitude towards working with animals in research."
 };
 
 
