@@ -16,11 +16,7 @@
     <div class="answers-list">
         {% for answer in answers %}
             <p>{{ answer.question }}</p>
-            <p>{{ answer.answer1 }}</p>
-            <p>{{ answer.answer2 }}</p>
-            <p>{{ answer.answer3 }}</p>
-            <p>{{ answer.answer4 }}</p>
-            <p>{{ answer.answer5 }}</p>
+            <p>{{ answer.participant_answer }}</p>
             {% empty %}
                 <p>No answers recorded for this test.</p>
         {% endfor %}

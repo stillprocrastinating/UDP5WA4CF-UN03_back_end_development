@@ -121,3 +121,19 @@ class Answer(models.Model):
                 return et
             else:
                 return ef
+
+    @property
+    def participant_answer(self):
+        if (self.answer1 == 1):
+            pa = self.answer1
+        elif (self.answer2 == 1):
+            pa = self.answer2
+        elif (self.answer3 == 1):
+            pa = self.answer3
+        elif (self.answer4 == 1):
+            pa = self.answer4
+        elif (self.answer5 == 1):
+            pa = self.answer5
+        else:
+            pa = "No answer"
+        return pa
