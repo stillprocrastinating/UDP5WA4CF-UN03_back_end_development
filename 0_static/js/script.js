@@ -111,6 +111,24 @@ function formModifications () {
 
 
 /**
+ * Changes the textContent of the p.answers-list-answer from the table integer to a human-readable "verbose" string.
+ * @return {String} "[The text answer for that participant for that question]."
+ */
+// function verboseAnswer () {
+//     let q = document.getElementsByClassName("answers-list-question");
+//     let q_id = 
+
+//     let loN = document.getElementsByClassName("q-lo");
+
+//     for (i = 0; i < loN.length; i++) {
+//         if (loN[i].textContent == "1") {
+//             loN[i].innerHTML = lo.LO1;
+//         }
+//     }
+// }
+
+
+/**
  * Changes the textContent of the LO from the table integer to a human-readable "verbose" string.
  * @return {String} "LOx [the learning objective]."
  */
@@ -306,6 +324,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // calculateDifficultyTest();
     // calculateWarningQuestion();
     // calculateWarningTestQuestions();
+    // verboseAnswer();
     verboseLO();
     verboseDifficultyQuestion();
     verboseDifficultyTest();
