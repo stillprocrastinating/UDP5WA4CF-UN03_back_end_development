@@ -95,35 +95,35 @@ class Answer(models.Model):
 
         if (ca == 1):
             expected = self.answer1_percentage >= map
-            if (expected == True):
+            if (expected is True):
                 return et
             else:
                 return ef
 
         if (ca == 2):
             expected = self.answer2_percentage >= map
-            if (expected == True):
+            if (expected is True):
                 return et
             else:
                 return ef
 
         if (ca == 3):
             expected = self.answer3_percentage >= map
-            if (expected == True):
+            if (expected is True):
                 return et
             else:
                 return ef
 
         if (ca == 4):
             expected = self.answer4_percentage >= map
-            if (expected == True):
+            if (expected is True):
                 return et
             else:
                 return ef
 
         if (ca == 5):
             expected = self.answer5_percentage >= map
-            if (expected == True):
+            if (expected is True):
                 return et
             else:
                 return ef
