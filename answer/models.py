@@ -82,7 +82,13 @@ class Answer(models.Model):
     def teaching_warning(self):
         
         ca = self.correct
-        map = max(self.answer1_percentage, self.answer2_percentage, self.answer3_percentage, self.answer4_percentage, self.answer5_percentage)
+        map = max(
+            self.answer1_percentage,
+            self.answer2_percentage,
+            self.answer3_percentage,
+            self.answer4_percentage,
+            self.answer5_percentage
+        )
 
         et = "None."
         ef = "Consider a learning objective teaching method audit."
