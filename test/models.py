@@ -23,8 +23,8 @@ class Test(models.Model):
     Stores each test
     """
 
-    id = models.CharField(max_length=20, primary_key=True)
-    slug = AutoSlugField(max_length=20, unique=True, populate_from='id')
+    id = models.CharField(max_length=25, primary_key=True)
+    slug = AutoSlugField(max_length=25, unique=True, populate_from='id')
     date = models.DateField()
     type = models.IntegerField(choices=T_TYPE)
     participant_number = models.IntegerField(

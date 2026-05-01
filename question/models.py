@@ -57,8 +57,8 @@ class Question(models.Model):
     Stores each question
     """
 
-    id = models.CharField(max_length=20, primary_key=True)
-    slug = AutoSlugField(max_length=20, unique=True, populate_from='id')
+    id = models.CharField(max_length=25, primary_key=True)
+    slug = AutoSlugField(max_length=25, unique=True, populate_from='id')
     lo = models.IntegerField(
         choices=LO,
         verbose_name="learning objective"
