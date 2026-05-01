@@ -100,10 +100,9 @@ function calculateWarningTestQuestions () {
  */
 function formModifications () {
     let inputIdId = document.getElementById("id_id");
-    inputIdId.placeholder = "Jan 26 Resit";
+    inputIdId.placeholder = "E1/L PiLAB Jan 26 resit";
     inputIdId.autofocus = true;
-    inputIdId.previousElementSibling.innerHTML = inputIdId.previousElementSibling.innerHTML + "<span class='form-hint'>( Month Year [Type] )</span>";
-    inputIdId.pattern = "^[Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec] \s[00-99] ?\s[Resit|AB]?";
+    inputIdId.previousElementSibling.innerHTML = inputIdId.previousElementSibling.innerHTML + "<span class='form-hint'>( [E1/L] PiLAB Month Year [resit] )</span>";
 
     let inputIdDate = document.getElementById("id_date");
     inputIdDate.type = "date";
