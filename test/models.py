@@ -12,9 +12,9 @@ T_DIFFICULTY = (
 )
 
 T_TYPE = (
-    (0, "Test"),
-    (1, "Resit"),
-    (2, "AB")
+    (0, "E1/L PiLAB Test"),
+    (1, "PiLAB Test"),
+    (2, "Resit")
 )
 
 

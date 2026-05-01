@@ -48,9 +48,9 @@ let t_difficulty = {
 
 /** Dictionary of test types */
 let t_type = {
-    tt1: "Test",
-    tt2: "Resit",
-    tt3: "AB"
+    tt1: "E1/L PiLAB Test",
+    tt2: "PiLAB Test",
+    tt3: "Resit"
 };
 
 
