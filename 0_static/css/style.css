@@ -265,6 +265,13 @@
     justify-self: left;
 }
 
+.flex-testlist {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px 100px;
+}
+
 
 /* font */
 
@@ -444,6 +451,7 @@ input {
 
 .highlight-link {
     text-decoration: none;
+    flex: 1 1 300px;
 }
 
 .highlight-link:hover {
