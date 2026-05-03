@@ -21,7 +21,7 @@ class Answer(models.Model):
     """
 
     question = models.ForeignKey(
-        Question, related_name="question_answers", on_delete=models.CASCADE
+        Question, on_delete=models.DO_NOTHING, related_name="question_answers"
     )
     test = models.ForeignKey(
         Test, related_name="test_answers", on_delete=models.CASCADE

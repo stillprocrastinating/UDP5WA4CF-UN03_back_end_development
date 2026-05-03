@@ -80,7 +80,7 @@ class Question(models.Model):
         choices=Q_CORRECT,
         verbose_name="which answer for subquestion is correct"
     )
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     q_difficulty = models.IntegerField(
         choices=Q_DIFFICULTY, default=0, verbose_name="question difficulty"
     )
