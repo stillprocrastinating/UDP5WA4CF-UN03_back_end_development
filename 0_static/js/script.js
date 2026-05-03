@@ -100,12 +100,22 @@ function calculateWarningTestQuestions () {
  */
 function formModifications () {
     let inputIdId = document.getElementById("id_id");
-    inputIdId.placeholder = "E1/L PiLAB Jan 26 resit";
-    inputIdId.autofocus = true;
-    inputIdId.previousElementSibling.innerHTML = inputIdId.previousElementSibling.innerHTML + "<span class='form-hint'>( [E1/L] PiLAB Month Year [resit] )</span>";
-
     let inputIdDate = document.getElementById("id_date");
-    inputIdDate.type = "date";
+    let inputIdQuestion = document.getElementById("id_question");
+
+    if (inputIdId != null) {
+        inputIdId.placeholder = "E1/L PiLAB Jan 26 resit";
+        inputIdId.autofocus = true;
+        inputIdId.previousElementSibling.innerHTML = inputIdId.previousElementSibling.innerHTML + "<span class='form-hint'>( [E1/L] PiLAB Month Year [resit] )</span>";
+    }
+
+    if (inputIdDate != null) {
+        inputIdDate.type = "date";
+    }
+
+    if (inputIdQuestion != null) {
+        inputIdQuestion.style.width = "90%";
+    }
 }
 
 
