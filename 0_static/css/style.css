@@ -304,7 +304,7 @@ a:hover {
     border-radius: 50%;
 }
 
-.button {
+button {
     border: none;
     border-radius: 10px;
     background-color: var(--color-dark);
@@ -314,7 +314,7 @@ a:hover {
     cursor: pointer;
 }
 
-.button:hover {
+button:hover {
     transition: 1s;
     background-color: var(--color-secondary);
     color: var(--color-black);
