@@ -15,7 +15,7 @@
     <p>Number of participants: {{ test.participant_number }}</p>
     <div class="answers-list">
         {% for answer in answers %}
-            <p class="answers-list-question">{{ answer.question }}</p>
+            <p class="answers-list-question strong">{{ answer.question }}</p>
             <p class="answers-list-answer">{{ answer.participant_answer }}</p>
             {% empty %}
                 <p>No answers recorded for this test.</p>
