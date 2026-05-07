@@ -49,9 +49,6 @@
     --color-transparent: #00000000;
     --color-background: #eedeff;
     --font: 'UCLSans', sans-serif;
-    /*--font-b: 'UCLSans-Bold', sans-serif;
-    --font-i: 'UCLSans-Italic', sans-serif;
-    --font-bi: 'UCLSans-BoldItalic', sans-serif;*/
 }
 
 *:focus-visible {
@@ -283,6 +280,11 @@
     font-size: x-large;
 }
 
+.strong {
+    font-size: larger;
+    font-weight: 600;
+}
+
 
 /*  |||  ||||  ||||| |||||  |||| |||||  |||
 /* |   | |   |   |   |     |       |   |
@@ -304,6 +306,7 @@ a:hover {
     border-radius: 50%;
 }
 
+button,
 .button {
     border: none;
     border-radius: 10px;
@@ -314,6 +317,7 @@ a:hover {
     cursor: pointer;
 }
 
+button:hover,
 .button:hover {
     transition: 1s;
     background-color: var(--color-secondary);
