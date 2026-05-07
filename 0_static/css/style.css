@@ -24,6 +24,14 @@
 @font-face {
     font-family: "UCLSans";
     src:
+        local("UCLSans-SemiBold"),
+        url("UCLSans/UCLSans-SemiBold.otf") format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "UCLSans";
+    src:
         local("UCLSans-Italic"),
         url("UCLSans/UCLSans-Italic.otf") format("opentype");
     font-style: italic;
@@ -282,7 +290,7 @@
 
 .strong {
     font-size: larger;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
