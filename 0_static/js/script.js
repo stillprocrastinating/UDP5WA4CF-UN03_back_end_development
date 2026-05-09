@@ -57,9 +57,8 @@ let t_type = {
 /** Dictionary of warnings */
 let warning = {
     w0: "Error in calculation",
-    w1: "None",
-    w2: "Warning",
-    w3: "Flag"
+    w1: "None.",
+    w2: "A question has a warning."
 };
 
 
@@ -78,18 +77,29 @@ function calculateDifficultyTest () {}
 
 
 /**
- * Calculates the WARNING of the Question from the incorrect_option_frequency of the Answers.
+ * Calculates the WARNING of the Question from the calculateWarningTestQuestions().
  * @return {Integer} "1 / 2 / 3"
  */
 function calculateWarningQuestion () {}
 
 
 /**
- * Calculates the WARNING of the Test from the calculateWarningQuestion() of the Questions.
- * @return {Integer} "1 / 2 / 3"
+ * Calculates the WARNING of the Tests' Question from the .answers-list-warning of the Answers.
+ * @return {Integer} "1 / 2"
  */
 function calculateWarningTestQuestions () {
-    let warningN = document.getElementsByClassName("q-warning q-warnings");
+    let tw = document.getElementsByClassName("q-warnings");
+    let qw = document.getElementsByClassName("answers-list-warning");
+    let qwText = qw.textContent;
+
+    for (i = 0; i < qw.length; i++) {
+        if (qwText[18:25] == "Consider") {
+            tw == 2;
+        }
+        else {
+            tw == 1;
+        }
+    }
 
     verboseWarning();
 }
@@ -306,9 +316,6 @@ function verboseWarning () {
         }
         else if (warningN[i].textContent == "2") {
             warningN[i].innerHTML = warning.w2;
-        }
-        else if (warningN[i].textContent == "3") {
-            warningN[i].innerHTML = warning.w3;
         }
     }
 }
