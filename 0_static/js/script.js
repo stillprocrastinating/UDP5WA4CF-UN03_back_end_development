@@ -58,7 +58,7 @@ let t_type = {
 let warning = {
     w0: "Error in calculation",
     w1: "None.",
-    w2: "A question has a warning."
+    w2: "Yes."
 };
 
 
@@ -87,22 +87,24 @@ function calculateWarningQuestion () {}
  * Calculates the WARNING of the Tests' Question from the .answers-list-warning of the Answers.
  * @return {Integer} "1 / 2"
  */
-// function calculateWarningTestQuestions () {
-//     let tw = document.getElementsByClassName("q-warnings");
-//     let qw = document.getElementsByClassName("answers-list-warning");
-//     let qwText = qw[i].textContent;
+function calculateWarningTestQuestions () {
+    let tw = document.getElementsByClassName("q-warnings").textContent;
+    let qw = document.getElementsByClassName("answers-list-warning");
 
-//     for (i = 0; i < qw.length; i++) {
-//         if (qwText[18:25] == "Consider") {
-//             tw == 2;
-//         }
-//         else {
-//             tw == 1;
-//         }
-//     }
+    for (i = 0; i < qw.length; i++) {
+        if (qw[i].textContent[18] == "C") {     // Consider a learning objective teaching method audit.
+            tw == 2;
+        }
+        else if (qw[i].textContent[18] == "N") {     // None.
+            tw == 1;
+        }
+        else {
+            tw == 0;
+        }
+    }
 
-//     verboseWarning();
-// }
+    verboseWarning();
+}
 
 
 /**
@@ -302,20 +304,20 @@ function verboseTypeTest () {
 
 /**
  * Changes the textContent of the WARNING from the table integer to a human-readable "verbose" string.
- * @return {String} "None / Warning / Flag"
+ * @return {String} "None / Yes"
  */
 function verboseWarning () {
     let warningN = document.getElementsByClassName("q-warnings");
 
     for (i = 0; i < warningN.length; i++) {
-        if (warningN[i].textContent == "0") {
-            warningN[i].innerHTML = warning.w0;
+        if (warningN[i].textContent == "2") {
+            warningN[i].innerHTML = warning.w2;
         }
         else if (warningN[i].textContent == "1") {
             warningN[i].innerHTML = warning.w1;
         }
-        else if (warningN[i].textContent == "2") {
-            warningN[i].innerHTML = warning.w2;
+        else {
+            warningN[i].innerHTML = warning.w0;
         }
     }
 }
@@ -339,14 +341,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
     // calculateWarningQuestion();
-    // calculateWarningTestQuestions();
+    calculateWarningTestQuestions();
     // verboseAnswer();
     verboseLO();
     verboseDifficultyQuestion();
     verboseDifficultyTest();
     verboseTypeQuestion();
     verboseTypeTest();
-    verboseWarning();
+    // verboseWarning();
 
     if (document = "/test/new") {
         formModifications();
