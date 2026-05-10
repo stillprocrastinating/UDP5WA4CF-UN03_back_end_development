@@ -46,3 +46,9 @@
 1. What are the learning objectives? --> question/models.py
 1. What are the names of the question types? --> question/models.py
 1. Do you want the questions themselves to be stored? --> question/models.py (remember to migrate if 'yes')
+
+
+# Future
+
+- Add question warnings per user.  
+Example: Ability to differentiate between a generic 1/6th of tests resulting in warnings for a particular question vs 1 of the 6 users' tests resulting in warnings for a particular question.
