@@ -6,9 +6,7 @@
 
 <section class="flex-section">
     <h2 class="h2">Answers list</h2>
-    {% if user.is_authenticated %}
         <a href="{% url 'answer_new' %}" class="button header-button">New</a>
-    {% endif %}
 </section>
 
 <section class="test-answers">

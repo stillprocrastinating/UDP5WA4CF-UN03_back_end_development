@@ -24,17 +24,17 @@
     {% endfor %}
 </section>
 
-<section class="answer-section">
-    {% block test_answer_detail %}
-        <section class="flex-section">
-            <p class="no-answers">
-                This test does not contain E1L multiple choice questions/answers.
-            </p>
-            {% if user.is_authenticated %}
-                <a href="{% url 'answer_new' %}" class="button header-button">New answers</a>
-            {% endif %}
-        </section>
-    {% endblock test_answer_detail %}
-</section>
+{% if user.is_authenticated %}
+    <section class="answer-section">
+        {% block test_answer_detail %}
+            <section class="flex-section">
+                <p class="no-answers">
+                    This test does not contain E1L multiple choice questions/answers.
+                </p>
+                    <a href="{% url 'answer_new' %}" class="button header-button">New answers</a>
+            </section>
+        {% endblock test_answer_detail %}
+    </section>
+{% endif %}
 
 {% endblock test_detail %}
