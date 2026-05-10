@@ -87,22 +87,22 @@ function calculateWarningQuestion () {}
  * Calculates the WARNING of the Tests' Question from the .answers-list-warning of the Answers.
  * @return {Integer} "1 / 2"
  */
-function calculateWarningTestQuestions () {
-    let tw = document.getElementsByClassName("q-warnings");
-    let qw = document.getElementsByClassName("answers-list-warning");
-    let qwText = qw.textContent;
+// function calculateWarningTestQuestions () {
+//     let tw = document.getElementsByClassName("q-warnings");
+//     let qw = document.getElementsByClassName("answers-list-warning");
+//     let qwText = qw[i].textContent;
 
-    for (i = 0; i < qw.length; i++) {
-        if (qwText[18:25] == "Consider") {
-            tw == 2;
-        }
-        else {
-            tw == 1;
-        }
-    }
+//     for (i = 0; i < qw.length; i++) {
+//         if (qwText[18:25] == "Consider") {
+//             tw == 2;
+//         }
+//         else {
+//             tw == 1;
+//         }
+//     }
 
-    verboseWarning();
-}
+//     verboseWarning();
+// }
 
 
 /**
@@ -305,7 +305,7 @@ function verboseTypeTest () {
  * @return {String} "None / Warning / Flag"
  */
 function verboseWarning () {
-    let warningN = document.getElementsByClassName("q-warning");
+    let warningN = document.getElementsByClassName("q-warnings");
 
     for (i = 0; i < warningN.length; i++) {
         if (warningN[i].textContent == "0") {
