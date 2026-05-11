@@ -137,15 +137,15 @@ class Answer(models.Model):
     @property
     def participant_answer(self):
         if (self.answer1 != 0):
-            pa = self.question.answer1
+            pa = str(self.answer1) + " | " + self.question.answer1
         elif (self.answer2 != 0):
-            pa = self.question.answer2
+            pa = str(self.answer2) + " | " + self.question.answer2
         elif (self.answer3 != 0):
-            pa = self.question.answer3
+            pa = str(self.answer3) + " | " + self.question.answer3
         elif (self.answer4 != 0):
-            pa = self.question.answer4
+            pa = str(self.answer4) + " | " + self.question.answer4
         elif (self.answer5 != 0):
-            pa = self.question.answer5
+            pa = str(self.answer5) + " | " + self.question.answer5
         else:
             pa = "No answer"
         return pa
