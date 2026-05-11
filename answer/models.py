@@ -133,19 +133,23 @@ class Answer(models.Model):
                 return et
             else:
                 return ef
-
+    
     @property
-    def participant_answer(self):
-        if (self.answer1 != 0):
-            pa = str(self.answer1) + " | " + self.question.answer1
-        elif (self.answer2 != 0):
-            pa = str(self.answer2) + " | " + self.question.answer2
-        elif (self.answer3 != 0):
-            pa = str(self.answer3) + " | " + self.question.answer3
-        elif (self.answer4 != 0):
-            pa = str(self.answer4) + " | " + self.question.answer4
-        elif (self.answer5 != 0):
-            pa = str(self.answer5) + " | " + self.question.answer5
-        else:
-            pa = "No answer"
-        return pa
+    def participant_answer1(self):
+        return str(self.answer1) + " ~~~ " + self.question.answer1
+    
+    @property
+    def participant_answer2(self):
+        return str(self.answer2) + " ~~~ " + self.question.answer2
+    
+    @property
+    def participant_answer3(self):
+        return str(self.answer3) + " ~~~ " + self.question.answer3
+    
+    @property
+    def participant_answer4(self):
+        return str(self.answer4) + " ~~~ " + self.question.answer4
+    
+    @property
+    def participant_answer5(self):
+        return str(self.answer5) + " ~~~ " + self.question.answer5
