@@ -13,11 +13,11 @@
     <div class="answers-list">
         {% for answer in answers %}
             <p class="answers-list-question strong">{{ answer.question }}</p>
-            <p class="answers-list-answer text-overflow-ellipsis">{{ answer.participant_answer1 }}</p>
-            <p class="answers-list-answer text-overflow-ellipsis">{{ answer.participant_answer2 }}</p>
-            <p class="answers-list-answer text-overflow-ellipsis">{{ answer.participant_answer3 }}</p>
-            <p class="answers-list-answer text-overflow-ellipsis">{{ answer.participant_answer4 }}</p>
-            <p class="answers-list-answer text-overflow-ellipsis">{{ answer.participant_answer5 }}</p>
+            <p class="answers-list-answer mb5 mt5 text-overflow-ellipsis">{{ answer.participant_answer1 }}</p>
+            <p class="answers-list-answer mb5 mt5 text-overflow-ellipsis">{{ answer.participant_answer2 }}</p>
+            <p class="answers-list-answer mb5 mt5 text-overflow-ellipsis">{{ answer.participant_answer3 }}</p>
+            <p class="answers-list-answer mb5 mt5 text-overflow-ellipsis">{{ answer.participant_answer4 }}</p>
+            <p class="answers-list-answer mb5 mt5 text-overflow-ellipsis">{{ answer.participant_answer5 }}</p>
             <p class="answers-list-warning">Question warning: {{ answer.teaching_warning }}</p>
             {% empty %}
                 <p>No answers recorded for this test.</p>

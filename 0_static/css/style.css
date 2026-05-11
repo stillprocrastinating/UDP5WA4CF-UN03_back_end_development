@@ -76,8 +76,22 @@
     margin-bottom: 20px;
 }
 
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
 .narrow {
     margin: 0% 10%;
+}
+
+.text-overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
@@ -506,19 +520,6 @@ input {
 .q-answers {
     font-size: large;
     padding-inline-start: 50px;
-}
-
-.q-answer {
-    margin-bottom: 5px;
-}
-
-
-/* question_list.html */
-
-.text-overflow-ellipsis {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 
