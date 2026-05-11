@@ -90,17 +90,25 @@ function calculateWarningQuestion () {}
 function calculateWarningTestQuestions () {
     let tw = document.getElementsByClassName("q-warnings").textContent;
     let qw = document.getElementsByClassName("answers-list-warning");
+    x = 0;
 
     for (i = 0; i < qw.length; i++) {
         if (qw[i].textContent[18] == "C") {     // Consider a learning objective teaching method audit.
-            tw == 2;
+            x += 1;
         }
         else if (qw[i].textContent[18] == "N") {     // None.
-            tw == 1;
+            x += 0;
         }
         else {
             tw == 0;
         }
+    }
+
+    if (x > 0) {
+        tw == 2;
+    }
+    else {
+        tw == 1;
     }
 
     verboseWarning();
