@@ -515,7 +515,7 @@ input {
 
 /* question_list.html */
 
-.q-question-excerpt {
+.text-overflow-ellipsis {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

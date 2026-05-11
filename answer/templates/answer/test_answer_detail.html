@@ -13,7 +13,7 @@
     <div class="answers-list">
         {% for answer in answers %}
             <p class="answers-list-question strong">{{ answer.question }}</p>
-            <p class="answers-list-answer">{{ answer.participant_answer }}</p>
+            <p class="answers-list-answer text-overflow-ellipsis">{{ answer.participant_answer }}</p>
             <p class="answers-list-warning">Question warning: {{ answer.teaching_warning }}</p>
             {% empty %}
                 <p>No answers recorded for this test.</p>
