@@ -63,7 +63,7 @@
     outline: auto 1px var(--color-secondary);
 }
 
-.answer-section {background-color: #38d8ff; min-height: 100px;}     /* delete */
+.t-questions {background-color: #38d8ff; min-height: 100px;}     /* delete */
 
 
 /* align */
