@@ -94,24 +94,27 @@ function calculateWarningTestQuestions () {
 
     for (i = 0; i < qw.length; i++) {
         if (qw[i].textContent[18] == "C") {     // Consider a learning objective teaching method audit.
-            return x += 1;
+            x += 1;
         }
         else if (qw[i].textContent[18] == "N") {     // None.
-            return x += 0;
+            x += 0;
         }
         else {
-            return tw == 0;
+            tw = 0;
         }
     }
 
     if (x > 0) {
-        return tw == 2;
+        return tw = 2;
+    }
+    else if (x == 0) {
+        return tw = 1;
     }
     else {
-        return tw == 1;
+        return tw = 0;
     }
 
-    verboseWarning();
+    // verboseWarning();
 }
 
 
@@ -337,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function () {
     verboseDifficultyTest();
     verboseTypeQuestion();
     verboseTypeTest();
-    // verboseWarning();
+    verboseWarning();
 
     if (document = "/test/new") {
         formModifications();
