@@ -94,21 +94,21 @@ function calculateWarningTestQuestions () {
 
     for (i = 0; i < qw.length; i++) {
         if (qw[i].textContent[18] == "C") {     // Consider a learning objective teaching method audit.
-            x += 1;
+            return x += 1;
         }
         else if (qw[i].textContent[18] == "N") {     // None.
-            x += 0;
+            return x += 0;
         }
         else {
-            tw == 0;
+            return tw == 0;
         }
     }
 
     if (x > 0) {
-        tw == 2;
+        return tw == 2;
     }
     else {
-        tw == 1;
+        return tw == 1;
     }
 
     verboseWarning();
