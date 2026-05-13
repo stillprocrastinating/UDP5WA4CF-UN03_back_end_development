@@ -56,7 +56,7 @@ let t_type = {
 
 /** Dictionary of warnings */
 let warning = {
-    w0: "Error in calculation",
+    w0: "Error in calculation. [verboseWarning()]",
     w1: "None.",
     w2: "Yes."
 };
@@ -88,9 +88,9 @@ function calculateWarningQuestion () {}
  * @return {Integer} "1 / 2"
  */
 function calculateWarningTestQuestions () {
-    let tw = document.getElementsByClassName("q-warnings").textContent;
+    let tw = document.getElementsByClassName("q-warnings")[0].textContent;
     let qw = document.getElementsByClassName("answers-list-warning");
-    x = 0;
+    x = 1;
 
     for (i = 0; i < qw.length; i++) {
         if (qw[i].textContent[18] == "C") {     // Consider a learning objective teaching method audit.
@@ -100,21 +100,19 @@ function calculateWarningTestQuestions () {
             x += 0;
         }
         else {
-            tw = 0;
+            tw = "Error in calculation. [calculateWarningTestQuestions(){for loop}]";
         }
     }
 
     if (x > 0) {
-        return tw = 2;
+        return tw = "2";
     }
     else if (x == 0) {
-        return tw = 1;
+        return tw = "1";
     }
     else {
-        return tw = 0;
+        return tw = "Error in calculation. [calculateWarningTestQuestions(){if else}]";
     }
-
-    // verboseWarning();
 }
 
 
@@ -304,13 +302,13 @@ function verboseWarning () {
 
     for (i = 0; i < warningN.length; i++) {
         if (warningN[i].textContent == "2") {
-            warningN[i].innerHTML = warning.w2;
+            warningN[i].textContent = warning.w2;
         }
         else if (warningN[i].textContent == "1") {
-            warningN[i].innerHTML = warning.w1;
+            warningN[i].textContent = warning.w1;
         }
         else {
-            warningN[i].innerHTML = warning.w0;
+            warningN[i].textContent = warning.w0;
         }
     }
 }
