@@ -86,7 +86,7 @@ class Answer(models.Model):
 
     @property
     def teaching_warning(self):
-        
+
         ca = self.correct
         map = max(
             self.answer1_percentage,
@@ -100,56 +100,54 @@ class Answer(models.Model):
         ef = "Consider a learning objective teaching method audit."
 
         if (ca == 1):
-            expected = self.answer1_percentage >= map
-            if (expected is True):
+            if (self.answer1_percentage >= map):
                 return et
             else:
                 return ef
 
-        if (ca == 2):
-            expected = self.answer2_percentage >= map
-            if (expected is True):
+        elif (ca == 2):
+            if (self.answer2_percentage >= map):
                 return et
             else:
                 return ef
 
-        if (ca == 3):
-            expected = self.answer3_percentage >= map
-            if (expected is True):
+        elif (ca == 3):
+            if (self.answer3_percentage >= map):
                 return et
             else:
                 return ef
 
-        if (ca == 4):
-            expected = self.answer4_percentage >= map
-            if (expected is True):
+        elif (ca == 4):
+            if (self.answer4_percentage >= map):
                 return et
             else:
                 return ef
 
-        if (ca == 5):
-            expected = self.answer5_percentage >= map
-            if (expected is True):
+        elif (ca == 5):
+            if (self.answer5_percentage >= map):
                 return et
             else:
                 return ef
-    
+
+        else:
+            return "Error in calculation."
+
     @property
     def participant_answer1(self):
         return str(self.answer1) + " ~~~ " + self.question.answer1
-    
+
     @property
     def participant_answer2(self):
         return str(self.answer2) + " ~~~ " + self.question.answer2
-    
+
     @property
     def participant_answer3(self):
         return str(self.answer3) + " ~~~ " + self.question.answer3
-    
+
     @property
     def participant_answer4(self):
         return str(self.answer4) + " ~~~ " + self.question.answer4
-    
+
     @property
     def participant_answer5(self):
         return str(self.answer5) + " ~~~ " + self.question.answer5
