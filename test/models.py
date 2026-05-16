@@ -44,15 +44,15 @@ class Test(models.Model):
 
     def __str__(self):
         return self.id
-    
+
     @property
     def q_id(self):
         return self.question.id
-    
+
     @property
     def questions(self):
         return self.question.question
-    
+
     @property
     def q_difficulty(self):
         return self.question.q_difficulty
