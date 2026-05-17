@@ -34,8 +34,6 @@ class Answer(models.Model):
     answer3 = models.IntegerField(default=0)
     answer4 = models.IntegerField(default=0)
     answer5 = models.IntegerField(default=0)
-    # Create a warning identifier using the highest percentage answer
-    # teaching_warning = models.IntegerField(choices=TEACHING_WARNING, default=0)
 
     class Meta:
         ordering = ["question"]
@@ -130,7 +128,7 @@ class Answer(models.Model):
                 return ef
 
         else:
-            return "Error in calculation."
+            return "Error in calculation. [Answer.teaching_warning]"
 
     @property
     def participant_answer1(self):
