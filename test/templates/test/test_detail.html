@@ -18,10 +18,10 @@
 
 <section class="t-questions">
     <!-- delete -->section.t-questions --> make properties in Test models.py
-    {% for question in t_questions %}
-        <h2 class="t-question-id">{{ test.q_id }}</h2>
-        <p class="t-question">{{ test.questions }}</p>
-        <p class="t-answer">{{ question.q_difficulty }}</p>
+    {% for tq in t_questions %}
+        <h2 class="t-question-id">{{ tq.q_id }}</h2>
+        <p class="t-question">{{ tq.questions }}</p>
+        <p class="t-answer">{{ tq.q_difficulty }}</p>
     {% endfor %}
 </section>
 

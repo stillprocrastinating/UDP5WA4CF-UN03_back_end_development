@@ -19,11 +19,11 @@
 <section class="q-details">
     <h2 class="q-question">{{ question.question }}</h2>
     <ol class="q-answers">
-        <li class="q-answer mb5">{{ question.answer1 }}</li>
-        <li class="q-answer mb5">{{ question.answer2 }}</li>
-        <li class="q-answer mb5">{{ question.answer3 }}</li>
-        <li class="q-answer mb5">{{ question.answer4 }}</li>
-        <li class="q-answer mb5">{{ question.answer5 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 1 %}correct{% endif %} mb5 q-answer">{{ question.answer1 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 2 %}correct{% endif %} mb5 q-answer">{{ question.answer2 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 3 %}correct{% endif %} mb5 q-answer">{{ question.answer3 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 4 %}correct{% endif %} mb5 q-answer">{{ question.answer4 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 5 %}correct{% endif %} mb5 q-answer">{{ question.answer5 }}</li>
     </ol>
 </section>
 

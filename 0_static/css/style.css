@@ -219,11 +219,11 @@
     background-color: var(--color-secondary);
 }*/
 
-/*.black-secondary {
+/* .black-secondary {
     color: var(--color-black);
     border-color: var(--color-black);
     background-color: var(--color-secondary);
-}*/
+} */
 
 
 /* flex */
@@ -520,6 +520,14 @@ input {
 .q-answers {
     font-size: large;
     padding-inline-start: 50px;
+}
+
+
+/* question_detail.html test_answer_detail.html */
+
+.correct {
+    font-weight: 500;
+    text-decoration: wavy underline var(--color-secondary) 1px;
 }
 
 
