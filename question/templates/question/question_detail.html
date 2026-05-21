@@ -32,6 +32,12 @@
     <section class="answer-section">
         <!-- delete -->section.answer-section
         {% block question_answer_detail %}
+            <section class="flex-section">
+                <p class="no-answers">
+                    This question does not contain any test answers.
+                </p>
+                    <a class="button header-button" href="{% url 'test_new' %}">New test</a>
+            </section>
         {% endblock question_answer_detail %}
     </section>
 {% endif %}

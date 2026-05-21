@@ -2,8 +2,26 @@
 {% load static %}
 {% block question_answer_detail %}
 
-<p>Number of participants: {{ test.participant_number }}</p>
-<div class="answers-list"></div>
+<hr class="hr">
+
+<section class="flex-section">
+    <h2 class="h2">Answers list</h2>
+        <a class="button header-button" href="{% url 'test_new' %}">New test</a>
+</section>
+
+<section class="test-answers">
+    <div class="answers-list">
+        {% for answer in answers %}
+            <p class="answers-list-question strong">{{ answer.test }}</p>
+            <p class="answers-list-answer {% if answer.correct == 1 %}correct{% endif %} mb5 mt5 {% if answer.correct != 1 %}text-overflow-ellipsis{% endif %}">{{ answer.participant_answer1 }}</p>
+            <p class="answers-list-answer {% if answer.correct == 2 %}correct{% endif %} mb5 mt5 {% if answer.correct != 2 %}text-overflow-ellipsis{% endif %}">{{ answer.participant_answer2 }}</p>
+            <p class="answers-list-answer {% if answer.correct == 3 %}correct{% endif %} mb5 mt5 {% if answer.correct != 3 %}text-overflow-ellipsis{% endif %}">{{ answer.participant_answer3 }}</p>
+            <p class="answers-list-answer {% if answer.correct == 4 %}correct{% endif %} mb5 mt5 {% if answer.correct != 4 %}text-overflow-ellipsis{% endif %}">{{ answer.participant_answer4 }}</p>
+            <p class="answers-list-answer {% if answer.correct == 5 %}correct{% endif %} mb5 mt5 {% if answer.correct != 5 %}text-overflow-ellipsis{% endif %}">{{ answer.participant_answer5 }}</p>
+            <p class="answers-list-warning">Question warning: {{ answer.teaching_warning }}</p>
+        {% endfor %}
+    </div>
+</section>
 
 {% endblock question_answer_detail %}
 
