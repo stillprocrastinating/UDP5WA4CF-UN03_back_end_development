@@ -145,3 +145,28 @@ class Answer(models.Model):
     @property
     def participant_answer5(self):
         return str(self.answer5) + " ~~~ " + self.question.answer5
+
+    @property
+    def participant_agg_answer1(self):
+        a = self.question.from_db(field_names=["answer1"])
+        return str(a) + " ~~~ " + self.question.answer1
+
+    @property
+    def participant_agg_answer2(self):
+        a = self.question.from_db(field_names=["answer2"])
+        return str(a) + " ~~~ " + self.question.answer2
+
+    @property
+    def participant_agg_answer3(self):
+        a = self.question.from_db(field_names=["answer3"])
+        return str(a) + " ~~~ " + self.question.answer3
+
+    @property
+    def participant_agg_answer4(self):
+        a = self.question.from_db(field_names=["answer4"])
+        return str(a) + " ~~~ " + self.question.answer4
+
+    @property
+    def participant_agg_answer5(self):
+        a = self.question.from_db(field_names=["answer5"])
+        return str(a) + " ~~~ " + self.question.answer5
