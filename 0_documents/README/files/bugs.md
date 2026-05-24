@@ -13,3 +13,4 @@
 | 11 | 2026-04-05 | _test_list.html_ is paginated without a method of navigating to subsequent pages | 2026-04-11 | _base.html_ `div.paginate`... | [main 0c2b86f] .paginate ||
 | 12 | 2026-04-22 | _test_answer_detail.html_ does not display answers as text | 2026-05-11 | _answer/models.py_ participant_answer() return self.question.answerx | [main 8833f23] participant_answer = self.question.answerx ||
 | 13 | 2026-05-12 | _test_detail.html_ does not display verboseWarning() as expected | 2026-05-24 | _script.js_ ~~tw = .q-warnings[0] -> tw.textContent~~ tw = .q-warnings -> tw[0].textContent | [main 1bd790a] calculateWarningTestQuestions(){...tw[0].textContent...} ||
+| 14 | 2026-05-24 | _script.js_ Uncaught TypeError: Cannot set properties of undefined (setting 'textContent') at calculateWarningTestQuestions (script.js:111:34)

@@ -332,7 +332,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
     // calculateWarningQuestion();
-    calculateWarningTestQuestions();
     verboseLO();
     verboseDifficultyQuestion();
     verboseDifficultyTest();
@@ -342,5 +341,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (document = "/test/new") {
         formModifications();
+    }
+    else if (document = "/test/" & document != "/test/new") {
+        calculateWarningTestQuestions();     // BUG 14
     }     // etc for each page to avoid console errors
 });
