@@ -12,7 +12,7 @@
 <section class="test-answers">
     <div class="answers-list">
         {% for answer in answers %}
-            <p class="answers-list-question strong">{{ answer.question }}</p>
+            <p class="answers-list-question mt30 strong">{{ answer.question }}</p>
             <p class="answers-list-answer {% if answer.correct == 1 %}correct{% endif %} mb5 mt5 {% if answer.correct != 1 %}text-overflow-ellipsis{% endif %}">{{ answer.participant_answer1 }}</p>
             <p class="answers-list-answer {% if answer.correct == 2 %}correct{% endif %} mb5 mt5 {% if answer.correct != 2 %}text-overflow-ellipsis{% endif %}">{{ answer.participant_answer2 }}</p>
             <p class="answers-list-answer {% if answer.correct == 3 %}correct{% endif %} mb5 mt5 {% if answer.correct != 3 %}text-overflow-ellipsis{% endif %}">{{ answer.participant_answer3 }}</p>
