@@ -88,9 +88,9 @@ function calculateWarningQuestion () {}
  * @return {Integer} "1 / 2"
  */
 function calculateWarningTestQuestions () {
-    let tw = document.getElementsByClassName("q-warnings")[0].textContent;
+    let tw = document.getElementsByClassName("q-warnings");
     let qw = document.getElementsByClassName("answers-list-warning");
-    x = 1;
+    x = 0;
 
     for (i = 0; i < qw.length; i++) {
         if (qw[i].textContent[18] == "C") {     // Consider a learning objective teaching method audit.
@@ -100,18 +100,18 @@ function calculateWarningTestQuestions () {
             x += 0;
         }
         else {
-            tw = "Error in calculation. [calculateWarningTestQuestions(){for loop}]";
+            tw[0].textContent = "Error in calculation. [calculateWarningTestQuestions(){for loop}]";
         }
     }
 
     if (x > 0) {
-        return tw = "2";
+        return tw[0].textContent = "2";
     }
     else if (x == 0) {
-        return tw = "1";
+        return tw[0].textContent = "1";
     }
     else {
-        return tw = "Error in calculation. [calculateWarningTestQuestions(){if else}]";
+        return tw[0].textContent = "Error in calculation. [calculateWarningTestQuestions(){if else}]";
     }
 }
 
