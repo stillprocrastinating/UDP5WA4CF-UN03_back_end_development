@@ -316,17 +316,7 @@ function verboseWarning () {
 
 /**
  * On DOM load:
- * - Run calculateDifficultyQuestion()
- * - Run calculateDifficultyTest()
- * - Run calculateWarningQuestion()
- * - Run calculateWarningTestQuestions()
- * - Run formModifications()
- * - Run verboseLO()
- * - Run verboseDifficultyQuestion()
- * - Run verboseDifficultyTest()
- * - Run verboseTypeQuestion()
- * - Run verboseTypeTest()
- * - Run verboseWarning()
+ * - Run everything
  */
 document.addEventListener("DOMContentLoaded", function () {
     // calculateDifficultyQuestion();
@@ -342,7 +332,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document = "/test/new") {
         formModifications();
     }
-    else if (document = "/test/" & document != "/test/new") {
+    else if (document = "/test/") {
         calculateWarningTestQuestions();     // BUG 14
+        verboseWarning();
     }     // etc for each page to avoid console errors
 });

@@ -27,7 +27,10 @@ class Answer(models.Model):
         Test, related_name="test_answers", on_delete=models.CASCADE
     )
     # option = models.IntegerField()
-    answer1 = models.IntegerField(default=0)
+    answer1 = models.IntegerField(
+        default=0,
+        verbose_name=f"{Question.answer1}"
+    )
     answer2 = models.IntegerField(default=0)
     answer3 = models.IntegerField(default=0)
     answer4 = models.IntegerField(default=0)
