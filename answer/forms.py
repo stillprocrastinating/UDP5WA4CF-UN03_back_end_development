@@ -2,16 +2,35 @@ from django import forms
 from .models import Answer
 
 
-class AnswerNew(forms.ModelForm):
+class AnswerNewTest(forms.ModelForm):
     """
-    Generates the form to create Answers
+    Generates the form to create Answers by selecting the Test
     """
-    # q_answers = forms.ModelMultipleChoiceField(
-    #     queryset=Question.objects.filter(Test.t_questions),     # fix to have Question.answerx labels
-    #     widget=forms.CheckboxSelectMultiple
-    # )
 
     class Meta:
         model = Answer
-        # fields = ('question_id', 'test_id', 'option', 'correct_option_frequency', 'incorrect_option_frequency')
-        fields = ('test', 'question', 'answer1', 'answer2', 'answer3','answer4', 'answer5',)
+        fields = ('test',)
+
+
+class AnswerNewQuestion(forms.ModelForm):
+    """
+    Generates the form to create Answers by selecting the Question
+
+    Relies on :form:`AnswerNewTest`
+    """
+
+    class Meta:
+        model = Answer
+        fields = ('question',)
+
+
+class AnswerNewAnswers(forms.ModelForm):
+    """
+    Generates the form to create Answers by selecting the Answers
+
+    Relies on :form:`AnswerNewQuestion`
+    """
+
+    class Meta:
+        model = Answer
+        fields = ('answer1', 'answer2', 'answer3', 'answer4', 'answer5',)

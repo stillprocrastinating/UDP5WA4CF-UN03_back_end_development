@@ -43,6 +43,10 @@ class Answer(models.Model):
         return str(self.id)
 
     @property
+    def question_pool(self):
+        return self.question.q_pool
+
+    @property
     def correct(self):
         return self.question.sub_correct_answer_individual
 

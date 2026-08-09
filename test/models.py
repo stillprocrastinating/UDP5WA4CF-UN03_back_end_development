@@ -34,7 +34,7 @@ class Test(models.Model):
     t_difficulty = models.IntegerField(
         choices=T_DIFFICULTY, default=0, verbose_name="test difficulty"
     )
-    t_questions = models.ManyToManyField(to=Question)
+    t_questions = models.ManyToManyField(to=Question, related_name="q_pool")
     # question = models.ForeignKey(
     #     Question, on_delete=models.DO_NOTHING, related_name="test_questions"
     # )
