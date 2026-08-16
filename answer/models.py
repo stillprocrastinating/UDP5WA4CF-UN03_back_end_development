@@ -57,7 +57,7 @@ class Answer(models.Model):
     @property
     def tester(self):
         return self.test.tester
-    
+
     @property
     def a1n(self):
         return self.question.answer1
