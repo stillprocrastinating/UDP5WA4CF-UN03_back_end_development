@@ -63,7 +63,12 @@
     outline: auto 1px var(--color-secondary);
 }
 
-.inprogress {background-color: #38d8ff; min-height: 100px;}     /* delete */
+
+/* delete */
+
+.bug {background-color: red; min-height: 100px;}
+
+.inprogress {background-color: #38d8ff; min-height: 100px;}
 
 
 /* align */
