@@ -9,19 +9,16 @@
     <p>Examined by {{ test.tester }}</p>
 </section>
 
-<section class="meta">
-    <p class="center t-meta"><span class="t-date">{{ test.date }}</span></p>
-    <p class="center">Test difficulty: <span class="t-difficulty">{{ test.t_difficulty }}</span></p>
-    <p class="center">Question warnings: <span class="q-warnings">Error in calculation. [JavaScript disabled]</span></p>
+<section class="center meta">
+    <p class="t-meta"><span class="t-date">{{ test.date }}</span></p>
+    <p>Test difficulty: <span class="t-difficulty">{{ test.t_difficulty }}</span></p>
+    <p>Question warnings: <span class="q-warnings">Error in calculation. [JavaScript disabled]</span></p>
     <p>Number of participants: {{ test.participant_number }}</p>
 </section>
 
 <section class="t-questions">
-    <!-- delete -->section.t-questions --> make properties in Test models.py
-    {% for tq in t_questions %}
-        <h2 class="t-question-id">{{ tq.q_id }}</h2>
-        <p class="t-question">{{ tq.questions }}</p>
-        <p class="t-answer">{{ tq.q_difficulty }}</p>
+    {% for answer in answers %}
+        <p class="answers-list-question">{{ answer.question }}</p>
     {% endfor %}
 </section>
 
