@@ -1,7 +1,6 @@
 .venv
 env.py
+0_documents/gitignore
 question/fixtures
 test/fixtures
 answer/fixtures
-kd_test_questions_stats_2025.xlsx
-test_format_master_2024.pdf
