@@ -77,13 +77,6 @@ function calculateDifficultyTest () {}
 
 
 /**
- * Calculates the WARNING of the Question from the calculateWarningTestQuestions().
- * @return {Integer} "1 / 2 / 3"
- */
-function calculateWarningQuestion () {}
-
-
-/**
  * Calculates the WARNING of the Tests' Question from the .answers-list-warning of the Answers.
  * @return {Integer} "1 / 2"
  */
@@ -321,7 +314,6 @@ function verboseWarning () {
 document.addEventListener("DOMContentLoaded", function () {
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
-    // calculateWarningQuestion();
     verboseLO();
     verboseDifficultyQuestion();
     verboseDifficultyTest();
