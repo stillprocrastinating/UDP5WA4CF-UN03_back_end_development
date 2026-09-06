@@ -70,7 +70,7 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 
 | # | Description | Solution |
 |-|-|-|
-| 1 | As a Dungeons and Dragons player, I want to be able to play online without needing my physical dice sets, they're heavy! | ![solution1](https://github.com/stillprocrastinating/UDP5WA4CF-UN02_interactive_front_end_development/blob/main/assets/README/user_stories/solution1.jpg) |
+| 6 | As a tester, I want to be able to tell the difference between a question being difficult because it is difficult or because I am teaching it poorly. | ![solution6](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution6.png) |
 
 
 ### Features
