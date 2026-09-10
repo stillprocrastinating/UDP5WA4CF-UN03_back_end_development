@@ -86,10 +86,10 @@ function calculateWarningTestQuestions () {
     x = 0;
 
     for (i = 0; i < qw.length; i++) {
-        if (qw[i].textContent[18] == "C") {     // Consider a learning objective teaching method audit.
+        if (qw[i].textContent.includes("Consider")) {     // Consider a learning objective teaching method audit.
             x += 1;
         }
-        else if (qw[i].textContent[18] == "N") {     // None.
+        else if (qw[i].textContent.includes("None")) {     // None.
             x += 0;
         }
         else {
