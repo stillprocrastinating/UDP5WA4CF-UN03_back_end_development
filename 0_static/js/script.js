@@ -319,13 +319,14 @@ document.addEventListener("DOMContentLoaded", function () {
     verboseDifficultyTest();
     verboseTypeQuestion();
     verboseTypeTest();
-    verboseWarning();
+    // verboseWarning();
 
-    if (document = "/test/new") {
+    // BUG 14
+    if (document.documentURI.includes("/test/new")) {
         formModifications();
     }
-    else if (document = "/test/") {
-        calculateWarningTestQuestions();     // BUG 14
+    else if (document.documentURI.includes("/test/")) {
+        calculateWarningTestQuestions();
         verboseWarning();
     }     // etc for each page to avoid console errors
 });
