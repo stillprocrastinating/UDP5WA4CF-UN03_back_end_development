@@ -56,9 +56,9 @@ let t_type = {
 
 /** Dictionary of warnings */
 let warning = {
-    w0: "Error in calculation. [verboseWarning()]",
-    w1: "None.",
-    w2: "Yes."
+    w0: "Error in calculation",
+    w1: "None",
+    w2: "Yes"
 };
 
 
@@ -93,7 +93,7 @@ function calculateWarningTestQuestions () {
             x += 0;
         }
         else {
-            tw[0].textContent = "Error in calculation. [calculateWarningTestQuestions(){for loop}]";
+            tw[0].textContent = "Error in calculation";
         }
     }
 
@@ -104,7 +104,7 @@ function calculateWarningTestQuestions () {
         return tw[0].textContent = "1";
     }
     else {
-        return tw[0].textContent = "Error in calculation. [calculateWarningTestQuestions(){if else}]";
+        return tw[0].textContent = "Error in calculation";
     }
 }
 
@@ -321,7 +321,6 @@ document.addEventListener("DOMContentLoaded", function () {
     verboseTypeTest();
     // verboseWarning();
 
-    // BUG 14
     if (document.documentURI.includes("/test/new")) {
         formModifications();
     }
