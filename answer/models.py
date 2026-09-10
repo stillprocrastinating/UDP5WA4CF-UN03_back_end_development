@@ -133,7 +133,7 @@ class Answer(models.Model):
                 return ef
 
         else:
-            return "Error in calculation. [Answer.teaching_warning]"
+            return "Error in calculation"
 
     @property
     def participant_answer1(self):
