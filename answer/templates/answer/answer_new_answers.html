@@ -6,7 +6,7 @@
 
 <section class="flex-header">
     <h1>New answer</h1>
-    <a class="button header-button" href="{% url 'tests' %}">Cancel</a> <!-- is there a way i can href to the previous page? -->
+    <a class="button header-button" href="{% url 'tests' %}">Cancel</a> <!-- is there a way i can href to the previous page? YES! Unfortunately, only by js: document.referrer -->
 </section>
 <section class="submitted">
     <p class="submitted-test">{{ answer_new_test.test }}</p>
