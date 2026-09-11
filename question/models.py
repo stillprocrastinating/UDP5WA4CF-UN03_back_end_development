@@ -60,8 +60,7 @@ class Question(models.Model):
     id = models.CharField(max_length=25, primary_key=True)
     slug = AutoSlugField(max_length=25, unique=True, populate_from='id')
     lo = models.IntegerField(
-        choices=LO,
-        verbose_name="learning objective"
+        choices=LO, verbose_name="learning objective"
     )
     type = models.IntegerField(choices=Q_TYPE)
     number = models.IntegerField(verbose_name="number of Qs of that LO & type")
@@ -77,8 +76,7 @@ class Question(models.Model):
         verbose_name="number of answers for subquestion"
     )
     sub_correct_answer_individual = models.IntegerField(
-        choices=Q_CORRECT,
-        verbose_name="which answer for subquestion is correct"
+        choices=Q_CORRECT, verbose_name="which answer for subquestion is correct"
     )
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     q_difficulty = models.IntegerField(
