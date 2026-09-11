@@ -27,10 +27,7 @@ class Answer(models.Model):
         Test, related_name="test_answers", on_delete=models.CASCADE
     )
     # option = models.IntegerField()
-    answer1 = models.IntegerField(
-        default=0,
-        verbose_name=f"{Question.answer1}"
-    )
+    answer1 = models.IntegerField(default=0)
     answer2 = models.IntegerField(default=0)
     answer3 = models.IntegerField(default=0)
     answer4 = models.IntegerField(default=0)
@@ -57,10 +54,6 @@ class Answer(models.Model):
     @property
     def tester(self):
         return self.test.tester
-
-    @property
-    def a1n(self):
-        return self.question.answer1
 
     @property
     def answer1_percentage(self):
