@@ -99,8 +99,8 @@ class Answer(models.Model):
             self.answer5_percentage
         )
 
-        et = "None."
-        ef = "Consider a learning objective teaching method audit."
+        et = "None"
+        ef = "Consider a learning objective teaching method audit"
 
         if (ca == 1):
             if (self.answer1_percentage >= map):
