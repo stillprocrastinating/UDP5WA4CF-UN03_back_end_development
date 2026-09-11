@@ -24,7 +24,7 @@ class Answer(models.Model):
         Question, on_delete=models.DO_NOTHING, related_name="question_answers"
     )
     test = models.ForeignKey(
-        Test, related_name="test_answers", on_delete=models.CASCADE
+        Test, on_delete=models.CASCADE, related_name="test_answers"
     )
     # option = models.IntegerField()
     answer1 = models.IntegerField(default=0)
