@@ -70,13 +70,14 @@ class Question(models.Model):
     answer3 = models.TextField(blank=True)     # extend.ucl.ac.uk
     answer4 = models.TextField(blank=True)     # extend.ucl.ac.uk
     answer5 = models.TextField(blank=True)     # extend.ucl.ac.uk
-    #image = models.ImageField(blank=True)     # not needed for this iteration of the app
+    # image = models.ImageField(blank=True)     # not needed this app version
     sub_number = models.IntegerField(verbose_name="number of subquestions")
     sub_answer_number_individual = models.IntegerField(
         verbose_name="number of answers for subquestion"
     )
     sub_correct_answer_individual = models.IntegerField(
-        choices=Q_CORRECT, verbose_name="which answer for subquestion is correct"
+        choices=Q_CORRECT,
+        verbose_name="which answer for subquestion is correct"
     )
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     q_difficulty = models.IntegerField(
@@ -86,7 +87,7 @@ class Question(models.Model):
 
     class Meta:
         ordering = ["lo", "type", "number"]
-        #filtering = ["lo", "type", "author", "warning"]
+        # filtering = ["lo", "type", "author", "warning"]
 
     def __str__(self):
         return self.question
