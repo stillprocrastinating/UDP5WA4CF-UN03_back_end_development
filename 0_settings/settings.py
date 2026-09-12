@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'question',
     'test',
     'answer',
+    'q_meta',
 ]
 
 SITE_ID = 1

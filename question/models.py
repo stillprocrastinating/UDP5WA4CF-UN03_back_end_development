@@ -28,12 +28,12 @@ Q_CORRECT = (
     (5, "Answer5")
 )
 
-Q_DIFFICULTY = (
-    (0, "Error in calculation"),
-    (1, "Easy"),
-    (2, "Optimal"),
-    (3, "Difficult")
-)
+# Q_DIFFICULTY = (
+#     (0, "Error in calculation"),
+#     (1, "Easy"),
+#     (2, "Optimal"),
+#     (3, "Difficult")
+# )
 
 Q_TYPE = (
     (1, "Diagram"),
@@ -44,12 +44,12 @@ Q_TYPE = (
     (6, "True/false")
 )
 
-WARNING = (
-    (0, "Error in calculation"),
-    (1, "None"),
-    (2, "Warning"),
-    (3, "Flagged to revise question wording")
-)
+# WARNING = (
+#     (0, "Error in calculation"),
+#     (1, "None"),
+#     (2, "Warning"),
+#     (3, "Flagged to revise question wording")
+# )
 
 
 class Question(models.Model):
@@ -80,10 +80,10 @@ class Question(models.Model):
         verbose_name="which answer for subquestion is correct"
     )
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    q_difficulty = models.IntegerField(
-        choices=Q_DIFFICULTY, default=0, verbose_name="question difficulty"
-    )
-    warning = models.IntegerField(choices=WARNING, default=0)
+    # q_difficulty = models.IntegerField(
+    #     choices=Q_DIFFICULTY, default=0, verbose_name="question difficulty"
+    # )
+    # warning = models.IntegerField(choices=WARNING, default=0)
 
     class Meta:
         ordering = ["lo", "type", "number"]
@@ -91,3 +91,7 @@ class Question(models.Model):
 
     def __str__(self):
         return self.question
+
+    # @property
+    # def warning(self):
+    #     return warning
