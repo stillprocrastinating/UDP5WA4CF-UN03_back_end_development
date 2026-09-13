@@ -324,6 +324,15 @@ function verboseWarning () {
  * - Run everything
  */
 document.addEventListener("DOMContentLoaded", function () {
+
+    if (document.documentURI.includes("/test/new")) {
+        formModifications();
+    }
+    else if (document.documentURI.includes("/test/")) {
+        calculateWarningTestQuestions();
+    }     // etc for each page to avoid console errors
+
+    // for all pages
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
     hrefReferrer();
@@ -332,13 +341,6 @@ document.addEventListener("DOMContentLoaded", function () {
     verboseDifficultyTest();
     verboseTypeQuestion();
     verboseTypeTest();
-    // verboseWarning();
+    verboseWarning();
 
-    if (document.documentURI.includes("/test/new")) {
-        formModifications();
-    }
-    else if (document.documentURI.includes("/test/")) {
-        calculateWarningTestQuestions();
-        verboseWarning();
-    }     // etc for each page to avoid console errors
 });
