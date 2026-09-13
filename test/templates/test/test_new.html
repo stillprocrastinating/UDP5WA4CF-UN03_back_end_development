@@ -6,7 +6,7 @@
 
 <section class="flex-header">
     <h1>New test</h1>
-    <a class="button header-button referrer" href="{% url 'tests' %}">Cancel</a>
+    <a class="button header-button referrer" href="{% url 'tests' %}" aria-label="Return to the previous page">Cancel</a>
 </section>
 <form method="post" id="testForm" class="form">
     {{ test_new | crispy }}
