@@ -134,6 +134,18 @@ function formModifications () {
 
 
 /**
+ * Replace the default/assigned href of any cancel or back buttons with the document.referrer.
+ */
+function hrefReferrer () {
+    let button = document.getElementsByClassName("referrer");
+
+    for (i = 0; i < button.length; i++) {
+        button[i].href = document.referrer;
+    }
+}
+
+
+/**
  * Changes the textContent of the LO from the table integer to a human-readable "verbose" string.
  * @return {String} "LOx [the learning objective]."
  */
@@ -314,6 +326,7 @@ function verboseWarning () {
 document.addEventListener("DOMContentLoaded", function () {
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
+    hrefReferrer();
     verboseLO();
     verboseDifficultyQuestion();
     verboseDifficultyTest();
