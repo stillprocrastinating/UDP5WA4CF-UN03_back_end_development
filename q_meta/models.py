@@ -20,4 +20,5 @@ class Q_meta(models.Model):
 
     @property
     def warning(self):
-        return str(sum(self.answer.teaching_warning))
+        # return str(sum(self.answer.teaching_warning))
+        return "Test"

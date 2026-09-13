@@ -1,0 +1,19 @@
+{% extends 'question/question_detail.html' %}
+{% load static %}
+{% block q_meta %}
+
+<section class="center">
+    <p class="center">Question difficulty: <span class="bug q-difficulty">{{ question.q_difficulty }} BROKEN</span></p>
+    <p class="center">Question warning: <span class="bug q-warnings">{{ q_meta.warning }} BROKEN</span></p>
+</section>
+
+<section class="center">
+    {% for q_meta in q_metas %}
+        <p class="center">Question difficulty: <span class="bug q-difficulty">{{ question.q_difficulty }} BROKEN</span></p>
+        <p class="center">Question warning: <span class="bug q-warnings">{{ q_meta.warning }} BROKEN</span></p>
+        {% empty %}
+            <p>No answers recorded for this question.</p>
+    {% endfor %}
+</section>
+
+{% endblock q_meta %}

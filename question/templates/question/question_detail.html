@@ -11,9 +11,8 @@
 </section>
 
 <section class="meta">
-    <p class="center q-meta"><span class="q-type">{{ question.type }}</span> #{{ question.number }}</p>
-    <p class="center">Question difficulty: <span class="bug q-difficulty">{{ question.q_difficulty }} BROKEN</span></p>
-    <p class="center">Question warning: <span class="bug q-warnings">{{ q_meta.warning }} BROKEN</span></p>
+    <p class="center"><span class="q-type">{{ question.type }}</span> #{{ question.number }}</p>
+    {% block q_meta %}test{% endblock q_meta %}
 </section>
 
 <section class="q-details">
