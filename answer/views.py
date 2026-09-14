@@ -4,6 +4,28 @@ from .forms import AnswerNewTest, AnswerNewQuestion, AnswerNewAnswers
 from .models import Answer
 
 
+def question_answer_detail(request, slug):
+    """
+    Display all :model:`test.Test` per individual :model:`question.Question`.
+
+    :param request: The requested question.
+    :param slug: The identification (slug) of the request.
+    """
+
+    answers = Answer.objects.filter(question__slug=slug)
+
+    context = {
+        "answers": answers,
+        "question": answers.first().question,
+    }
+
+    return render(
+        request,
+        "answer/question_answer_detail.html",
+        context
+    )
+
+
 def test_answer_detail(request, slug):
     """
     Display all :model:`question.Question` per individual :model:`test.Test`.
