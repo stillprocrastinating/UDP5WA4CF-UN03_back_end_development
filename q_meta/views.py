@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from question.models import Question
-from answer.models import Answer
 from .models import Q_meta
 
 
@@ -21,14 +19,15 @@ def question_meta(request, slug):
     :template:`question/question_detail.html`.
     """
 
-    questions = Q_meta.objects.filter(question__slug=slug)
+    q_metas = Q_meta.objects.filter(question__slug=slug)
 
     context = {
-        "questions": questions,
+        "q_metas": q_metas,
+        "question": q_metas.first().question,
     }
 
     return render(
         request,
-        "question/question_detail.html",
+        "q_meta/q_meta.html",
         context
     )

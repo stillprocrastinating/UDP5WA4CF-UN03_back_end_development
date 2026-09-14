@@ -9,7 +9,7 @@ class Q_meta(models.Model):
     """
 
     question = models.ForeignKey(
-        Question, on_delete=models.DO_NOTHING, related_name="question_analyses"
+        Question, on_delete=models.DO_NOTHING, related_name="question_meta"
     )
     answer = models.ForeignKey(
         Answer, on_delete=models.CASCADE, related_name="q_meta_answers"
@@ -21,4 +21,4 @@ class Q_meta(models.Model):
     @property
     def warning(self):
         # return str(sum(self.answer.teaching_warning))
-        return "Test"
+        return "It works?"
