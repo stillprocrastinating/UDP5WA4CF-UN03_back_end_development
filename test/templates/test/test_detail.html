@@ -27,10 +27,8 @@
     <section class="answer-section">
         {% block test_answer_detail %}
             <section class="flex-section">
-                <p class="no-answers">
-                    This test does not contain E1L multiple choice questions/answers.
-                </p>
-                    <a href="{% url 'answer_new' %}" class="button header-button">New answers</a>
+                <p class="no-answers">This test does not contain E1L multiple choice questions/answers.</p>
+                <a href="{% url 'answer_new' %}" class="button header-button">New answers</a>
             </section>
         {% endblock test_answer_detail %}
     </section>
