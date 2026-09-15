@@ -55,7 +55,9 @@ def answer_new(request):
     **Context**
 
     ``answer_new``
-        An instance of :form:`answer.AnswerNewTest`, then :form:`answer.AnswerNewQuestion`, then :form:`answer.AnswerNewAnswers`.
+        An instance of :form:`answer.AnswerNewTest`,
+        then :form:`answer.AnswerNewQuestion`,
+        then :form:`answer.AnswerNewAnswers`.
 
     **Template**
 
