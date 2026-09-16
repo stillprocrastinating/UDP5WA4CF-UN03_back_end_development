@@ -112,6 +112,20 @@ function calculateWarningTestQuestions () {
 /**
  * Edit the TestForm() form attributes.
  */
+function encodeAnswersListQuestion () {
+    let alq = document.getElementsByClassName("answers-list-question");
+
+    for (i = 0; i < alq.length; i++) {
+        alq[i].href = "#" + encodeURIComponent(alq[i].innerHTML);
+    }
+}
+// http://127.0.0.1:8000/test/nov-24-2-2/#The%20use%20of%20animals%20in%20research%20is%20a%20controversial%20one%20and%20researchers%20have%20an%20obligation%20to%20ensure%20ethical%20and%20humane%20treatment.%20Below%20are%20institutions%20that%20offer%20information%20on%20animals%20in%20research.%20Which%20one%20is%20NOT%20a%20reliable%20resource%3F
+// http://127.0.0.1:8000/test/nov-24-2-2/#Users%20of%20animals%20models%20for%20research%20are%20expected%20to%20maintain%20high%20standards%20of%20animal%20welfare%20at%20all%20times.%20Why%3F:~:text=New-,The%20use%20of%20animals%20in%20research%20is%20a%20controversial%20one%20and%20researchers%20have%20an%20obligation%20to%20ensure%20ethical%20and%20humane%20treatment.%20Below%20are%20institutions%20that%20offer%20information%20on%20animals%20in%20research.%20Which%20one%20is%20NOT%20a%20reliable%20resource%3F,-0%20~~~%20Norecopa
+
+
+/**
+ * Edit the TestForm() form attributes.
+ */
 function formModifications () {
     let inputIdId = document.getElementById("id_id");
     let inputIdDate = document.getElementById("id_date");
@@ -335,6 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // for all pages
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
+    encodeAnswersListQuestion();
     hrefReferrer();
     verboseLO();
     verboseDifficultyQuestion();

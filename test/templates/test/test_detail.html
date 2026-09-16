@@ -19,7 +19,7 @@
 <section class="t-questions">
     <p class="mt30 strong">Test questions</p>
     {% for answer in answers %}
-        <p class="answers-list-question">{{ answer.question }}</p>
+        <a href="javascript:void(0);" class="answers-list-question">{{ answer.question }}</a>
         <!-- encodeURIComponent() -->
     {% endfor %}
 </section>
