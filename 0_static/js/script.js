@@ -112,22 +112,6 @@ function calculateWarningTestQuestions () {
 /**
  * Edit the TestForm() form attributes.
  */
-function encodeAnswersListQuestion () {
-    let alq = document.getElementsByClassName("answers-list-question");
-
-    for (i = 0; i < alq.length; i++) {
-        alq[i].href = "#" + encodeURIComponent(alq[i].innerHTML) + ",-" + encodeURIComponent(alq[i].nextSibling.innerHTML) + ":~:text=Question%20warning%3A%20" + "None-," + encodeURIComponent(alq[i].innerHTML) + ",-" + encodeURIComponent(alq[i].nextSibling.innerHTML);
-    }
-}
-// produced
-// http://127.0.0.1:8000/test/nov-24-2-2/#Users%20of%20animals%20models%20for%20research%20are%20expected%20to%20maintain%20high%20standards%20of%20animal%20welfare%20at%20all%20times.%20Why%3F,-undefined:~:text=Question%20warning%3A%20None-,Users%20of%20animals%20models%20for%20research%20are%20expected%20to%20maintain%20high%20standards%20of%20animal%20welfare%20at%20all%20times.%20Why%3F,-undefined
-// actual
-// http://127.0.0.1:8000/test/nov-24-2-2/#Users%20of%20animals%20models%20for%20research%20are%20expected%20to%20maintain%20high%20standards%20of%20animal%20welfare%20at%20all%20times.%20Why%3F,-undefined:~:text=Question%20warning%3A%20None-,Users%20of%20animals%20models%20for%20research%20are%20expected%20to%20maintain%20high%20standards%20of%20animal%20welfare%20at%20all%20times.%20Why%3F,-0%20~~~%20Societal%20expectations
-
-
-/**
- * Edit the TestForm() form attributes.
- */
 function formModifications () {
     let inputIdId = document.getElementById("id_id");
     let inputIdDate = document.getElementById("id_date");
@@ -145,6 +129,20 @@ function formModifications () {
 
     if (inputIdQuestion != null) {
         inputIdQuestion.style.width = "90%";
+    }
+}
+
+
+/**
+ * Add `name` attribute to <h6.answers-list-question> & link to it.
+ */
+function headingLinks () {
+    let alql = document.getElementsByClassName("alq-link");
+    let alq = document.getElementsByClassName("answers-list-question");
+
+    for (i = 0; i < alq.length; i++) {
+        alql[i].href = "#" + "question" + i;
+        alq[i].id = "question" + i;
     }
 }
 
@@ -351,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // for all pages
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
-    encodeAnswersListQuestion();
+    headingLinks();
     hrefReferrer();
     verboseLO();
     verboseDifficultyQuestion();
