@@ -534,6 +534,11 @@ input {
 
 /* question_detail.html test_answer_detail.html */
 
+.alq-link {
+    display: block;
+    padding: 5px;
+}
+
 .correct {
     font-weight: 500;
     text-decoration: wavy underline var(--color-secondary) 1px;
