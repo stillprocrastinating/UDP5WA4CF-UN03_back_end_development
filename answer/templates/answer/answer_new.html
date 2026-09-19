@@ -9,9 +9,9 @@
     <a class="button header-button referrer" href="{% url 'tests' %}" aria-label="Return to the previous page">Cancel</a>
 </section>
 <form method="post" id="answerForm" class="form">
-    {{ answer_new_test | crispy }}
+    {{ answer_new | crispy }}
     {% csrf_token %}
-    <button type="submit" id="answerSubmit" class="button mb-3" href="{% url 'answer_new_question' %}">Submit</button>
+    <button type="submit" id="answerSubmit" class="button mb-3">Submit</button>
 </form>
 
 {% endblock answer_new %}
