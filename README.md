@@ -82,7 +82,7 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 | Pages | Sizes | Feature | Presentation |
 |-|-|-|-|
 | All | All | `<noscript>` to handle disabled JavaScript | ![noscript](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/noscript.png) |
-| test_detail.html | All | `<a>` to see a quick list of the questions in that test and be able to jump to a particular question quickly _- this may not seem pertinent, but will be appreciated in later versions of the site when the number of questions per test matches reality (~30)_ | ![alq-list](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/alq-list.png) |
+| test_detail.html | All | `<a>` to see a quick list of the questions in that test and be able to jump to a particular question quickly _- this may not seem pertinent, but will be appreciated in later versions of the site when the number of questions per test matches reality (~30)_ | ![alq-list](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/alq-link.png) |
 
 
 ### Entity relationship diagrams
