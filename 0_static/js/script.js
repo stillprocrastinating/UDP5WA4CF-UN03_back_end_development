@@ -356,6 +356,6 @@ document.addEventListener("DOMContentLoaded", function () {
     verboseDifficultyTest();
     verboseTypeQuestion();
     verboseTypeTest();
-    // verboseWarning();
+    verboseWarning();
 
 });
