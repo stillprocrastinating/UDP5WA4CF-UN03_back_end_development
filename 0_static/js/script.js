@@ -339,7 +339,7 @@ function verboseWarning () {
  */
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (document.documentURI.includes("/test/")) {
+    if (document.documentURI.includes("/test/id-")) {
         calculateWarningTestQuestions();
     }     // etc for each page to avoid console errors
 
