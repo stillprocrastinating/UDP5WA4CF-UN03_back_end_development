@@ -339,16 +339,14 @@ function verboseWarning () {
  */
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (document.documentURI.includes("/test/new")) {
-        formModifications();
-    }
-    else if (document.documentURI.includes("/test/")) {
+    if (document.documentURI.includes("/test/")) {
         calculateWarningTestQuestions();
     }     // etc for each page to avoid console errors
 
     // for all pages
     // calculateDifficultyQuestion();
     // calculateDifficultyTest();
+    formModifications();
     headingLinks();
     hrefReferrer();
     verboseLO();
