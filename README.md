@@ -123,6 +123,8 @@ Raghav Kovvuri, my tutor during my [Code Institute](https://codeinstitute.net) c
 ### How to...
 
 UPDATE
+- deployed site via GitHub & Heroku
+- credit SQLTools, Python, PostgreSQL, & VSC extensions
 
 View the deployed site on [GitHub](https://github.com/dashboard) Pages, [here](https://stillprocrastinating.github.io/UDP5WA4CF-UN02_interactive_front_end_development/).
 
