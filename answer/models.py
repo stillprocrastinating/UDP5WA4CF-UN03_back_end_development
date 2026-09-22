@@ -41,7 +41,7 @@ class Answer(models.Model):
 
     @property
     def question_pool(self):
-        return self.question.q_pool
+        return self.test.t_questions
 
     @property
     def correct(self):
