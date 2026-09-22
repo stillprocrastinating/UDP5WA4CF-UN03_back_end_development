@@ -68,7 +68,9 @@
 
 .bug {background-color: red; min-height: 100px;}
 
-.inprogress {background-color: #38d8ff; min-height: 100px;}
+.in-progress {background-color: #38d8ff; min-height: 100px;}
+
+.improve {background-color: #983bfe;}
 
 
 /* align */
