@@ -29,15 +29,6 @@ let q_type = {
 
 
 /** Dictionary of test difficulties */
-let q_difficulty = {
-    qd0: "Error in calculation",
-    qd1: "Easy",
-    qd2: "Optimal",
-    qd3: "Difficult"
-};
-
-
-/** Dictionary of test difficulties */
 let t_difficulty = {
     td0: "Error in calculation",
     td1: "Easy",
@@ -63,17 +54,42 @@ let warning = {
 
 
 /**
- * Calculates the Q_DIFFICULTY of the Question from the correct_option_frequency of the Answers.
- * @return {Integer} "1 / 2 / 3"
+ * Calculates the DIFFICULTY of the Tests' Question from the .answers-list-difficulty of the Answers.
+ * @return {Integer} "1 / 2"
  */
-function calculateDifficultyQuestion () {}
+function calculateDifficultyTest () {
+    let td = document.getElementsByClassName("t-difficulty");
+    let qd = document.getElementsByClassName("answers-list-difficulty");
+    x = 0;
 
+    for (i = 0; i < qd.length; i++) {
+        if (qd[i].textContent.includes("Difficult")) {
+            x += 1;
+        }
+        else if (qd[i].textContent.includes("Optimal")) {
+            x += 0;
+        }
+        else {
+            td[0].textContent = "Error in calculation";
+        }
+    }
 
-/**
- * Calculates the T_DIFFICULTY of the Test from the Q_DIFFUCULTY of the Question.
- * @return {Integer} "1 / 2 / 3"
- */
-function calculateDifficultyTest () {}
+    if (x/qd.length >= qd.length) {
+        return td[0].textContent = "3";
+    }
+    else if (x/qd.length < qd.length) {
+        return td[0].textContent = "2";
+    }
+    else if (qd.length == 0) {
+        return td[0].textContent = "Not applicable";
+    }
+    else if (x == 0) {
+        return td[0].textContent = "1";
+    }
+    else {
+        return td[0].textContent = "Error in calculation";
+    }
+}
 
 
 /**
@@ -340,12 +356,11 @@ function verboseWarning () {
 document.addEventListener("DOMContentLoaded", function () {
 
     if (document.documentURI.includes("/test/id-")) {
+        calculateDifficultyTest();
         calculateWarningTestQuestions();
     }     // etc for each page to avoid console errors
 
     // for all pages
-    // calculateDifficultyQuestion();
-    // calculateDifficultyTest();
     formModifications();
     headingLinks();
     hrefReferrer();

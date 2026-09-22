@@ -129,6 +129,72 @@ class Answer(models.Model):
             return "Error in calculation"
 
     @property
+    def question_difficulty(self):
+
+        ca = self.correct
+
+        et = "Optimal"
+        ef = "Difficult"
+
+        if (ca == 1):
+            if (self.answer1_percentage >= (
+                self.answer2_percentage
+                + self.answer3_percentage
+                + self.answer4_percentage
+                + self.answer5_percentage
+            )):
+                return et
+            else:
+                return ef
+
+        elif (ca == 2):
+            if (self.answer2_percentage >= (
+                self.answer1_percentage
+                + self.answer3_percentage
+                + self.answer4_percentage
+                + self.answer5_percentage
+            )):
+                return et
+            else:
+                return ef
+
+        elif (ca == 3):
+            if (self.answer3_percentage >= (
+                self.answer1_percentage
+                + self.answer2_percentage
+                + self.answer4_percentage
+                + self.answer5_percentage
+            )):
+                return et
+            else:
+                return ef
+
+        elif (ca == 4):
+            if (self.answer4_percentage >= (
+                self.answer1_percentage
+                + self.answer2_percentage
+                + self.answer3_percentage
+                + self.answer5_percentage
+            )):
+                return et
+            else:
+                return ef
+
+        elif (ca == 5):
+            if (self.answer5_percentage >= (
+                self.answer1_percentage
+                + self.answer2_percentage
+                + self.answer3_percentage
+                + self.answer4_percentage
+            )):
+                return et
+            else:
+                return ef
+
+        else:
+            return "Error in calculation"
+
+    @property
     def participant_answer1(self):
         return str(self.answer1) + " ~~~ " + self.question.answer1
 
