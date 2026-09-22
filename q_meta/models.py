@@ -16,7 +16,7 @@ class Q_meta(models.Model):
     )
 
     def __str__(self):
-        return str(self.id)
+        return self.question.id
 
     @property
     def warning(self):
