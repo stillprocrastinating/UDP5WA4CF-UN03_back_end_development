@@ -1,6 +1,6 @@
 {% extends 'question/question_detail.html' %}
 {% load static %}
-{% block q_meta %}
+{% block q_meta_detail %}
 
 <section class="center">
     <p class="center">Question difficulty: <span class="bug q-difficulty">{{ question.q_difficulty }} BROKEN</span></p>
@@ -16,4 +16,4 @@
     {% endfor %}
 </section>
 
-{% endblock q_meta %}
+{% endblock q_meta_detail %}

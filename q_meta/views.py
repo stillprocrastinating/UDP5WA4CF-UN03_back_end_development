@@ -28,6 +28,6 @@ def question_meta(request, slug):
 
     return render(
         request,
-        "q_meta/q_meta.html",
+        "q_meta/q_meta_detail.html",
         context
     )

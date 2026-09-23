@@ -10,9 +10,9 @@
     <p class="flex-accommodate margin-0">Created by {{ question.author }}</p>
 </section>
 
-<section class="meta">
-    <p class="center"><span class="q-type">{{ question.type }}</span> #{{ question.number }}</p>
-    {% block q_meta %}<!-- delete --><span class="bug">test</span>{% endblock q_meta %}
+<section class="center meta">
+    <p><span class="q-type">{{ question.type }}</span> #{{ question.number }}</p>
+    {% block q_meta_detail %}<!-- delete --><span class="bug">test</span>{% endblock q_meta_detail %}
 </section>
 
 <section class="q-details">
