@@ -111,6 +111,8 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 
 [UCL brand resources](https://www.ucl.ac.uk/brand-and-experience/brand/brand-resources) directly influenced my colour theme, [Favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/favicon/favicon.svg), and footer image [banner](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/base/ucl200_stretch_banner_3000x2280mm_original.jpg).
 
+[designdunja](https://www.istockphoto.com/portfolio/designdunja?mediatype=illustration) made the [source image](https://www.istockphoto.com/vector/zebrafish-gm479692688-68004101) of my [logo](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/base/zebrafish.jpg) for [iStock](https://www.istockphoto.com). I've been using it for years (offline) and almost forgot to give credit this time due to my familiarity with it. Sorry!
+
 [rxaviers](https://gist.github.com/rxaviers)' GitHub markdown [emojis](https://gist.github.com/rxaviers/7360908).
 
 Raghav Kovvuri, my tutor during my [Code Institute](https://codeinstitute.net) course, helped me fix a few bugs:
