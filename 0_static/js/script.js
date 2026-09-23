@@ -358,11 +358,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.documentURI.includes("/test/id-")) {
         calculateDifficultyTest();
         calculateWarningTestQuestions();
+        headingLinks();
     }     // etc for each page to avoid console errors
 
     // for all pages
     formModifications();
-    headingLinks();
     hrefReferrer();
     verboseLO();
     verboseDifficultyQuestion();
