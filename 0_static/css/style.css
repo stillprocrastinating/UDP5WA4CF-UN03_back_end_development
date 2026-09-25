@@ -532,6 +532,37 @@ input {
 
 /* question_detail.html */
 
+/* .show-answers {
+    background-color: linear-gradient(to top right, var(--color-primary), var(--color-secondary), var(--color-black), var(--color-dark));
+    transition: background-color 1000ms linear;
+} */
+
+@keyframes show-answers-animation {
+    0% {
+        background-color: var(--color-light);
+    }
+    50% {
+        background-color: var(--color-primary);  
+    }
+    90% {
+        background-color: var(--color-dark);
+    }
+    100% {
+        background-color: var(--color-black);
+    }
+}
+
+.show-answers {
+    background-color: var(--color-background);
+    animation-name: show-answers-animation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: Infinite;
+    animation-direction: alternate;
+    
+    
+}
+
 .q-answers {
     font-size: large;
     padding-inline-start: 50px;

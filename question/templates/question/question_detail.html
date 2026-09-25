@@ -15,14 +15,17 @@
     {% block q_meta_detail %}<!-- delete --><span class="bug">test</span>{% endblock q_meta_detail %}
 </section>
 
-<section class="q-details">
+<section class="{% if user.is_authenticated %}{% else %}flex-section{% endif %} q-details">
     <h2 class="q-question">{{ question.question }}</h2>
+    {% if user.is_authenticated %}{% else %}
+        <div class="button header-button" id="show-answers">Show answers</div>
+    {% endif %}
     <ol class="q-answers">
-        <li class="{% if question.sub_correct_answer_individual == 1 %}correct{% endif %} mb5 q-answer">{{ question.answer1 }}</li>
-        <li class="{% if question.sub_correct_answer_individual == 2 %}correct{% endif %} mb5 q-answer">{{ question.answer2 }}</li>
-        <li class="{% if question.sub_correct_answer_individual == 3 %}correct{% endif %} mb5 q-answer">{{ question.answer3 }}</li>
-        <li class="{% if question.sub_correct_answer_individual == 4 %}correct{% endif %} mb5 q-answer">{{ question.answer4 }}</li>
-        <li class="{% if question.sub_correct_answer_individual == 5 %}correct{% endif %} mb5 q-answer">{{ question.answer5 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 1 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 1 %}yes{% else %}no{% endif %}">{{ question.answer1 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 2 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 2 %}yes{% else %}no{% endif %}">{{ question.answer2 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 3 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 3 %}yes{% else %}no{% endif %}">{{ question.answer3 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 4 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 4 %}yes{% else %}no{% endif %}">{{ question.answer4 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 5 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 5 %}yes{% else %}no{% endif %}">{{ question.answer5 }}</li>
     </ol>
 </section>
 

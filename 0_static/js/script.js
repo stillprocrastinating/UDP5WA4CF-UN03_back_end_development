@@ -176,6 +176,23 @@ function hrefReferrer () {
 
 
 /**
+ * Show the answers to the questions in the question_detail.html views for unauthenticated users.
+ */
+function showAnswers () {
+    let sab = document.getElementById("show-answers");
+    let q = document.getElementsByClassName("q-answer");
+    sab.addEventListener("click", function () {
+        for (i = 0; i < q.length; i++) {
+            if (q[i].getAttribute("correct") === "yes") {
+                q[i].classList.toggle("correct");
+                sab.classList.toggle("show-answers");
+            };
+        };
+    });
+}
+
+
+/**
  * Changes the textContent of the LO from the table integer to a human-readable "verbose" string.
  * @return {String} "LOx [the learning objective]."
  */
@@ -359,6 +376,9 @@ document.addEventListener("DOMContentLoaded", function () {
         calculateDifficultyTest();
         calculateWarningTestQuestions();
         headingLinks();
+    }
+    else if (document.getElementById("show-answers")) {
+        showAnswers();
     }     // etc for each page to avoid console errors
 
     // for all pages
