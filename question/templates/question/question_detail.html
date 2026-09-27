@@ -21,11 +21,11 @@
         <div class="button header-button" id="show-answers">Show answers</div>
     {% endif %}
     <ol class="q-answers">
-        <li class="{% if question.sub_correct_answer_individual == 1 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 1 %}yes{% else %}no{% endif %}">{{ question.answer1 }}</li>
-        <li class="{% if question.sub_correct_answer_individual == 2 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 2 %}yes{% else %}no{% endif %}">{{ question.answer2 }}</li>
-        <li class="{% if question.sub_correct_answer_individual == 3 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 3 %}yes{% else %}no{% endif %}">{{ question.answer3 }}</li>
-        <li class="{% if question.sub_correct_answer_individual == 4 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 4 %}yes{% else %}no{% endif %}">{{ question.answer4 }}</li>
-        <li class="{% if question.sub_correct_answer_individual == 5 %}{% if user.is_authenticated %}correct{% endif %}{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 5 %}yes{% else %}no{% endif %}">{{ question.answer5 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 1 and user.is_authenticated %}correct{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 1 %}yes{% else %}no{% endif %}">{{ question.answer1 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 2 and user.is_authenticated %}correct{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 2 %}yes{% else %}no{% endif %}">{{ question.answer2 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 3 and user.is_authenticated %}correct{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 3 %}yes{% else %}no{% endif %}">{{ question.answer3 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 4 and user.is_authenticated %}correct{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 4 %}yes{% else %}no{% endif %}">{{ question.answer4 }}</li>
+        <li class="{% if question.sub_correct_answer_individual == 5 and user.is_authenticated %}correct{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 5 %}yes{% else %}no{% endif %}">{{ question.answer5 }}</li>
     </ol>
 </section>
 
