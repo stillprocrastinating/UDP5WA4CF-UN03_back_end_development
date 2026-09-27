@@ -57,28 +57,23 @@ class Answer(models.Model):
 
     @property
     def answer1_percentage(self):
-        a1p = self.answer1 / self.test.participant_number
-        return a1p
+        return self.answer1 / self.test.participant_number
 
     @property
     def answer2_percentage(self):
-        a2p = self.answer2 / self.test.participant_number
-        return a2p
+        return self.answer2 / self.test.participant_number
 
     @property
     def answer3_percentage(self):
-        a3p = self.answer3 / self.test.participant_number
-        return a3p
+        return self.answer3 / self.test.participant_number
 
     @property
     def answer4_percentage(self):
-        a4p = self.answer4 / self.test.participant_number
-        return a4p
+        return self.answer4 / self.test.participant_number
 
     @property
     def answer5_percentage(self):
-        a5p = self.answer5 / self.test.participant_number
-        return a5p
+        return self.answer5 / self.test.participant_number
 
     @property
     def teaching_warning(self):
