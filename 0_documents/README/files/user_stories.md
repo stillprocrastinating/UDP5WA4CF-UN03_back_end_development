@@ -26,3 +26,15 @@ delete - :white_square_button: -> :ballot_box_with_check:
 | :white_square_button: | 5.1 | Build a `calculateDifficultyQuestion()` function which classifies `Question()` based on the frequency of correct `Answer()`. |
 | :ballot_box_with_check: | 6.1 | Build a `calculateWarningQuestion()` function which classifies `Question()` based on the frequency of specific incorrect `Answer()`. |
 | :white_square_button: | 7.1 | Build a `calculateDifficultyTest()` function which pulls from `calculateDifficultyQuestion()` per `Test()`. |
+
+
+## Future plans
+
+- As an admin, I want to upgrade this project to include all question types and learning modules (not just multiple choice questions for the _Ethics 1_ module).
+- As an admin, I want verification for the testers so that not any layperson may create an account.
+- As an admin, I want the testers to see question warnings only for their personal tests, not anyone elses' tests.
+- As a tester, I want potential students to be able to reach my course information and email address.
+- As a tester, I want to be able to compare my statistics against everyone elses statistics (average/cumulative, not personal).
+- As a tester, I want to be able to see my statistics in a graphical format for ease of understanding.
+- As a tester, it can be wearisome to create novel tests which aren't too easy or difficult, so a test generator could be useful.
+- As a user, some of the site may be difficult to understand the purpose of certain features, question mark icons for interactive explanations could be helpful.
