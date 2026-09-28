@@ -111,8 +111,6 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 
 [UCL brand resources](https://www.ucl.ac.uk/brand-and-experience/brand/brand-resources) directly influenced my colour theme, [Favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/favicon/favicon.svg), and footer image [banner](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/base/ucl200_stretch_banner_3000x2280mm_original.jpg).
 
-[designdunja](https://www.istockphoto.com/portfolio/designdunja?mediatype=illustration) made the [source image](https://www.istockphoto.com/vector/zebrafish-gm479692688-68004101) of my [logo](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/base/zebrafish.jpg) for [iStock](https://www.istockphoto.com). I've been using it for years (offline) and almost forgot to give credit this time due to my familiarity with it. Sorry!
-
 [rxaviers](https://gist.github.com/rxaviers)' GitHub markdown [emojis](https://gist.github.com/rxaviers/7360908).
 
 Raghav Kovvuri, my tutor during my [Code Institute](https://codeinstitute.net) course, helped me fix a few bugs:
@@ -167,9 +165,12 @@ UPDATE with only used colours & list `aria-label`s in accessibility.md
 
 
 ### Images
-_Files can be found under `0_static/images/base`._
+
+Files can be found under _0\_static > images > [base](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_static/images/base)_.
 
 The original [zebrafish image](https://www.istockphoto.com/vector/zebrafish-gm479692688-68004101) was designed by [designdunja](https://www.istockphoto.com/portfolio/designdunja?mediatype=illustration) and sourced from [iStock by Getty Images](https://www.istockphoto.com). The image indicates that a subject of the PiL course tests is zebrafish. I edited the image to remove the background so that it looked more aesthetic in my header.
+
+The [Home Office](https://www.gov.uk/guidance/research-and-testing-using-animals) and [Royal Society of Biology](https://www.rsb.org.uk) images were sourced from [DuckDuckGo images](https://duckduckgo.com/?q=duckduckgo+images&t=opera&ia=images&iax=images).
 
 The original [UCL stretch banner](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates/UCL200/UCL200%20Stretch%20Banners?fc=browse&column=7&listview=overview&view=preview&fileid=1&fuid=UCL200%20Stretch%20banner%203000x2280mm_02.pdf) was sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7). The banner indicates that I am affiliated with University College London. I edited the image to replace the background colour with `--color-dark: #2f1c48` to match the colour of the footer.
 
@@ -178,13 +179,9 @@ The [REAL Rating](https://www.realgoodai.org/real-rating) 1 - Automation image w
 
 #### Favicon
 
-The favicon was generated from the [UCL social icon](https://imagestore.ucl.ac.uk/imagestore/pcache/10034/0e/l_icon_square_1080x1080px_e51db.jpg) (sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7)) using [RealFaviconGenerator](https://realfavicongenerator.net).  
-_Files can be found under `0_static/images/favicon`._
+Files can be found under _0\_static > images > [favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_static/images/favicon)_.
 
-
-#### Icons
-
-The navbar [hamburger icon SVG](https://lucide.dev/icons/menu) was sourced from [Lucide](https://lucide.dev).
+The favicon was generated from the [UCL social icon](https://imagestore.ucl.ac.uk/imagestore/pcache/10034/0e/l_icon_square_1080x1080px_e51db.jpg) (sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7)) using [RealFaviconGenerator](https://realfavicongenerator.net).
 
 
 ### Fonts
