@@ -80,10 +80,10 @@ function calculateDifficultyTest () {
     if (x/qd.length >= qd.length) {
         return td[0].textContent = "3";
     }
-    else if (x/qd.length < qd.length & x/qd.length > 0) {
+    else if (x/qd.length < qd.length & x/qd.length >= 0) {
         return td[0].textContent = "2";
     }
-    else if (x/qd.length <= 0) {
+    else if (x/qd.length < 0) {
         return td[0].textContent = "1";
     }
     else if (qd.length == 0) {
