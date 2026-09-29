@@ -128,63 +128,52 @@ class Answer(models.Model):
 
         ca = self.correct
 
-        et = "Optimal"
-        ef = "Difficult"
+        e = 0.75
+        o = 0.50
+
+        et = "Easy"
+        ot = "Optimal"
+        dt = "Difficult"
 
         if (ca == 1):
-            if (self.answer1_percentage >= (
-                self.answer2_percentage
-                + self.answer3_percentage
-                + self.answer4_percentage
-                + self.answer5_percentage
-            )):
+            if (self.answer1_percentage >= e):
                 return et
+            elif (self.answer1_percentage >= o):
+                return ot
             else:
-                return ef
+                return dt
 
         elif (ca == 2):
-            if (self.answer2_percentage >= (
-                self.answer1_percentage
-                + self.answer3_percentage
-                + self.answer4_percentage
-                + self.answer5_percentage
-            )):
+            if (self.answer2_percentage >= e):
                 return et
+            elif (self.answer2_percentage >= o):
+                return ot
             else:
-                return ef
+                return dt
 
         elif (ca == 3):
-            if (self.answer3_percentage >= (
-                self.answer1_percentage
-                + self.answer2_percentage
-                + self.answer4_percentage
-                + self.answer5_percentage
-            )):
+            if (self.answer3_percentage >= e):
                 return et
+            elif (self.answer3_percentage >= o):
+                return ot
             else:
-                return ef
+                return dt
 
         elif (ca == 4):
-            if (self.answer4_percentage >= (
-                self.answer1_percentage
-                + self.answer2_percentage
-                + self.answer3_percentage
-                + self.answer5_percentage
-            )):
+            if (self.answer4_percentage >= e):
                 return et
+            elif (self.answer4_percentage >= o):
+                return ot
             else:
-                return ef
+                return dt
 
         elif (ca == 5):
-            if (self.answer5_percentage >= (
-                self.answer1_percentage
-                + self.answer2_percentage
-                + self.answer3_percentage
-                + self.answer4_percentage
-            )):
+            if (self.answer5_percentage >= e):
                 return et
+            elif (self.answer5_percentage >= o):
+                return ot
             else:
-                return ef
+                return dt
 
         else:
             return "Error in calculation"

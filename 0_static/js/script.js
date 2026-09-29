@@ -69,6 +69,9 @@ function calculateDifficultyTest () {
         else if (qd[i].textContent.includes("Optimal")) {
             x += 0;
         }
+        else if (qd[i].textContent.includes("Easy")) {
+            x -= 1;
+        }
         else {
             td[0].textContent = "Error in calculation";
         }
@@ -77,14 +80,14 @@ function calculateDifficultyTest () {
     if (x/qd.length >= qd.length) {
         return td[0].textContent = "3";
     }
-    else if (x/qd.length < qd.length) {
+    else if (x/qd.length < qd.length & x/qd.length > 0) {
         return td[0].textContent = "2";
+    }
+    else if (x/qd.length <= 0) {
+        return td[0].textContent = "1";
     }
     else if (qd.length == 0) {
         return td[0].textContent = "Not applicable";
-    }
-    else if (x == 0) {
-        return td[0].textContent = "1";
     }
     else {
         return td[0].textContent = "Error in calculation";
@@ -361,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function () {
     formModifications();
     hrefReferrer();
     verboseLO();
-    // verboseDifficultyTest();
+    verboseDifficultyTest();
     verboseTypeQuestion();
     verboseTypeTest();
     verboseWarning();
