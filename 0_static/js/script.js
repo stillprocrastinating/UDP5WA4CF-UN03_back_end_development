@@ -250,30 +250,6 @@ function verboseLO () {
  * Changes the textContent of the T_DIFFICULTY from the table integer to a human-readable "verbose" string.
  * @return {String} "Error in calculation / Easy / Optimal / Difficult"
  */
-function verboseDifficultyQuestion () {
-    let N = document.getElementsByClassName("q-difficulty");
-
-    for (i = 0; i < N.length; i++) {
-        if (N[i].textContent == "0") {
-            N[i].innerHTML = q_difficulty.qd0;
-        }
-        else if (N[i].textContent == "1") {
-            N[i].innerHTML = q_difficulty.qd1;
-        }
-        else if (N[i].textContent == "2") {
-            N[i].innerHTML = q_difficulty.qd2;
-        }
-        else if (N[i].textContent == "3") {
-            N[i].innerHTML = q_difficulty.qd3;
-        }
-    }
-}
-
-
-/**
- * Changes the textContent of the T_DIFFICULTY from the table integer to a human-readable "verbose" string.
- * @return {String} "Error in calculation / Easy / Optimal / Difficult"
- */
 function verboseDifficultyTest () {
     let N = document.getElementsByClassName("t-difficulty");
 
@@ -385,8 +361,7 @@ document.addEventListener("DOMContentLoaded", function () {
     formModifications();
     hrefReferrer();
     verboseLO();
-    verboseDifficultyQuestion();
-    verboseDifficultyTest();
+    // verboseDifficultyTest();
     verboseTypeQuestion();
     verboseTypeTest();
     verboseWarning();
