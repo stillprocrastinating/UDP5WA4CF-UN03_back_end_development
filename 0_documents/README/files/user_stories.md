@@ -33,6 +33,7 @@ delete - :white_square_button: -> :ballot_box_with_check:
 - As an admin, I want to upgrade this project to include all question types and learning modules (not just multiple choice questions for the _Ethics 1_ module).
 - As an admin, I want verification for the testers so that not any layperson may create an account.
 - As an admin, I want the testers to see question warnings only for their personal tests, not anyone elses' tests.
+    <!-- For the purposes of the milestone project, this is silly, for the real thing: Utilise {% if user.is_authenticated and test.tester == user %} -->
 - As a tester, I want potential students to be able to reach my course information and email address.
 - As a tester, I want to be able to compare my statistics against everyone elses statistics (average/cumulative, not personal).
 - As a tester, I want to be able to see my statistics in a graphical format for ease of understanding.
