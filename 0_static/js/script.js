@@ -54,6 +54,39 @@ let warning = {
 
 
 /**
+ * Dynamic construction of the answer_edit view url.
+ */
+function answerEdit() {
+    let editButtons = document.getElementsByClassName("edit-button");
+    let fillIdTest = document.getElementById("id_test");
+    let fillIdQuestion = document.getElementById("id_question");
+    let fillIdAnswer1 = document.getElementById("id_answer1");
+    let fillIdAnswer2 = document.getElementById("id_answer2");
+    let fillIdAnswer3 = document.getElementById("id_answer3");
+    let fillIdAnswer4 = document.getElementById("id_answer4");
+    let fillIdAnswer5 = document.getElementById("id_answer5");
+    let answerForm = document.getElementById("answerForm");
+    let submitButton = document.getElementById("submitButton");
+
+    for (let button of editButtons) {
+    button.addEventListener("click", (e) => {
+        let answerId = e.target.getAttribute("answer_id");
+        let answerIdElement = document.getElementById(`answer${answerId}`);
+        fillIdTest = answerIdElement.value;
+        fillIdQuestion = answerIdElement.value;
+        fillIdAnswer1 = answerIdElement.value;
+        fillIdAnswer2 = answerIdElement.value;
+        fillIdAnswer3 = answerIdElement.value;
+        fillIdAnswer4 = answerIdElement.value;
+        fillIdAnswer5 = answerIdElement.value;
+        submitButton.innerText = "Update";
+        answerForm.setAttribute("action", `edit/${answerId}`);
+    });
+    }
+}
+
+
+/**
  * Calculates the DIFFICULTY of the Tests' Question from the .answers-list-difficulty of the Answers.
  * @return {Integer} "1 / 2"
  */
@@ -361,6 +394,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }     // etc for each page to avoid console errors
 
     // for all pages
+    answerEdit();
     formModifications();
     hrefReferrer();
     verboseLO();

@@ -183,6 +183,13 @@ The original [UCL stretch banner](https://imagestore.ucl.ac.uk/imagestore/start/
 The [REAL Rating](https://www.realgoodai.org/real-rating) 1 - Automation image was sourced from [REAL Good AI](https://www.realgoodai.org). The Reported Engagement with AI Level (REAL) rating indicates that my pages were assisted by Artificial Intelligence (AI) automation (for example, automatic completion of standard code), but no idea-generation or copy-pasting from a generative AI was used (there are other ratings to indicate as such).
 
 
+#### Icons
+
+The answer areas image SVGs were sourced from [Lucide](https://lucide.dev/).
+- The edit image is [square-pen](https://lucide.dev/icons/square-pen).
+- The delete image is [trash-2](https://lucide.dev/icons/trash-2).
+
+
 #### Favicon
 
 Files can be found under _0\_static > images > [favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_static/images/favicon)_.
