@@ -6,7 +6,7 @@
 1. `README.md` > Design > Users stories > 3
 1. fix `question_detail.html`, however that looks
 1. `README.md` > Design > User stories > 4
-1. `settings.py` > `DEBUG = False`
+1. `README.md` > AmIResponsive [attempt at home, work pc may be the problem]
 
 
 ## Deploy
@@ -16,6 +16,7 @@
 1. `python manage.py collectstatic`
 1. `python manage.py makemigrations`
 1. `python manage.py migrate`
+1. `settings.py` > `DEBUG = False`
 
 
 ## General
