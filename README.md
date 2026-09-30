@@ -83,13 +83,12 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 
 ### Features
 
-UPDATE
-
 _You may click on any screenshot image to be taken to the fullscreen view (and use the browser back button to return here)._
 
 | Pages | Sizes | Feature | Presentation |
 |-|-|-|-|
 | All | All | `<noscript>` to handle disabled JavaScript | ![noscript](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/noscript.png) |
+| question_detail.html | All | `.correct` to clearly show which answer is correct | ![correct](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/correct.jpeg) |
 | test_detail.html | All | An explanation for when a dataset is empty (and a handy-dandy button-link to the form to add data) | ![no-answers](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/no-answers.png) |
 | test_detail.html | All | `<a>` to see a quick list of the questions in that test and be able to jump to a particular question quickly _- this may not seem pertinent, but will be appreciated in later versions of the site when the number of questions per test matches reality (~30)_ | ![alq-list](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/alq-link.png) |
 

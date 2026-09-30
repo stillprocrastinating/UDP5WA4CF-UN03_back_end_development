@@ -12,7 +12,10 @@
 
 <section class="center meta">
     <p><span class="q-type">{{ question.type }}</span> #{{ question.number }}</p>
-    {% block q_meta_detail %}<!-- delete --><span class="bug">test</span>{% endblock q_meta_detail %}
+    <!-- {% block q_meta_detail %} -->
+     <!-- delete -->
+      <!-- <span class="bug">test</span> -->
+    <!-- {% endblock q_meta_detail %} -->
 </section>
 
 <section class="{% if user.is_authenticated %}{% else %}flex-section{% endif %} q-details">
@@ -30,7 +33,7 @@
 </section>
 
 
-{% if user.is_authenticated %}
+<!-- {% if user.is_authenticated %}
     <section class="bug answer-section">
         {% block question_answer_detail %}
             <section class="flex-section">
@@ -39,6 +42,6 @@
             </section>
         {% endblock question_answer_detail %}
     </section>
-{% endif %}
+{% endif %} -->
 
 {% endblock question_detail %}
