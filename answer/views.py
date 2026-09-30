@@ -87,28 +87,3 @@ def answer_new(request):
         "answer/answer_new.html",
         context
     )
-
-
-def answer_edit(request, slug, answer_id):
-    """
-    View to edit answers.
-    """
-
-    if request.method == "POST":
-
-        queryset = Answer.objects.filter(test__slug=slug)
-        answer = get_object_or_404(Answer, pk=answer_id)
-        answer_form = AnswerNew(data=request.POST, instance=answer)
-
-        if answer_form.is_valid() and answer.tester == request.user:
-            answer = answer_form.save(commit=False)
-            answer.queryset = queryset
-            answer.approved = False
-            answer.save()
-            messages.add_message(request, messages.SUCCESS, "Answer updated!")
-        else:
-            messages.add_message(
-                request, messages.ERROR, "Error in editing :("
-            )
-
-    return HttpResponseRedirect(reverse("test_detail", args=[slug]))

@@ -72,9 +72,9 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 
 | # | Description | Solution |
 |-|-|-|
-| 1 | As an admin, I want edit functionality for test questions. | ![solution1](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution1.jpeg) |
-| 2 | As a tester, I want edit functionality for tests I host. | todo |
-| 3 | As a tester, I want edit functionality for test answers of my students. | todo |
+| 1 | As an admin, I want CRUD functionality for test questions. | ![solution1](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution1.jpeg) |
+| 2 | As a tester, I want create functionality for tests I host. | todo |
+| 3 | As a tester, I want create functionality for test answers of my students. | todo |
 | 4 | As a student, I want to be able to prepare for which questions may occur on the test. | todo |
 | 5 | As a tester, I want to be able to see which questions are more difficult than others. | ![solution5](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution5.jpeg) |
 | 6 | As a tester, I want to be able to tell the difference between a question being difficult because it is difficult or because I am teaching it poorly. | ![solution6](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution6.jpeg) |
@@ -182,13 +182,6 @@ The [Home Office](https://www.gov.uk/guidance/research-and-testing-using-animals
 The original [UCL stretch banner](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates/UCL200/UCL200%20Stretch%20Banners?fc=browse&column=7&listview=overview&view=preview&fileid=1&fuid=UCL200%20Stretch%20banner%203000x2280mm_02.pdf) was sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7). The banner indicates that I am affiliated with University College London. I edited the image to replace the background colour with `--color-dark: #2f1c48` to match the colour of the footer.
 
 The [REAL Rating](https://www.realgoodai.org/real-rating) 1 - Automation image was sourced from [REAL Good AI](https://www.realgoodai.org). The Reported Engagement with AI Level (REAL) rating indicates that my pages were assisted by Artificial Intelligence (AI) automation (for example, automatic completion of standard code), but no idea-generation or copy-pasting from a generative AI was used (there are other ratings to indicate as such).
-
-
-#### Icons
-
-The answer areas image SVGs were sourced from [Lucide](https://lucide.dev/).
-- The edit image is [square-pen](https://lucide.dev/icons/square-pen).
-- The delete image is [trash-2](https://lucide.dev/icons/trash-2).
 
 
 #### Favicon
