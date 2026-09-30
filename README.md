@@ -66,16 +66,14 @@ Although the Heroku build logs are daunting, they can be helpful.
 Please find a comprehensive list of user story goal progress under _0_documents_ > _README_ > _files_ > _[user_stories](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/files/user_stories.md)_.  
 TLDR as follows.
 
-UPDATE
-
 _You may click on any screenshot image to be taken to the fullscreen view (and use the browser back button to return here)._
 
 | # | Description | Solution |
 |-|-|-|
 | 1 | As an admin, I want CRUD functionality for test questions. | ![solution1](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution1.jpeg) |
-| 2 | As a tester, I want create functionality for tests I host. | todo |
-| 3 | As a tester, I want create functionality for test answers of my students. | todo |
-| 4 | As a student, I want to be able to prepare for which questions may occur on the test. | todo |
+| 2 | As a tester, I want to create tests I host. | ![solution2](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution2.png) |
+| 3 | As a tester, I want to create test answers of my students. | ![solution3](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution3.png) |
+| 4 | As a student, I want to be able to prepare for which questions may occur on the test. | ![solution4](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution4.png) |
 | 5 | As a tester, I want to be able to see which questions are more difficult than others. | ![solution5](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution5.jpeg) |
 | 6 | As a tester, I want to be able to tell the difference between a question being difficult because it is difficult or because I am teaching it poorly. | ![solution6](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution6.jpeg) |
 | 7 | As a tester, I want to be able to see which tests were more difficult than others. | ![solution7](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution7.jpeg) |

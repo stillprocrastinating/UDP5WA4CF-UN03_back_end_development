@@ -1,11 +1,5 @@
 # TODO
 
-1. CRUD functionality for tests by testers
-1. `README.md` > Design > Users stories > 2
-1. CRUD functionality for test answers by testers
-1. `README.md` > Design > Users stories > 3
-1. fix `question_detail.html`, however that looks
-1. `README.md` > Design > User stories > 4
 1. `README.md` > AmIResponsive [attempt at home, work pc may be the problem]
 
 
