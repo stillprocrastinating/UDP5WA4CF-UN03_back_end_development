@@ -4,7 +4,7 @@
 | 2 | 2026-01-24 | _script.js_ `loVerbose()` does not seem to be targetting `.q-lo` | 2026-01-25 | `loVerbose()` was targetting `.q-lo`, needed to use `=` instead of `==` in `if` statement | [main 7b310e0] BUGFIX loVerbose() ||
 | 3 | 2026-01-24 | _style.css_ `@font-face{UCLSans}` isn't functioning | 2026-01-25 | 1. `url()` path needed to be relative to _style.css_ \| 2. Run `python manage.py collectstatic` | [main 37b696c] BUGFIX @font-face{UCLSans} ||
 | 4 | 2026-01-28 | __404__ Reverse for 'questions' not found. 'questions' is not a valid view function or pattern name. | 2026-01-29 | _app / urls.py_ `path(name)` needed to match _base.html_ url reference | [main 7801f0c] BUGFIX Reverse for 'questions' not found. |
-| 5 | 2026-01-30 | __404__ Deployed page doesn't load
+| 5 | 2026-01-30 | __404__ Deployed page doesn't load | 2026-09-28 | _Procfile_ [main 7ea584c] Heroku log: Mis-cased procfile detected; ignoring. |  [main 18b5bad] Heroku log: Rename it to Procfile to have it honored. | ^rude.^ |
 | 6 | 2026-02-01 | `.footer-item {height: 100px;}` doesn't function | 2026-02-04 | ~~`<img class=".footer-item">`~~ `<img class="footer-item">` | [main 04f6c6a] .flex-page & related | :roll-eyes: |
 | 7 | 2026-02-13 | __No HttpResponse__ | 2026-02-14 | _views.py_ `return render()` | [main 4eeabe2] BUGFIX question_detail.html ||
 | 8 | 2026-02-14 | _style.css_ `.q-link:hover{}` doesn't function | 2026-02-16 | _style.css_ `h2{display:inline-block;}` | [main 7f1e513] BUGFIX .q-link:hover{} ||
