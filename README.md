@@ -30,6 +30,8 @@ If something isn't working but the code _seems_ fine, remember to check DevTools
 
 `assert` is a cool error checking tool.
 
+Although the Heroku build logs are daunting, they can be helpful.
+
 
 ## Contents
 
