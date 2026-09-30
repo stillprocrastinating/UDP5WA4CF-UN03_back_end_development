@@ -6,6 +6,7 @@
 1. `README.md` > Design > Users stories > 3
 1. fix `question_detail.html`, however that looks
 1. `README.md` > Design > User stories > 4
+1. `settings.py` > `DEBUG = False`
 
 
 ## Deploy
