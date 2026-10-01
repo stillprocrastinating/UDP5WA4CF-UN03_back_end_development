@@ -192,7 +192,7 @@ The favicon was generated from the [UCL social icon](https://imagestore.ucl.ac.u
 ### Fonts
 
 - [UCL Sans](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates/UCL/UCL%20Fonts?fc=browse&column=7&listview=overview&view=preview&fileid=1&fuid=UCL%20Sans.zip)  
-![UCLSans Aa font demonstration as an image](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/fonts/UCLSans.png)
+![UCLSans Aa font demonstration as an image](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/fonts/UCLSans.png|200)
 
 ---
 
