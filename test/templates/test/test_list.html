@@ -7,7 +7,7 @@
 <section class="flex-header">
     <h1>Tests list</h1>
     {% if user.is_authenticated %}
-        <a class="button header-button" href="{% url 'test_new' %}">New</a>
+        <a class="button form-new header-button" href="{% url 'test_new' %}" aria-label="A form to create a new test">New</a>
     {% endif %}
 </section>
 <section class="flex-testlist">

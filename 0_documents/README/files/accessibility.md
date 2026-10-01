@@ -2,7 +2,7 @@
 
 >[Entire colour palette](https://www.ucl.ac.uk/brand-and-experience/brand/ucl200/bicentenary-colours#colour-palette)
 
-[WebAIM](https://webaim.org/resources/contrastchecker/) was used to check colour contrast between backgrounds and font colours.  
+[WebAIM](https://webaim.org/resources/contrastchecker/) was used to check colour contrast between background and foreground colours.  
 Each stated ratio is the contrast ratio between the background and font colours used. Then the pass/fail mode for Web Content Accessibility Guidelines. Each link should provide full details.
 
 | Use | Foreground colour | Background colour | Ratio | WCAG AA | WCAG AAA | Permalink |
@@ -49,5 +49,9 @@ Each stated ratio is the contrast ratio between the background and font colours 
 
 | Object | Method | Description |
 |-|-|-|
-| `.nav-item` | `aria-current` | page |
+| `.correct` | `aria-label` | This is the correct answer |
 | `.footer-link` | `aria-label` | [link description] (opens in a new tab) |
+| `.form-cancel` | `aria-label` | Cancel and return to the previous page |
+| `.form-new` | `aria-label` | A form to create a new [test/answer] |
+| `.form-submit` | `aria-label` | Submit the [test/answer] form |
+| `.nav-item` | `aria-current` | page |
