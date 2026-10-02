@@ -88,13 +88,11 @@ TLDR as follows.
 
 >Question
 
-|
-V
+:arrow_down:
 
 >Test
 
-|
-V
+:arrow_down:
 
 >Answer
 
