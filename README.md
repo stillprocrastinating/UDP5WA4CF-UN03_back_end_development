@@ -43,7 +43,6 @@ Although the Heroku build logs are daunting, they can be helpful.
     2.1. [User Stories](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#user-stories)  
     2.2. [Features](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#features)  
     2.3. [ERDs](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#entity-relationship-diagrams)  
-    2.4. [Wireframes](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#wireframes)  
 1. [Credits](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#credits)  
     3.1. [Development](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#development)  
     3.2. [Libraries](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#libraries)  
@@ -107,17 +106,6 @@ V
 V
 
 >Answer
-
-
-### Wireframes
-
-UPDATE
-
-_You may click on any screenshot image to be taken to the fullscreen view (and use the browser back button to return here)._
-
-| Pages | Features | Wireframe | Presentation |
-|-|-|-|-|
-| index.html | On load | ![wireframe phone](https://github.com/stillprocrastinating/UDP5WA4CF-UN02_interactive_front_end_development/blob/main/assets/README/wireframes/phone.png) | ![presentation phone](https://github.com/stillprocrastinating/UDP5WA4CF-UN02_interactive_front_end_development/blob/main/assets/README/wireframes/presentation_phone.jpeg) |
 
 ---
 
