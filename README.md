@@ -165,7 +165,7 @@ The favicon was generated from the [UCL social icon](https://imagestore.ucl.ac.u
 
 #### Icons
 
-Files can be found under _README_ > _images_ > _[icons](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/README/images/icons)_.
+Files can be found under _0\_documents_ > _README_ > _images_ > _[icons](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/README/images/icons)_.
 
 The test answer image SVGs were sourced from [Lucide](https://lucide.dev/).
 - The edit image was [square-pen](https://lucide.dev/icons/square-pen).
