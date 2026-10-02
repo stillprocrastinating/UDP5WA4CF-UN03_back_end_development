@@ -45,7 +45,7 @@ Although the Heroku build logs are daunting, they can be helpful.
     2.3. [ERDs](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#entity-relationship-diagrams)  
     2.4. [Wireframes](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#wireframes)  
 1. [Credits](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#credits)  
-    3.1. [How to...](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#how-to)  
+    3.1. [Development](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#development)  
     3.2. [Libraries](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#libraries)  
     3.3. [Accessibility](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#accessibility)  
     3.4. [Images](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#images)  
@@ -96,7 +96,17 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 Please find a comprehensive list of ERDs under _0_documents_ > _README_ > _files_ > _[erd](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/files/erd.md)_.  
 TLDR as follows.
 
-UPDATE
+>Question
+
+|
+V
+
+>Test
+
+|
+V
+
+>Answer
 
 
 ### Wireframes
@@ -126,30 +136,9 @@ Raghav Kovvuri, my tutor during my [Code Institute](https://codeinstitute.net) c
 - [main 220d7f8] fix url pathing
 
 
-### How to...
+### Development
 
-UPDATE
-- deployed site via GitHub & Heroku
-- credit SQLTools, Python, PostgreSQL, & VSC extensions
-
-View the deployed site on [GitHub](https://github.com/dashboard) Pages, [here](https://stillprocrastinating.github.io/UDP5WA4CF-UN02_interactive_front_end_development/).
-
-This website was developed using HTML5, CSS3, and JavaScript in [Visual Studio Code](https://code.visualstudio.com). The terminal was used to commit and push to [GitHub](https://github.com/dashboard).  
-For a video tutorial by [The Code City](https://www.youtube.com/@TheCodeCity) on [YouTube](https://www.youtube.com), click [here](https://youtu.be/JB7YD7OKm5g?si=6b_75xUimYFwXsza).
-
-
-#### Deployment steps
-
-UPDATE
-
-1. Log in to [GitHub](https://github.com/dashboard) and locate the GitHub Repository.
-1. At the top of the Repository, locate the Settings button on the menu.
-1. Scroll down the Settings page until you locate the Pages section.
-1. Under Source, click the dropdown called None and select Master/Main Branch.
-1. Ensure the branch and directory/folder are saved.
-1. Refresh the page until a new section appears at the top of the screen beginning "Your page is live at" and then a link. This link is the deployed/live link of your website homepage (index.html).
-
-For a video tutorial by [AKRITI GOSWAMI](https://www.youtube.com/@akritigoswamiLetsCode) on [YouTube](https://www.youtube.com), click [here](https://www.youtube.com/watch?v=BT4WzyT2g8k).
+This website was developed using HTML5, CSS3, JavaScript, and Python in [Visual Studio Code](https://code.visualstudio.com); SQLTools, Python, and PostgreSQL, [Visual Studio Code](https://code.visualstudio.com) extensions were also used. The terminal was used to commit and push to [GitHub](https://github.com/dashboard). The code was pulled from [GitHub](https://github.com/dashboard) into [Heroku](https://id.heroku.com), which built the site.
 
 
 ### Libraries
