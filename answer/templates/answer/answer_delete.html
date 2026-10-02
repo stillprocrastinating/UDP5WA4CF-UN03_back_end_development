@@ -8,10 +8,11 @@
     <h1>New answer</h1>
     <a class="button form-cancel header-button referrer" href="{% url 'tests' %}" aria-label="Cancel and return to the previous page">Cancel</a>
 </section>
-<form method="post" id="answerForm" class="form">
-    {{ answer_new | crispy }}
+<form method="post" id="answerForm" class="center form">
+    <p>Please confirm:</p>
+    <p class="strong">Delete {{object}}?</p>
     {% csrf_token %}
-    <button type="submit" id="answerSubmit" class="button form-new mb-3" aria-label="Submit the answer form" value="AnswerNew">Submit</button>
+    <button type="submit" id="answerDelete" class="button form-delete mb-3" aria-label="Submit the delete answer form" value="AnswerDelete">Confirm delete</button>
 </form>
 
 {% endblock answer_form %}

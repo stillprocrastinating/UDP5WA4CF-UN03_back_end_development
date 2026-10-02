@@ -52,6 +52,8 @@ Each stated ratio is the contrast ratio between the background and font colours 
 | `.correct` | `aria-label` | This is the correct answer |
 | `.footer-link` | `aria-label` | [link description] (opens in a new tab) |
 | `.form-cancel` | `aria-label` | Cancel and return to the previous page |
+| `.form-delete` | `aria-label` | Submit the delete [test/answer] form |
+| `.form-edit` | `aria-label` | Submit the edit [test/answer] form |
 | `.form-new` | `aria-label` | A form to create a new [test/answer] |
 | `.form-submit` | `aria-label` | Submit the [test/answer] form |
 | `.nav-item` | `aria-current` | page |

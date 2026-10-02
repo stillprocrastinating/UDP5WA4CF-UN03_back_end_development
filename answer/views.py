@@ -87,3 +87,29 @@ def answer_new(request):
         "answer/answer_new.html",
         context
     )
+
+
+def answer_edit(request, id):
+    obj = get_object_or_404(Answer, id=id)
+    form = AnswerNew()
+    form = AnswerNew(request.POST, instance=obj)
+
+    if form.is_valid():
+        form.save()
+        return HttpResponseRedirect('/')
+
+    context = {
+        'form': obj
+    }
+    
+    return render(request, 'answer_edit.html', context)
+
+
+def answer_delete(request, id):
+    obj = get_object_or_404(Answer, id=id)
+
+    if request.method == 'POST':
+        obj.delete()
+        return HttpResponseRedirect('/')
+
+    return render(request, 'answer_delete.html')
