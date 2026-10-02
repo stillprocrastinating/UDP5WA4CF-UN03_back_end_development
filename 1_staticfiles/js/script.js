@@ -69,6 +69,9 @@ function calculateDifficultyTest () {
         else if (qd[i].textContent.includes("Optimal")) {
             x += 0;
         }
+        else if (qd[i].textContent.includes("Easy")) {
+            x -= 1;
+        }
         else {
             td[0].textContent = "Error in calculation";
         }
@@ -77,14 +80,14 @@ function calculateDifficultyTest () {
     if (x/qd.length >= qd.length) {
         return td[0].textContent = "3";
     }
-    else if (x/qd.length < qd.length) {
+    else if (x/qd.length < qd.length & x/qd.length >= 0) {
         return td[0].textContent = "2";
+    }
+    else if (x/qd.length < 0) {
+        return td[0].textContent = "1";
     }
     else if (qd.length == 0) {
         return td[0].textContent = "Not applicable";
-    }
-    else if (x == 0) {
-        return td[0].textContent = "1";
     }
     else {
         return td[0].textContent = "Error in calculation";
@@ -250,30 +253,6 @@ function verboseLO () {
  * Changes the textContent of the T_DIFFICULTY from the table integer to a human-readable "verbose" string.
  * @return {String} "Error in calculation / Easy / Optimal / Difficult"
  */
-function verboseDifficultyQuestion () {
-    let N = document.getElementsByClassName("q-difficulty");
-
-    for (i = 0; i < N.length; i++) {
-        if (N[i].textContent == "0") {
-            N[i].innerHTML = q_difficulty.qd0;
-        }
-        else if (N[i].textContent == "1") {
-            N[i].innerHTML = q_difficulty.qd1;
-        }
-        else if (N[i].textContent == "2") {
-            N[i].innerHTML = q_difficulty.qd2;
-        }
-        else if (N[i].textContent == "3") {
-            N[i].innerHTML = q_difficulty.qd3;
-        }
-    }
-}
-
-
-/**
- * Changes the textContent of the T_DIFFICULTY from the table integer to a human-readable "verbose" string.
- * @return {String} "Error in calculation / Easy / Optimal / Difficult"
- */
 function verboseDifficultyTest () {
     let N = document.getElementsByClassName("t-difficulty");
 
@@ -385,7 +364,6 @@ document.addEventListener("DOMContentLoaded", function () {
     formModifications();
     hrefReferrer();
     verboseLO();
-    verboseDifficultyQuestion();
     verboseDifficultyTest();
     verboseTypeQuestion();
     verboseTypeTest();

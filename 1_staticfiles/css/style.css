@@ -576,6 +576,10 @@ input {
     text-decoration: wavy underline var(--color-secondary) 1px;
 }
 
+.delete-button {
+    margin-left: 5px;
+}
+
 
 /*  |||   |||| ||||  ||||| ||||| |   |  |||
 /* |     |     |   | |     |     ||  | |
