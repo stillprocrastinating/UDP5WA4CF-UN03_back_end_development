@@ -162,11 +162,17 @@ Inspiration for much of the code was modified directly from the [Code Institute]
 Please find a comprehensive list of accessibility under _0_documents_ > _README_ > _files_ > _[accessibility](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/files/accessibility.md)_.  
 TLDR as follows.
 
-UPDATE with only used colours & list `aria-label`s in accessibility.md
-
 | Object | Ratio | WCAG AA |
 |-|-|-|
-| [--color-primary on --color-white](https://webaim.org/resources/contrastchecker/?fcolor=983BFE&bcolor=FFFFFF) | 4.78 : 1 | pass |
+| [--color-dark on --color-white](https://webaim.org/resources/contrastchecker/?fcolor=2F1C48&bcolor=FFFFFF) | 15.21 : 1 | pass |
+| [--color-dark on --color-background](https://webaim.org/resources/contrastchecker/?fcolor=2F1C48&bcolor=EFDDFF) | 11.92 : 1 | pass |
+| [--color-black on --color-secondary](https://webaim.org/resources/contrastchecker/?fcolor=000000&bcolor=38D8FF) | 12.43 : 1 | pass |
+
+| Object | Method | Description |
+|-|-|-|
+| `.correct` | `aria-label` | This is the correct answer |
+| `.nav-item` | `aria-current` | page |
+| various buttons/links | `aria-label` | descriptions such as "Submit the [test/answer] form" |
 
 
 ### Images
