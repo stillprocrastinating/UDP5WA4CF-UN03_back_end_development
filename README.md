@@ -171,7 +171,7 @@ UPDATE with only used colours & list `aria-label`s in accessibility.md
 
 ### Images
 
-Files can be found under _0\_static > images > [base](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_static/images/base)_.
+Files can be found under _0\_static_ > _images_ > _[base](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_static/images/base)_.
 
 The original [zebrafish image](https://www.istockphoto.com/vector/zebrafish-gm479692688-68004101) was designed by [designdunja](https://www.istockphoto.com/portfolio/designdunja?mediatype=illustration) and sourced from [iStock by Getty Images](https://www.istockphoto.com). The image indicates that a subject of the PiL course tests is zebrafish. I edited the image to remove the background so that it looked more aesthetic in my header.
 
@@ -184,9 +184,18 @@ The [REAL Rating](https://www.realgoodai.org/real-rating) 1 - Automation image w
 
 #### Favicon
 
-Files can be found under _0\_static > images > [favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_static/images/favicon)_.
+Files can be found under _0\_static_ > _images_ > _[favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_static/images/favicon)_.
 
 The favicon was generated from the [UCL social icon](https://imagestore.ucl.ac.uk/imagestore/pcache/10034/0e/l_icon_square_1080x1080px_e51db.jpg) (sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7)) using [RealFaviconGenerator](https://realfavicongenerator.net).
+
+
+#### Icons
+
+Files can be found under _README_ > _images_ > _[icons](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/README/images/icons)_.
+
+The test answer image SVGs were sourced from [Lucide](https://lucide.dev/).
+- The edit image was [square-pen](https://lucide.dev/icons/square-pen).
+- The delete image was [trash-2](https://lucide.dev/icons/trash-2).
 
 
 ### Fonts
