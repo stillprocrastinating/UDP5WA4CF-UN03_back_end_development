@@ -96,7 +96,7 @@ def answer_edit(request, id):
 
     if form.is_valid():
         form.save()
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('test/')
 
     context = {
         'form': obj
@@ -110,6 +110,6 @@ def answer_delete(request, id):
 
     if request.method == 'POST':
         obj.delete()
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('test/')
 
     return render(request, 'answer_delete.html')
