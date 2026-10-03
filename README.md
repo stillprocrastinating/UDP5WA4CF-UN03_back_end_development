@@ -115,7 +115,7 @@ Raghav Kovvuri, my tutor during my [Code Institute](https://codeinstitute.net) c
 
 ### Development
 
-This website was developed using HTML5, CSS3, JavaScript, and Python in [Visual Studio Code](https://code.visualstudio.com); SQLTools, Python, and PostgreSQL, [Visual Studio Code](https://code.visualstudio.com) extensions were also used. The terminal was used to commit and push to [GitHub](https://github.com/dashboard). The code was pulled from [GitHub](https://github.com/dashboard) into [Heroku](https://id.heroku.com), which built the site.
+This website was developed using HTML5, CSS3, JavaScript, and Python in [Visual Studio Code](https://code.visualstudio.com); SQLTools, Python, and PostgreSQL, [Visual Studio Code](https://code.visualstudio.com) extensions were also used. The terminal and source control were used to commit and push to [GitHub](https://github.com/dashboard). The code was pulled from [GitHub](https://github.com/dashboard) into [Heroku](https://id.heroku.com), which built the site.
 
 
 ### Libraries
