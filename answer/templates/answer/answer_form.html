@@ -5,12 +5,34 @@
 {% block answer_form %}
 
 <section class="flex-header">
-    <h1>{% if id %}Edit{% else %}New{% endif %} answer</h1>
+    <h1>{% if answer %}Edit{% else %}New{% endif %} answer</h1>
     <a class="button form-cancel header-button referrer" href="{% url 'tests' %}" aria-label="Cancel and return to the previous page">Cancel</a>
 </section>
 <form method="post" id="answerForm" class="form">
-    {{ answer_form | crispy }}
     {% csrf_token %}
+    {% if answer %}
+        {% for field in form %}
+            {% if field.name == 'completed' %}
+                <p>
+                    {{ field.label_tag }}
+                    {{ field }}
+                </p>
+                {% if field.errors %}
+                    <small class="error">{{ field.errors|striptags  }}</small> 
+                {% endif %}
+            {% else %}
+                <p>
+                    {{ field.label_tag }} 
+                    {{ field }}
+                </p>
+                {% if field.errors %}
+                    <small class="error">{{ field.errors|striptags  }}</small> 
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {{ answer_form | crispy }}
+    {% endif %}
     <button type="submit" id="answerSubmit" class="button form-form mb-3" aria-label="Submit the answer form" value="AnswerForm">Submit</button>
 </form>
 

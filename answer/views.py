@@ -1,6 +1,8 @@
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404
+from django.urls import reverse_lazy
+from django.views.generic.edit import UpdateView
 from .forms import AnswerForm
 from .models import Answer
 
@@ -85,42 +87,18 @@ def answer_form(request):
     return render(request, "answer/answer_form.html", {'form': AnswerForm()})
 
 
-def answer_edit(request, id):
-    obj = get_object_or_404(Answer, id=id)
-    # form = AnswerNew()
-    # form = AnswerNew(request.POST, instance=obj)
+class AnswerEdit(UpdateView):
+    model = Answer
+    fields = [
+        'test',
+        'question',
+        'answer1', 'answer2', 'answer3', 'answer4', 'answer5',
+    ]
+    success_url = reverse_lazy('tests')
 
-    # if form.is_valid():
-    #     form.save()
-    #     return HttpResponseRedirect('test/')
-
-    # context = {
-    #     'form': obj
-    # }
-
-    # return render(request, 'answer_edit.html', context)
-
-    if request.method == 'GET':
-
-        context = {
-            'form': AnswerForm(instance=obj),
-            'id': id
-        }
-
-        return render(request, 'answer_form.html', context)
-
-    elif request.method == 'POST':
-
-        form = AnswerForm(request.POST, instance=obj)
-
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Answer updated")
-            return HttpResponseRedirect('tests')
-
-        else:
-            messages.error(request, "An error occurred during update")
-            return render(request, 'answer_form.html', {'form': form})
+    def form_valid(self, form):
+        messages.success(self.request, "The answer was updated")
+        return super(AnswerEdit, self).form_valid(form)
 
 
 def answer_delete(request, id):
