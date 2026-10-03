@@ -122,7 +122,7 @@ This website was developed using HTML5, CSS3, JavaScript, and Python in [Visual 
 
 Inspiration for much of the code was modified directly from the [Code Institute](https://codeinstitute.net) "Django Blog" (repo [here](https://github.com/stillprocrastinating/UDP5WA4CF-TU_django_blog)) walkthrough project.
 
-The edit and delete code for the Answer and Test apps was modified from [this video](https://www.youtube.com/watch?v=AgHWx89SpqI) on [YouTube](https://www.youtube.com/) by [RunCodes](https://www.youtube.com/@RunCodes).
+The edit and delete code for the Answer and Test apps was modified from [python tutorial](https://www.pythontutorial.net) [Django form](https://www.pythontutorial.net/django-tutorial/django-form/) and [Django edit form](https://www.pythontutorial.net/django-tutorial/django-edit-form/) pages.
 
 
 ### Accessibility

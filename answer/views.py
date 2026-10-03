@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse
-from .forms import AnswerNew
+from .forms import AnswerForm
 from .models import Answer
 
 
@@ -49,24 +49,30 @@ def test_answer_detail(request, slug):
     )
 
 
-def answer_new(request):
+def answer_form(request):
     """
     Display the form which creates a new :model:`answer.Answer`.
 
     **Context**
 
-    ``answer_new``
-        An instance of :form:`answer.AnswerNew`.
+    ``answer_form``
+        An instance of :form:`answer.AnswerForm`.
 
     **Template**
 
-    :template:`answer/answer_new.html`.
+    :template:`answer/answer_form.html`.
     """
 
+    if request.method == 'GET':
+
+        return render(request, 'answer_form.html', {'form': AnswerForm()})
+
     if request.method == "POST":
-        answer_new = AnswerNew(data=request.POST)
-        if answer_new.is_valid():
-            answer_new.save()
+
+        form = AnswerForm(request.POST)
+
+        if form.is_valid():
+            form.save()
 
             messages.add_message(
                 request,
@@ -74,35 +80,47 @@ def answer_new(request):
                 "New answer created"
             )
 
-    answer = Answer()
-    answer_new = AnswerNew()
+            return HttpResponseRedirect('tests')
 
-    context = {
-        "answer": answer,
-        "answer_new": answer_new
-    }
-
-    return render(
-        request,
-        "answer/answer_new.html",
-        context
-    )
+    return render(request, "answer/answer_form.html", {'form': AnswerForm()})
 
 
 def answer_edit(request, id):
     obj = get_object_or_404(Answer, id=id)
-    form = AnswerNew()
-    form = AnswerNew(request.POST, instance=obj)
+    # form = AnswerNew()
+    # form = AnswerNew(request.POST, instance=obj)
 
-    if form.is_valid():
-        form.save()
-        return HttpResponseRedirect('test/')
+    # if form.is_valid():
+    #     form.save()
+    #     return HttpResponseRedirect('test/')
 
-    context = {
-        'form': obj
-    }
-    
-    return render(request, 'answer_edit.html', context)
+    # context = {
+    #     'form': obj
+    # }
+
+    # return render(request, 'answer_edit.html', context)
+
+    if request.method == 'GET':
+
+        context = {
+            'form': AnswerForm(instance=obj),
+            'id': id
+        }
+
+        return render(request, 'answer_form.html', context)
+
+    elif request.method == 'POST':
+
+        form = AnswerForm(request.POST, instance=obj)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Answer updated")
+            return HttpResponseRedirect('tests')
+
+        else:
+            messages.error(request, "An error occurred during update")
+            return render(request, 'answer_form.html', {'form': form})
 
 
 def answer_delete(request, id):
