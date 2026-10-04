@@ -5,12 +5,14 @@
 {% block answer_form %}
 
 <section class="flex-header">
-    <h1>New answer</h1>
+    <h1>Delete answer</h1>
     <a class="button form-cancel header-button referrer" href="{% url 'tests' %}" aria-label="Cancel and return to the previous page">Cancel</a>
 </section>
 <form method="post" id="answerForm" class="center form">
-    <p>Please confirm:</p>
-    <p class="strong">Delete {{object}}?</p>
+    <p class="strong">Delete</p>
+    <p>{{ object.question }}</p>
+    <p>from</p>
+    <p>{{ object.test }}?</p>
     {% csrf_token %}
     <button type="submit" id="answerDelete" class="button form-delete mb-3" aria-label="Submit the delete answer form" value="AnswerDelete">Confirm delete</button>
 </form>

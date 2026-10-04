@@ -1,7 +1,7 @@
 from django.contrib import messages
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from .models import Answer
 
 
@@ -78,13 +78,11 @@ class AnswerEdit(UpdateView):
         return super(AnswerEdit, self).form_valid(form)
 
 
-def answer_delete(request, id):
-    obj = get_object_or_404(Answer, pk=id)
+class AnswerDelete(DeleteView):
+    model = Answer
+    context_object_name = 'answer'
+    success_url = reverse_lazy('tests')
 
-    if request.method == 'GET':
-        return render(request, 'answer_delete.html', {'answer': obj})
-
-    elif request.method == 'POST':
-        obj.delete()
-        messages.success(request, "The answer was deleted")
-        return redirect('test/')
+    def form_valid(self, form):
+        messages.success(self.request, "The answer was deleted")
+        return super(AnswerDelete, self).form_valid(form)
