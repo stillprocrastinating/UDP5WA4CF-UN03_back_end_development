@@ -1,7 +1,6 @@
 # TODO
 
 1. test `answer_delete` with nov24 test: In history, how has social views affected the formation of legislation in regards to animals? [not real answers]
-1. forms AnswerForm vs views AnswerForm
 1. see if crispy forms are needed
 1. `README.md` > AmIResponsive [attempt at home, work pc may be the problem]
 

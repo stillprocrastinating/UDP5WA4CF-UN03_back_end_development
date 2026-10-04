@@ -2,7 +2,6 @@ from django.contrib import messages
 from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView
-from .forms import AnswerForm
 from .models import Answer
 
 
