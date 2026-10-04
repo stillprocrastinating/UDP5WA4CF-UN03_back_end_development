@@ -1,9 +1,11 @@
 from django.urls import path
-from . import views
+from .views import TestDelete, TestEdit, TestForm, TestList, test_detail_page
 
 
 urlpatterns = [
-    path('new/', views.test_new, name='test_new'),
-    path('id-<slug:slug>/', views.test_detail_page, name='test_detail'),
-    path('', views.TestList.as_view(), name='tests'),
+    path('delete/<slug:slug>', TestDelete.as_view(), name='test_delete'),
+    path('edit/<slug:slug>', TestEdit.as_view(), name='test_edit'),
+    path('new/', TestForm.as_view(), name='test_form'),
+    path('id-<slug:slug>/', test_detail_page, name='test_detail'),
+    path('', TestList.as_view(), name='tests'),
 ]

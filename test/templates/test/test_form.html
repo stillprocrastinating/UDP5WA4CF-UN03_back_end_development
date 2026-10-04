@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block answer_form %}
+{% block test_form %}
 
 <section class="flex-header">
-    <h1>{% if answer %}Edit{% else %}New{% endif %} answer</h1>
-    <a class="button form-cancel header-button referrer" href="{% url 'tests' %}" aria-label="Cancel and return to the previous page">Cancel</a>
+    <h1>{% if answer %}Edit{% else %}New{% endif %} test</h1>
+    <a class="button form-cancel header-button referrer" href="{% url 'tests' %}" aria-label="Return to the previous page">Cancel</a>
 </section>
-<form method="post" id="answerForm" class="form">
+<form method="post" id="testForm" class="form">
     {% csrf_token %}
     {% for field in form %}
         {% if field.name == 'completed' %}
@@ -28,7 +28,7 @@
             {% endif %}
         {% endif %}
     {% endfor %}
-    <button type="submit" id="answerSubmit" class="button form-form mb-3" aria-label="Submit the answer form" value="AnswerForm">Submit</button>
+    <button type="submit" id="testSubmit" class="button form-submit mb-3" aria-label="Submit the test form">Submit</button>
 </form>
 
-{% endblock answer_form %}
+{% endblock test_form %}

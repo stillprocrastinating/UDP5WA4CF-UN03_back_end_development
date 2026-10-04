@@ -2,12 +2,12 @@
 {% load static %}
 {% block test %}
 
-{% url 'test_new' as test_new_url %}
+<!-- {% url 'test_form' as test_form_url %} -->
 
 <section class="flex-header">
     <h1>Tests list</h1>
     {% if user.is_authenticated %}
-        <a class="button form-new header-button" href="{% url 'test_new' %}" aria-label="A form to create a new test">New</a>
+        <a class="button form-new header-button" href="{% url 'test_form' %}" aria-label="A form to create a new test">New</a>
     {% endif %}
 </section>
 <section class="flex-testlist">

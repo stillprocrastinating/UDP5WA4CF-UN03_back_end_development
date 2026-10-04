@@ -103,6 +103,10 @@
     margin: 0% 10%;
 }
 
+.text-align-r {
+    text-align: right;
+}
+
 .text-overflow-ellipsis {
     white-space: nowrap;
     overflow: hidden;
@@ -512,7 +516,7 @@ input {
 }
 
 
-/* answer_new.html question_new.html test_new.html */
+/* answer_form.html test_form.html */
 
 .form-hint {
     font-size: small;

@@ -1,14 +1,13 @@
 from answer.models import Answer
 from answer.views import test_answer_detail
 from django.contrib import messages
-# from django.http import Http404
 from django.shortcuts import get_object_or_404, render
-from django.views import generic
-from .forms import TestNew
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 from .models import Test
 
 
-class TestList(generic.ListView):
+class TestList(ListView):
     queryset = Test.objects.all().order_by("-date")
     paginate_by = 9
 
@@ -50,40 +49,32 @@ def test_detail_page(request, slug):
     return test_detail(request, slug)
 
 
-def test_new(request):
-    """
-    Display the form which creates a new :model:`test.Test`.
+class TestForm(CreateView):
+    model = Test
+    fields = ['id', 'date', 'type', 'participant_number',]
+    success_url = reverse_lazy('tests')
 
-    **Context**
+    def form_valid(self, form):
+        form.instance.tester = self.request.user
+        messages.success(self.request, "New test created")
+        return super(TestForm, self).form_valid(form)
 
-    ``test_new``
-        An instance of :form:`test.TestNew`.
 
-    **Template**
+class TestEdit(UpdateView):
+    model = Test
+    fields = ['id', 'date', 'type', 'participant_number',]
+    success_url = reverse_lazy('tests')
 
-    :template:`test/test_new.html`.
-    """
+    def form_valid(self, form):
+        messages.success(self.request, "The test was updated")
+        return super(TestEdit, self).form_valid(form)
 
-    if request.method == "POST":
-        test_new = TestNew(data=request.POST)
-        if test_new.is_valid():
-            test_new.save()
-            messages.add_message(
-                request,
-                messages.SUCCESS,
-                "New test created"
-            )
 
-    test = Test()
-    test_new = TestNew()
+class TestDelete(DeleteView):
+    model = Test
+    context_object_name = 'test'
+    success_url = reverse_lazy('tests')
 
-    context = {
-        "test": test,
-        "test_new": test_new
-    }
-
-    return render(
-        request,
-        "test/test_new.html",
-        context
-    )
+    def form_valid(self, form):
+        messages.success(self.request, "The test was deleted")
+        return super(TestDelete, self).form_valid(form)

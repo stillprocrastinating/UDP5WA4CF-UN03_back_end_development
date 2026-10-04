@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block test_form %}
+
+<section class="flex-header">
+    <h1>Delete test</h1>
+    <a class="button form-cancel header-button referrer" href="{% url 'tests' %}" aria-label="Cancel and return to the previous page">Cancel</a>
+</section>
+<form method="post" id="testForm" class="center form">
+    <p class="strong">Delete</p>
+    <p>{{ object.id }}</p>
+    <p>from</p>
+    <p>{{ object.date }}?</p>
+    {% csrf_token %}
+    <button type="submit" id="testDelete" class="button form-delete mb-3" aria-label="Submit the delete test form" value="TestDelete">Confirm delete</button>
+</form>
+
+{% endblock test_form %}

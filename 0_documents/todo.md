@@ -1,6 +1,5 @@
 # TODO
 
-1. crispy forms aren't needed once tests have same crud functionality setup as answers - remove when appropriate
 1. `README.md` > AmIResponsive [attempt at home, work pc may be the problem]
 
 
