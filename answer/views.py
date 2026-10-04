@@ -1,6 +1,5 @@
 from django.contrib import messages
-from django.http import HttpResponseRedirect
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, UpdateView
 from .forms import AnswerForm
@@ -66,42 +65,6 @@ class AnswerForm(CreateView):
         return super(AnswerForm, self).form_valid(form)
 
 
-# def answer_form(request):
-#     """
-#     Display the form which creates a new :model:`answer.Answer`.
-
-#     **Context**
-
-#     ``answer_form``
-#         An instance of :form:`answer.AnswerForm`.
-
-#     **Template**
-
-#     :template:`answer/answer_form.html`.
-#     """
-
-#     if request.method == 'GET':
-
-#         return render(request, 'answer_form.html', {'form': AnswerForm()})
-
-#     if request.method == "POST":
-
-#         form = AnswerForm(request.POST)
-
-#         if form.is_valid():
-#             form.save()
-
-#             messages.add_message(
-#                 request,
-#                 messages.SUCCESS,
-#                 "New answer created"
-#             )
-
-#             return HttpResponseRedirect('tests')
-
-#     return render(request, "answer/answer_form.html", {'form': AnswerForm()})
-
-
 class AnswerEdit(UpdateView):
     model = Answer
     fields = [
@@ -117,10 +80,12 @@ class AnswerEdit(UpdateView):
 
 
 def answer_delete(request, id):
-    obj = get_object_or_404(Answer, id=id)
+    obj = get_object_or_404(Answer, pk=id)
 
-    if request.method == 'POST':
+    if request.method == 'GET':
+        return render(request, 'answer_delete.html', {'answer': obj})
+
+    elif request.method == 'POST':
         obj.delete()
-        return HttpResponseRedirect('test/')
-
-    return render(request, 'answer_delete.html')
+        messages.success(request, "The answer was deleted")
+        return redirect('test/')
