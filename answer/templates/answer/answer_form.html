@@ -10,29 +10,25 @@
 </section>
 <form method="post" id="answerForm" class="form">
     {% csrf_token %}
-    {% if answer %}
-        {% for field in form %}
-            {% if field.name == 'completed' %}
-                <p>
-                    {{ field.label_tag }}
-                    {{ field }}
-                </p>
-                {% if field.errors %}
-                    <small class="error">{{ field.errors|striptags  }}</small> 
-                {% endif %}
-            {% else %}
-                <p>
-                    {{ field.label_tag }} 
-                    {{ field }}
-                </p>
-                {% if field.errors %}
-                    <small class="error">{{ field.errors|striptags  }}</small> 
-                {% endif %}
+    {% for field in form %}
+        {% if field.name == 'completed' %}
+            <p>
+                {{ field.label_tag }}
+                {{ field }}
+            </p>
+            {% if field.errors %}
+                <small class="error">{{ field.errors|striptags  }}</small> 
             {% endif %}
-        {% endfor %}
-    {% else %}
-        {{ answer_form | crispy }}
-    {% endif %}
+        {% else %}
+            <p>
+                {{ field.label_tag }} 
+                {{ field }}
+            </p>
+            {% if field.errors %}
+                <small class="error">{{ field.errors|striptags  }}</small> 
+            {% endif %}
+        {% endif %}
+    {% endfor %}
     <button type="submit" id="answerSubmit" class="button form-form mb-3" aria-label="Submit the answer form" value="AnswerForm">Submit</button>
 </form>
 

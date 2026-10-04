@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic.edit import UpdateView
+from django.views.generic.edit import CreateView, UpdateView
 from .forms import AnswerForm
 from .models import Answer
 
@@ -51,40 +51,55 @@ def test_answer_detail(request, slug):
     )
 
 
-def answer_form(request):
-    """
-    Display the form which creates a new :model:`answer.Answer`.
+class AnswerForm(CreateView):
+    model = Answer
+    fields = [
+        'test',
+        'question',
+        'answer1', 'answer2', 'answer3', 'answer4', 'answer5',
+    ]
+    success_url = reverse_lazy('tests')
 
-    **Context**
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        messages.success(self.request, "New answer created")
+        return super(AnswerForm, self).form_valid(form)
 
-    ``answer_form``
-        An instance of :form:`answer.AnswerForm`.
 
-    **Template**
+# def answer_form(request):
+#     """
+#     Display the form which creates a new :model:`answer.Answer`.
 
-    :template:`answer/answer_form.html`.
-    """
+#     **Context**
 
-    if request.method == 'GET':
+#     ``answer_form``
+#         An instance of :form:`answer.AnswerForm`.
 
-        return render(request, 'answer_form.html', {'form': AnswerForm()})
+#     **Template**
 
-    if request.method == "POST":
+#     :template:`answer/answer_form.html`.
+#     """
 
-        form = AnswerForm(request.POST)
+#     if request.method == 'GET':
 
-        if form.is_valid():
-            form.save()
+#         return render(request, 'answer_form.html', {'form': AnswerForm()})
 
-            messages.add_message(
-                request,
-                messages.SUCCESS,
-                "New answer created"
-            )
+#     if request.method == "POST":
 
-            return HttpResponseRedirect('tests')
+#         form = AnswerForm(request.POST)
 
-    return render(request, "answer/answer_form.html", {'form': AnswerForm()})
+#         if form.is_valid():
+#             form.save()
+
+#             messages.add_message(
+#                 request,
+#                 messages.SUCCESS,
+#                 "New answer created"
+#             )
+
+#             return HttpResponseRedirect('tests')
+
+#     return render(request, "answer/answer_form.html", {'form': AnswerForm()})
 
 
 class AnswerEdit(UpdateView):
