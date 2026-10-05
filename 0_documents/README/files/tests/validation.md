@@ -2,7 +2,7 @@
 
 2026-10-05 18:58 style.css ![Valid CSS!](https://jigsaw.w3.org/css-validator/images/vcss)
 
-| Line | Error | Fixed |
+| Line | Error | Commit |
 |-|-|-|
 | 28 | Value Error : font-weight `lighter` is not a `font-weight` value : `lighter` | [main 704e7a9] validation error fix: font-weight: ~~lighter~~ 200 |
 
@@ -96,17 +96,11 @@
 
 # [W3C Markup Validation Service](https://validator.w3.org)
 
-2025-10-20 20:38 404.html
+2026-10-05 19:26
 
-| Line | Element | Warning | Resolution | Commit |
+| Page | Line | Element | Warning | Commit |
 |-|-|-|-|-|
-| From line 56, column 9; to line 56, column 110 | `<div id="discord" class="footer-button" aria-label="Look me up on Discord (opens in a prompt window)">` | Possible misuse of `aria-label` | None ||
-
-2025-10-20 21:53 index.html
-
-| Line | Element | Warning | Resolution | Commit |
-|-|-|-|-|-|
-| From line 359, column 9; to line 359, column 110 | `<div id="discord" class="footer-button" aria-label="Look me up on Discord (opens in a prompt window)">` | Possible misuse of `aria-label`. | None. ||
+| _base.html_ | From line 225, column 9; to line 225, column 38 | `<section class="affiliations">` | Section lacks heading. Consider using `h2`-`h6` elements to [add identifying headings to all sections](https://www.w3.org/wiki/HTML/Usage/Headings/Missing), or else use a `div` element instead for any cases where no heading is needed. | [main 0af1a0e] validation error fix: Section lacks heading -> use a div element instead |
 
 
 # [jslint.com](https://www.jslint.com)
