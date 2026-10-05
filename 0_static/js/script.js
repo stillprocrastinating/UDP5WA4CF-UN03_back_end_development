@@ -60,14 +60,14 @@ let warning = {
 function calculateDifficultyTest () {
     let td = document.getElementsByClassName("t-difficulty");
     let qd = document.getElementsByClassName("answers-list-difficulty");
-    x = 0;
+    let x = 0;
 
-    for (i = 0; i < qd.length; i++) {
+    for (let i = 0; i < qd.length; i++) {
         if (qd[i].textContent.includes("Difficult")) {
             x += 1;
         }
         else if (qd[i].textContent.includes("Optimal")) {
-            x += 0;
+            // x += 0;
         }
         else if (qd[i].textContent.includes("Easy")) {
             x -= 1;
@@ -86,7 +86,7 @@ function calculateDifficultyTest () {
     else if (x/qd.length < 0) {
         return td[0].textContent = "1";
     }
-    else if (qd.length == 0) {
+    else if (qd.length === 0) {
         return td[0].textContent = "Not applicable";
     }
     else {
@@ -102,14 +102,14 @@ function calculateDifficultyTest () {
 function calculateWarningTestQuestions () {
     let tw = document.getElementsByClassName("q-warnings");
     let qw = document.getElementsByClassName("answers-list-warning");
-    x = 0;
+    let x = 0;
 
-    for (i = 0; i < qw.length; i++) {
+    for (let i = 0; i < qw.length; i++) {
         if (qw[i].textContent.includes("Consider")) {     // Consider a learning objective teaching method audit
             x += 1;
         }
         else if (qw[i].textContent.includes("None")) {     // None
-            x += 0;
+            // x += 0;
         }
         else {
             tw[0].textContent = "Error in calculation";
@@ -119,7 +119,7 @@ function calculateWarningTestQuestions () {
     if (x > 0) {
         return tw[0].textContent = "2";
     }
-    else if (x == 0) {
+    else if (x === 0) {
         return tw[0].textContent = "1";
     }
     else {
@@ -136,17 +136,17 @@ function formModifications () {
     let inputIdDate = document.getElementById("id_date");
     let inputIdQuestion = document.getElementById("id_question");
 
-    if (inputIdId != null) {
+    if (inputIdId !== null) {
         inputIdId.placeholder = "E1/L PiLAB Jan 26 resit";
         inputIdId.autofocus = true;
         inputIdId.previousElementSibling.innerHTML = inputIdId.previousElementSibling.innerHTML + "<span class='form-hint'>( [E1/L] PiLAB Month Year [resit] )</span>";
     }
 
-    if (inputIdDate != null) {
+    if (inputIdDate !== null) {
         inputIdDate.type = "date";
     }
 
-    if (inputIdQuestion != null) {
+    if (inputIdQuestion !== null) {
         inputIdQuestion.style.width = "90%";
     }
 }
@@ -159,7 +159,7 @@ function headingLinks () {
     let alql = document.getElementsByClassName("alq-link");
     let alq = document.getElementsByClassName("answers-list-question");
 
-    for (i = 0; i < alq.length; i++) {
+    for (let i = 0; i < alq.length; i++) {
         alql[i].href = "#" + "question" + i;
         alq[i].id = "question" + i;
     }
@@ -172,7 +172,7 @@ function headingLinks () {
 function hrefReferrer () {
     let button = document.getElementsByClassName("referrer");
 
-    for (i = 0; i < button.length; i++) {
+    for (let i = 0; i < button.length; i++) {
         button[i].href = document.referrer;
     }
 }
@@ -185,12 +185,12 @@ function showAnswers () {
     let sab = document.getElementById("show-answers");
     let q = document.getElementsByClassName("q-answer");
     sab.addEventListener("click", function () {
-        for (i = 0; i < q.length; i++) {
+        for (let i = 0; i < q.length; i++) {
             if (q[i].getAttribute("correct") === "yes") {
                 q[i].classList.toggle("correct");
                 sab.classList.toggle("show-answers");
-            };
-        };
+            }
+        }
     });
 }
 
@@ -202,47 +202,47 @@ function showAnswers () {
 function verboseLO () {
     let loN = document.getElementsByClassName("q-lo");
 
-    for (i = 0; i < loN.length; i++) {
-        if (loN[i].textContent == "1") {
+    for (let i = 0; i < loN.length; i++) {
+        if (loN[i].textContent === "1") {
             loN[i].innerHTML = lo.LO1;
         }
-        else if (loN[i].textContent == "2") {
+        else if (loN[i].textContent === "2") {
             loN[i].innerHTML = lo.LO2;
         }
-        else if (loN[i].textContent == "3") {
+        else if (loN[i].textContent === "3") {
             loN[i].innerHTML = lo.LO3;
         }
-        else if (loN[i].textContent == "4") {
+        else if (loN[i].textContent === "4") {
             loN[i].innerHTML = lo.LO4;
         }
-        else if (loN[i].textContent == "5") {
+        else if (loN[i].textContent === "5") {
             loN[i].innerHTML = lo.LO5;
         }
-        else if (loN[i].textContent == "6") {
+        else if (loN[i].textContent === "6") {
             loN[i].innerHTML = lo.LO6;
         }
-        else if (loN[i].textContent == "7") {
+        else if (loN[i].textContent === "7") {
             loN[i].innerHTML = lo.LO7;
         }
-        else if (loN[i].textContent == "8") {
+        else if (loN[i].textContent === "8") {
             loN[i].innerHTML = lo.LO8;
         }
-        else if (loN[i].textContent == "9") {
+        else if (loN[i].textContent === "9") {
             loN[i].innerHTML = lo.LO9;
         }
-        else if (loN[i].textContent == "10") {
+        else if (loN[i].textContent === "10") {
             loN[i].innerHTML = lo.LO10;
         }
-        else if (loN[i].textContent == "11") {
+        else if (loN[i].textContent === "11") {
             loN[i].innerHTML = lo.LO11;
         }
-        else if (loN[i].textContent == "12") {
+        else if (loN[i].textContent === "12") {
             loN[i].innerHTML = lo.LO12;
         }
-        else if (loN[i].textContent == "13") {
+        else if (loN[i].textContent === "13") {
             loN[i].innerHTML = lo.LO13;
         }
-        else if (loN[i].textContent == "14") {
+        else if (loN[i].textContent === "14") {
             loN[i].innerHTML = lo.LO14;
         }
     }
@@ -256,17 +256,17 @@ function verboseLO () {
 function verboseDifficultyTest () {
     let N = document.getElementsByClassName("t-difficulty");
 
-    for (i = 0; i < N.length; i++) {
-        if (N[i].textContent == "0") {
+    for (let i = 0; i < N.length; i++) {
+        if (N[i].textContent === "0") {
             N[i].innerHTML = t_difficulty.td0;
         }
-        else if (N[i].textContent == "1") {
+        else if (N[i].textContent === "1") {
             N[i].innerHTML = t_difficulty.td1;
         }
-        else if (N[i].textContent == "2") {
+        else if (N[i].textContent === "2") {
             N[i].innerHTML = t_difficulty.td2;
         }
-        else if (N[i].textContent == "3") {
+        else if (N[i].textContent === "3") {
             N[i].innerHTML = t_difficulty.td3;
         }
     }
@@ -280,23 +280,23 @@ function verboseDifficultyTest () {
 function verboseTypeQuestion () {
     let testN = document.getElementsByClassName("q-type");
 
-    for (i = 0; i < testN.length; i++) {
-        if (testN[i].textContent == "1") {
+    for (let i = 0; i < testN.length; i++) {
+        if (testN[i].textContent === "1") {
             testN[i].innerHTML = q_type.qt1;
         }
-        else if (testN[i].textContent == "2") {
+        else if (testN[i].textContent === "2") {
             testN[i].innerHTML = q_type.qt2;
         }
-        else if (testN[i].textContent == "3") {
+        else if (testN[i].textContent === "3") {
             testN[i].innerHTML = q_type.qt3;
         }
-        else if (testN[i].textContent == "4") {
+        else if (testN[i].textContent === "4") {
             testN[i].innerHTML = q_type.qt4;
         }
-        else if (testN[i].textContent == "5") {
+        else if (testN[i].textContent === "5") {
             testN[i].innerHTML = q_type.qt5;
         }
-        else if (testN[i].textContent == "6") {
+        else if (testN[i].textContent === "6") {
             testN[i].innerHTML = q_type.qt6;
         }
     }
@@ -310,14 +310,14 @@ function verboseTypeQuestion () {
 function verboseTypeTest () {
     let testN = document.getElementsByClassName("t-type");
 
-    for (i = 0; i < testN.length; i++) {
-        if (testN[i].textContent == "0") {
+    for (let i = 0; i < testN.length; i++) {
+        if (testN[i].textContent === "0") {
             testN[i].innerHTML = t_type.tt1;
         }
-        else if (testN[i].textContent == "1") {
+        else if (testN[i].textContent === "1") {
             testN[i].innerHTML = t_type.tt2;
         }
-        else if (testN[i].textContent == "2") {
+        else if (testN[i].textContent === "2") {
             testN[i].innerHTML = t_type.tt3;
         }
     }
@@ -331,11 +331,11 @@ function verboseTypeTest () {
 function verboseWarning () {
     let warningN = document.getElementsByClassName("q-warnings");
 
-    for (i = 0; i < warningN.length; i++) {
-        if (warningN[i].textContent == "2") {
+    for (let i = 0; i < warningN.length; i++) {
+        if (warningN[i].textContent === "2") {
             warningN[i].textContent = warning.w2;
         }
-        else if (warningN[i].textContent == "1") {
+        else if (warningN[i].textContent === "1") {
             warningN[i].textContent = warning.w1;
         }
         else {
