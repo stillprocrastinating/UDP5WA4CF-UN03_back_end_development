@@ -61,8 +61,8 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 | # | Description | Solution |
 |-|-|-|
 | 1 | As an admin, I want CRUD functionality for test questions. | ![solution1](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution1.jpeg) |
-| 2 | As a tester, I want to create tests I host. | ![solution2](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution2.png) |
-| 3 | As a tester, I want to create test answers of my students. | ![solution3](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution3.png) |
+| 2 | As a tester, I want to edit tests I host. | ![solution2](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution2.png) |
+| 3 | As a tester, I want to edit test answers of my students. | ![solution3](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution3.png) |
 | 4 | As a student, I want to be able to prepare for which questions may occur on the test. | ![solution4](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution4.png) |
 | 5 | As a tester, I want to be able to see which questions are more difficult than others. | ![solution5](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution5.jpeg) |
 | 6 | As a tester, I want to be able to tell the difference between a question being difficult because it is difficult or because I am teaching it poorly. | ![solution6](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/user_stories/solution6.jpeg) |
@@ -79,6 +79,7 @@ _You may click on any screenshot image to be taken to the fullscreen view (and u
 | question_detail.html | All | `.correct` to clearly show which answer is correct | ![correct](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/correct.jpeg) |
 | test_detail.html | All | An explanation for when a dataset is empty (and a handy-dandy button-link to the form to add data) | ![no-answers](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/no-answers.png) |
 | test_detail.html | All | `<a>` to see a quick list of the questions in that test and be able to jump to a particular question quickly _- this may not seem pertinent, but will be appreciated in later versions of the site when the number of questions per test matches reality (~30)_ | ![alq-list](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/alq-link.png) |
+| test_detail.html | All | Edit and delete buttons - icons instead of text - for both test CRUD & answer CRUD | ![edit-delete](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/features/edit-delete.png) |
 
 
 ### Entity relationship diagrams

@@ -3,8 +3,8 @@
 | # | Description | Goal(s) |
 |-|-|-|
 | 1 | As an admin, I want edit functionality for test questions. | Build a `Question()` class to model CRUD functions for admins. |
-| 2 | As a tester, I want to create tests I host. | Build a `Test()` class to model CRUD functions.<br>Utilise `django.allauth` to manage login capabilities for `Test()`. |
-| 3 | As a tester, I want to create test answers of my students. | Build an `Answer()` class to model CRUD functions.<br>Utilise `django.allauth` to manage login capabilities for `Answer()`. |
+| 2 | As a tester, I want to edit tests I host. | Build a `Test()` class to model CRUD functions.<br>Utilise `django.allauth` to manage login capabilities for `Test()`. |
+| 3 | As a tester, I want to edit test answers of my students. | Build an `Answer()` class to model CRUD functions.<br>Utilise `django.allauth` to manage login capabilities for `Answer()`. |
 | 4 | As a student, I want to be able to prepare for which questions may occur on the test. | Utilise `django.allauth` to manage login capabilities, disallowed to students, to allow students to see the questions in their entirety, without providing the answers. |
 | 5 | As a tester, I want to be able to see which questions are more difficult than others. | Build a `calculateDifficultyQuestion()` function which classifies `Question()` based on the frequency of correct `Answer()`. |
 | 6 | As a tester, I want to be able to tell the difference between a question being difficult because it is difficult or because I am teaching it poorly. | Build a `calculateWarningQuestion()` function which classifies `Question()` based on the frequency of specific incorrect `Answer()`. |
