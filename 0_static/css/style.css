@@ -25,7 +25,7 @@
     src:
         local("UCLSans-Light"),
         url("UCLSans/UCLSans-Light.otf") format("opentype");
-    font-weight: lighter;
+    font-weight: 200;
 }
 
 @font-face {
