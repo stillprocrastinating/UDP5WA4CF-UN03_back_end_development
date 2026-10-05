@@ -4,13 +4,6 @@ from django.db import models
 from question.models import Question
 
 
-# T_DIFFICULTY = (
-#     (0, "Error in calculation"),
-#     (1, "Easy"),
-#     (2, "Optimal"),
-#     (3, "Difficult")
-# )
-
 T_TYPE = (
     (0, "E1/L PiLAB Test"),
     (1, "PiLAB Test"),
@@ -31,15 +24,9 @@ class Test(models.Model):
         verbose_name="number of participants"
     )
     tester = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    # t_difficulty = models.IntegerField(
-    #     choices=T_DIFFICULTY, default=0, verbose_name="test difficulty"
-    # )
     t_questions = models.ManyToManyField(
         to=Question, related_name="question_pool"
     )
-    # question = models.ForeignKey(
-    #     Question, on_delete=models.DO_NOTHING, related_name="test_questions"
-    # )
 
     class Meta:
         ordering = ["date"]

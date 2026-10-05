@@ -7,7 +7,6 @@
 
 ## Deploy
 
-1. Remove unused fonts and colours and code
 1. `python manage.py collectstatic`
 1. `python manage.py makemigrations`
 1. `python manage.py migrate`

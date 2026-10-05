@@ -12,10 +12,6 @@
 
 <section class="center meta">
     <p><span class="q-type">{{ question.type }}</span> #{{ question.number }}</p>
-    <!-- {% block q_meta_detail %} -->
-     <!-- delete -->
-      <!-- <span class="bug">test</span> -->
-    <!-- {% endblock q_meta_detail %} -->
 </section>
 
 <section class="{% if user.is_authenticated %}{% else %}flex-section{% endif %} q-details">
@@ -31,17 +27,5 @@
         <li class="{% if question.sub_correct_answer_individual == 5 and user.is_authenticated %}correct{% endif %} mb5 q-answer" correct="{% if question.sub_correct_answer_individual == 5 %}yes{% else %}no{% endif %}" aria-label="{% if question.sub_correct_answer_individual == 5 %}This is the correct answer{% endif %}">{{ question.answer5 }}</li>
     </ol>
 </section>
-
-
-<!-- {% if user.is_authenticated %}
-    <section class="bug answer-section">
-        {% block question_answer_detail %}
-            <section class="flex-section">
-                <p class="no-answers">This question does not contain any test answers.</p>
-                <a href="{% url 'test_form' %}" class="button form-new header-button" aria-label="A form to create a new test">New test</a>
-            </section>
-        {% endblock question_answer_detail %}
-    </section>
-{% endif %} -->
 
 {% endblock question_detail %}

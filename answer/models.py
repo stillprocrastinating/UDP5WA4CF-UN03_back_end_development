@@ -1,4 +1,3 @@
-# from django.contrib.auth.models import User
 from django.db import models
 from question.models import Question
 from test.models import Test
@@ -26,7 +25,6 @@ class Answer(models.Model):
     test = models.ForeignKey(
         Test, on_delete=models.CASCADE, related_name="test_answers"
     )
-    # option = models.IntegerField()
     answer1 = models.IntegerField(default=0)
     answer2 = models.IntegerField(default=0)
     answer3 = models.IntegerField(default=0)

@@ -53,7 +53,6 @@ INSTALLED_APPS = [
     'question',
     'test',
     'answer',
-    'q_meta',
 ]
 
 SITE_ID = 1
@@ -96,13 +95,6 @@ WSGI_APPLICATION = '0_settings.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
 
 DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}
 

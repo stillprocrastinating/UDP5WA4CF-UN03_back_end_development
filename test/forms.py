@@ -7,7 +7,7 @@ class TestNew(forms.ModelForm):
     Generates the form to create Tests
     """
     e1_questions = forms.ModelMultipleChoiceField(
-        queryset=Question.objects.all(),     # fix to have Question.question labels
+        queryset=Question.objects.all(),
         widget=forms.CheckboxSelectMultiple
     )
 

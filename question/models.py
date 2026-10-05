@@ -28,13 +28,6 @@ Q_CORRECT = (
     (5, "Answer5")
 )
 
-# Q_DIFFICULTY = (
-#     (0, "Error in calculation"),
-#     (1, "Easy"),
-#     (2, "Optimal"),
-#     (3, "Difficult")
-# )
-
 Q_TYPE = (
     (1, "Diagram"),
     (2, "Drag & drop"),
@@ -43,13 +36,6 @@ Q_TYPE = (
     (5, "Missing word"),
     (6, "True/false")
 )
-
-# WARNING = (
-#     (0, "Error in calculation"),
-#     (1, "None"),
-#     (2, "Warning"),
-#     (3, "Flagged to revise question wording")
-# )
 
 
 class Question(models.Model):
@@ -70,7 +56,6 @@ class Question(models.Model):
     answer3 = models.TextField(blank=True)     # extend.ucl.ac.uk
     answer4 = models.TextField(blank=True)     # extend.ucl.ac.uk
     answer5 = models.TextField(blank=True)     # extend.ucl.ac.uk
-    # image = models.ImageField(blank=True)     # not needed this app version
     sub_number = models.IntegerField(verbose_name="number of subquestions")
     sub_answer_number_individual = models.IntegerField(
         verbose_name="number of answers for subquestion"
@@ -80,18 +65,9 @@ class Question(models.Model):
         verbose_name="which answer for subquestion is correct"
     )
     author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-    # q_difficulty = models.IntegerField(
-    #     choices=Q_DIFFICULTY, default=0, verbose_name="question difficulty"
-    # )
-    # warning = models.IntegerField(choices=WARNING, default=0)
 
     class Meta:
         ordering = ["lo", "type", "number"]
-        # filtering = ["lo", "type", "author", "warning"]
 
     def __str__(self):
         return self.question
-
-    # @property
-    # def warning(self):
-    #     return warning
