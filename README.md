@@ -101,7 +101,7 @@ TLDR as follows.
 
 ## Credits
 
-[UCL brand resources](https://www.ucl.ac.uk/brand-and-experience/brand/brand-resources) directly influenced my colour theme, [Favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/favicon/favicon.svg), and footer image [banner](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_static/images/base/ucl200_stretch_banner_3000x2280mm_original.jpg).
+[UCL brand resources](https://www.ucl.ac.uk/brand-and-experience/brand/brand-resources) directly influenced my [colour theme](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/1_staticfiles/css/style.css), [Favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/1_staticfiles/images/favicon/favicon.svg), and footer image [banner](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/1_staticfiles/images/base/ucl200_stretch_banner_3000x2280mm_original.jpg).
 
 [rxaviers](https://gist.github.com/rxaviers)' GitHub markdown [emojis](https://gist.github.com/rxaviers/7360908).
 
@@ -145,7 +145,7 @@ TLDR as follows.
 
 ### Images
 
-Files can be found under _0\_static_ > _images_ > _[base](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_static/images/base)_.
+Files can be found under _1\_staticfiles_ > _images_ > _[base](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/1_staticfiles/images/base)_.
 
 The original [zebrafish image](https://www.istockphoto.com/vector/zebrafish-gm479692688-68004101) was designed by [designdunja](https://www.istockphoto.com/portfolio/designdunja?mediatype=illustration) and sourced from [iStock by Getty Images](https://www.istockphoto.com). The image indicates that a subject of the PiL course tests is zebrafish. I edited the image to remove the background so that it looked more aesthetic in my header.
 
@@ -158,7 +158,7 @@ The [REAL Rating](https://www.realgoodai.org/real-rating) 1 - Automation image w
 
 #### Favicon
 
-Files can be found under _0\_static_ > _images_ > _[favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_static/images/favicon)_.
+Files can be found under _1\_staticfiles_ > _images_ > _[favicon](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/1_staticfiles/images/favicon)_.
 
 The favicon was generated from the [UCL social icon](https://imagestore.ucl.ac.uk/imagestore/pcache/10034/0e/l_icon_square_1080x1080px_e51db.jpg) (sourced from [UCL Brand Resources](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates?fc=browse&column=7)) using [RealFaviconGenerator](https://realfavicongenerator.net).
 

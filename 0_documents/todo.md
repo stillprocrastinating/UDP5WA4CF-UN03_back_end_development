@@ -1,16 +1,16 @@
 # TODO
 
+1. user stories crud
+1. test_detail_page --> question
 1. `README.md` > AmIResponsive [attempt at home, work pc may be the problem]
 
 
 ## Deploy
 
-1. Change image references from `0_static` to `1_staticfiles`
 1. Remove unused fonts and colours and code
 1. `python manage.py collectstatic`
 1. `python manage.py makemigrations`
 1. `python manage.py migrate`
-1. `settings.py` > `DEBUG = False`
 
 
 ## General
