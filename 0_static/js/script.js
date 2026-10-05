@@ -66,9 +66,7 @@ function calculateDifficultyTest () {
         if (qd[i].textContent.includes("Difficult")) {
             x += 1;
         }
-        else if (qd[i].textContent.includes("Optimal")) {
-            // x += 0;
-        }
+        // else if (qd[i].textContent.includes("Optimal")) { x += 0; }
         else if (qd[i].textContent.includes("Easy")) {
             x -= 1;
         }
@@ -108,9 +106,7 @@ function calculateWarningTestQuestions () {
         if (qw[i].textContent.includes("Consider")) {     // Consider a learning objective teaching method audit
             x += 1;
         }
-        else if (qw[i].textContent.includes("None")) {     // None
-            // x += 0;
-        }
+        // else if (qw[i].textContent.includes("None")) { x += 0; }
         else {
             tw[0].textContent = "Error in calculation";
         }
