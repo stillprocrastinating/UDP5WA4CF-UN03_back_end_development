@@ -1,10 +1,12 @@
 # [Jigsaw W3C CSS Validation Service](https://jigsaw.w3.org/css-validator)
 
-2026-10-05 18:58 style.css ![Valid CSS!](https://jigsaw.w3.org/css-validator/images/vcss)
+## 2026-10-05 18:58
 
 | Line | Error | Commit |
 |-|-|-|
 | 28 | Value Error : font-weight `lighter` is not a `font-weight` value : `lighter` | [main 704e7a9] validation error fix: font-weight: ~~lighter~~ 200 |
+
+## 2026-10-05 19:03 ![Valid CSS!](https://jigsaw.w3.org/css-validator/images/vcss)
 
 | Line | Warning | Comments |
 |-|-|-|
@@ -96,11 +98,25 @@
 
 # [W3C Markup Validation Service](https://validator.w3.org)
 
-2026-10-05 19:26
+## 2026-10-05 19:26
 
 | Page | Line | Element | Warning | Commit |
 |-|-|-|-|-|
 | _base.html_ | From line 225, column 9; to line 225, column 38 | `<section class="affiliations">` | Section lacks heading. Consider using `h2`-`h6` elements to [add identifying headings to all sections](https://www.w3.org/wiki/HTML/Usage/Headings/Missing), or else use a `div` element instead for any cases where no heading is needed. | [main 0af1a0e] validation error fix: Section lacks heading -> use a div element instead |
+
+## 2026-10-05 19:36
+
+>Just ignore this set, it's embarrassing :sweat_smile:
+
+| Page | Line | Element | Error | Commit |
+|-|-|-|-|-|
+| _base.html_ | From line 235, column 9; to line 235, column 18 | `</section>` | Stray end tag `section`. | [main b7f3612] validation error fix: Stray end tag section... |
+| _base.html_ | From line 239, column 5; to line 239, column 13 | `</footer>` | End tag `footer` seen, but there were open elements. | [main b7f3612] validation error fix: Stray end tag section... |
+| _base.html_ | From line 225, column 9; to line 225, column 34 | `<div class="affiliations">` | Unclosed element `div`. | [main b7f3612] validation error fix: Stray end tag section... |
+
+## 2026-10-05 19:47
+
+Document checking completed. No errors or warnings to show.
 
 
 # [jslint.com](https://www.jslint.com)
