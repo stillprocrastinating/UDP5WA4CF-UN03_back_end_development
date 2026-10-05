@@ -65,6 +65,12 @@
             </ul>
         </div>
     </nav>
+        
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{message.tags}} black-secondary center">{{message}}</div>
+        {% endfor %}
+    {% endif %}
 
     <noscript>
         <div id="noscript" class="black-secondary center flex-main narrow">
@@ -78,12 +84,6 @@
     </noscript>
 
     <main class="flex-main narrow">
-        
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-{{message.tags}} black-secondary center">{{message}}</div>
-            {% endfor %}
-        {% endif %}
 
         {% block content %}
             {% if request.path == login_url %}
