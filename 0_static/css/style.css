@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.5.15,
+* Autoprefixer: v10.5.0
+* Browsers: last 4 version
+*/
+
 @font-face {
     font-family: "UCLSans";
     src:
@@ -144,65 +151,112 @@
 /* flex */
 
 .flex-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-height: 100vh;
 }
 
 .flex-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .flex-nav {
-    flex: 0 0 100px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100px;
+            flex: 0 0 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 10px;
 }
 
 .flex-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .flex-main {
-    flex: 2 0;
+    -webkit-box-flex: 2;
+        -ms-flex: 2 0;
+            flex: 2 0;
 }
 
 .page-spacer {
-    flex: 9 9 0px;
+    -webkit-box-flex: 9;
+        -ms-flex: 9 9 0px;
+            flex: 9 9 0px;
 }
 
 .flex-footer {
-    flex: 0 0 100px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100px;
+            flex: 0 0 100px;
     max-height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-bottom: 5px;
 }
 
 .flex-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .flex-accommodate {
-    flex-shrink: 9;
-    order: 1;
+    -ms-flex-negative: 9;
+        flex-shrink: 9;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
 }
 
 .flex-stubborn {
-    flex: 2 1 100%;
-    order: 3;
-    justify-self: left;
+    -webkit-box-flex: 2;
+        -ms-flex: 2 1 100%;
+            flex: 2 1 100%;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -ms-grid-column-align: left;
+        justify-self: left;
 }
 
 .flex-testlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 0px 100px;
 }
 
@@ -237,6 +291,7 @@ a {
 }
 
 a:hover {
+    -webkit-transition: 1s;
     transition: 1s;
     color: var(--color-secondary);
     background-color: var(--color-black);
@@ -256,6 +311,7 @@ button,
 
 button:hover,
 .button:hover {
+    -webkit-transition: 1s;
     transition: 1s;
     background-color: var(--color-secondary);
     color: var(--color-black);
@@ -268,7 +324,8 @@ fieldset {
 }
 
 .h2 {
-    margin-block-end: 0px;
+    -webkit-margin-after: 0px;
+            margin-block-end: 0px;
     padding: 5px;
 }
 
@@ -307,24 +364,39 @@ input {
 /* nav.dark-white.flex-nav.font-size-xl */
 
 .zf-logo {
-    flex: 2 1 300px;
+    -webkit-box-flex: 2;
+        -ms-flex: 2 1 300px;
+            flex: 2 1 300px;
     max-width: 300px;
     max-height: 15vh;
     aspect-ratio: 596 / 231;
 }
 
 .navbar {
-    flex: 1 2 5000px;
-    flex-flow: row nowrap;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 2 5000px;
+            flex: 1 2 5000px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 .nav-list {
-    margin-block-start: 0px;
-    margin-block-end: 0px;
+    -webkit-margin-before: 0px;
+            margin-block-start: 0px;
+    -webkit-margin-after: 0px;
+            margin-block-end: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     list-style-type: none;
 }
 
@@ -343,7 +415,8 @@ input {
     height: 100px;
     max-height: 95%;
     padding: 5px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .footer-link {
@@ -353,6 +426,7 @@ input {
 }
 
 .footer-link:hover {
+    -webkit-transition: none;
     transition: none;
     color: var(--color-secondary);
     background-color: var(--color-transparent);
@@ -384,7 +458,9 @@ input {
 
 .highlight-link {
     text-decoration: none;
-    flex: 1 1 300px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 300px;
+            flex: 1 1 300px;
 }
 
 .highlight-link:hover {
@@ -399,6 +475,7 @@ input {
 }
 
 .highlight-link:hover .h2-text {
+    -webkit-transition: 1s;
     transition: 1s;
     color: var(--color-secondary);
 }
@@ -413,6 +490,21 @@ input {
 
 
 /* question_detail.html */
+
+@-webkit-keyframes show-answers-animation {
+    0% {
+        background-color: var(--color-light);
+    }
+    50% {
+        background-color: var(--color-primary);  
+    }
+    90% {
+        background-color: var(--color-dark);
+    }
+    100% {
+        background-color: var(--color-black);
+    }
+}
 
 @keyframes show-answers-animation {
     0% {
@@ -431,16 +523,22 @@ input {
 
 .show-answers {
     background-color: var(--color-background);
-    animation-name: show-answers-animation;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: Infinite;
-    animation-direction: alternate;
+    -webkit-animation-name: show-answers-animation;
+            animation-name: show-answers-animation;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: Infinite;
+            animation-iteration-count: Infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
 }
 
 .q-answers {
     font-size: large;
-    padding-inline-start: 50px;
+    -webkit-padding-start: 50px;
+            padding-inline-start: 50px;
 }
 
 
@@ -453,7 +551,8 @@ input {
 
 .correct {
     font-weight: 500;
-    text-decoration: wavy underline var(--color-secondary) 1px;
+    -webkit-text-decoration: wavy underline var(--color-secondary) 1px;
+            text-decoration: wavy underline var(--color-secondary) 1px;
 }
 
 .delete-button {
@@ -470,7 +569,9 @@ input {
 @media screen and (max-width: 768px) {
     .flex-accommodate,
     .flex-stubborn {
-        order: initial;
+        -webkit-box-ordinal-group: initial;
+            -ms-flex-order: initial;
+                order: initial;
     }
     
     .font-medium {
@@ -480,7 +581,8 @@ input {
 
 @media screen and (max-width: 992px) {
     .navbar {
-        flex-flow: wrap;
+        -ms-flex-flow: wrap;
+            flex-flow: wrap;
     }
 
     .zf-logo {
@@ -488,7 +590,9 @@ input {
     }
 
     .nav-list-pages {
-        order: 3;
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
         padding: 0px;
         text-align: center;
         background-color: transparent;
