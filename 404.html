@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PiL course tester management tool for zebrafish and medaka">
+
+    <title>PiL certification</title>
+
+    <link rel="icon" type="image/png" href="{% static 'images/favicon/favicon-96x96.png' %}" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon/favicon.svg' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon/favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+    <link rel="manifest" href="{% static 'images/favicon/site.webmanifest' %}">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script src="{% static 'js/script.js' %}" defer></script>
+
+</head>
+
+<body class="dark-background flex-page font margin-0">
+
+    <nav class="dark-white flex-nav font-size-xl">
+        <div class="navbar">
+            <img class="zf-logo" src="{% static 'images/base/zebrafish.jpg' %}" alt="a digital sketch of a zebrafish">
+            <ul class="nav-list nav-list-pages">
+                <li class="nav-item">
+                    <a class="{% if request.path == question_url %}active" aria-current="page{% endif %}" href="{% url 'questions' %}">Home page</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="flex-main narrow">
+        <h1 class="center error404">Error 404</h1>
+        <p class="center error404p">This page does not exist.</p>
+    </main>
+
+</body>
