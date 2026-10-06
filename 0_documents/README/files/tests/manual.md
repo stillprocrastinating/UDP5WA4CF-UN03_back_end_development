@@ -174,8 +174,8 @@
 | 2026-10-06 15:27 | _Logout_ link hover | CSS background & text colour | Success |
 | 2026-10-06 15:28 | _New_ link hover | CSS background & text colour | Success |
 | 2026-10-06 15:28 | _New_ link click |||
-|| ___answer/new.html___ |||
-||| _answer/new.html_ loads | Success |
+|| ___answer\_form.html___ |||
+||| _answer\_form.html_ loads | Success |
 ||| CSS loads | Success |
 ||| JavaScript loads | Success |
 ||| User is logged in | Success |
@@ -186,12 +186,168 @@
 ||| CSS loads | Success |
 ||| JavaScript loads | Success |
 ||| User is logged in | Success |
-
-
-
-
-
-| 2025-10-26 19:04 || The window is unchanged |  [residual bug](https://github.com/stillprocrastinating/UDP5WA4CF-UN02_interactive_front_end_development#residual-bugs) |
+| 2026-10-06 18:07 | _Tests_ link click |||
+|| ___test\_list.html___ |||
+||| _test\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:08 | _New_ link click |||
+|| ___test\_form.html___ |||
+||| _test\_form.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:09 | _Cancel_ link hover | CSS background & text colour | Success |
+| 2026-10-06 18:09 | _Cancel_ link click |||
+|| ___test\_list.html___ |||
+||| _test\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:11 | _New_ link click |||
+|| ___test\_form.html___ |||
+||| _test\_form.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:12 | _Submit_ link hover | CSS background & text colour | Success |
+| 2026-10-06 18:12 | _Submit_ link click || "Please fill in this field." on _Id_ | Success |
+| 2026-10-06 18:15 | _Id_ field click | CSS outline colour (focus) | Success |
+| 2026-10-06 18:15 | _Id_ field type "TestTest" | _Id_ field fills with "TestTest" | Success |
+| 2026-10-06 18:15 | _Submit_ link click | "Please fill in this field." on _Date_ | Success |
+| 2026-10-06 18:16 | _Date_ field click | CSS outline colour (focus) | Success |
+| 2026-10-06 18:16 | _Date_ field type "01012000" | _Date_ field fills with "01/01/2000" | Success |
+| 2026-10-06 18:17 | _Date_ field icon click | _Date_ field opens calendar | Success |
+| 2026-10-06 18:18 | _Date_ calendar click _Today_ | _Date_ field fills with "06/10/2026" | Success |
+| 2026-10-06 18:19 | _Submit_ link click | "Please select an item in the list." on _Type_ | Success |
+| 2026-10-06 18:20 | _Type_ field click | _Type_ field opens dropdown menu | Success |
+| 2026-10-06 18:22 | _Type_ field click _PiLAB Test_ | _Type_ field fills with "PiLAB Test" | Success |
+| 2026-10-06 18:23 | _Submit_ link click | "Please fill in this field." on _Number of participants_ | Success |
+| 2026-10-06 18:23 | _Number of participants_ field click | CSS outline colour (focus) | Success |
+| 2026-10-06 18:24 | _Number of participants_ field type "5" | _Number of participants_ field fills with "5" | Success |
+| 2026-10-06 18:25 | _Number of participants_ field click _^_ (up arrow) | _Number of participants_ field fills with "6" | Success |
+| 2026-10-06 18:26 | _Number of participants_ field click _v_ (down arrow) | _Number of participants_ field fills with "5" | Success |
+| 2026-10-06 18:26 | _Submit_ link click |||
+|| ___test\_list.html___ |||
+||| _test\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+||| Message __New test created__ | Success |
+| 2026-10-06 18:28 | _TestTest_ link click |||
+|| ___test\_detail.html___ |||
+||| _test\_detail.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:29 | Edit icon & delete icon link hover | CSS background & text colour | Success |
+| 2026-10-06 18:30 | _New answers_ link hover | CSS background & text colour | Success |
+| 2026-10-06 18:32 | _New answers_ link click |||
+|| ___answer\_form.html___ |||
+||| _answer\_form.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:34 | _Submit_ link click || "Please select an item in the list." on _Test_ | Success |
+| 2026-10-06 18:34 | _Test_ field click | _Test_ field opens dropdown menu | Success |
+| 2026-10-06 18:34 | _Test_ field type "TestTest" | _Test_ field fills with "TestTest" | Success |
+| 2026-10-06 18:35 | _Submit_ link click | "Please select an item in the list." on _Question_ | Success |
+| 2026-10-06 18:36 | _Question_ field click | _Question_ field opens dropdown menu | Success |
+| 2026-10-06 18:36 | _Question_ field click _In history, how has social views affected the formation of legislation in regards to animals?_ | _Question_ field fills with "In history, how has social views affected the formation of legislation in regards to animals?" | Success |
+| 2026-10-06 18:40 | _Submit_ link click |||
+|| ___test\_list.html___ |||
+||| _test\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+||| Message __New answer created__ | Success |
+| 2026-10-06 18:44 | _TestTest_ link click |||
+|| ___test\_detail.html___ |||
+||| _test\_detail.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:45 | Edit icon & delete icon answer link hover | CSS background & text colour | Success |
+| 2026-10-06 18:46 | Answer edit icon link click |||
+|| ___answer\_form.html___ |||
+||| _answer\_form.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:47 | _Answer3_ field type "5" | _Answer3_ field fills with "5" | Success |
+| 2026-10-06 18:47 | _Answer3_ field click _^_ (up arrow) | _Answer3_ field fills with "6" | Success |
+| 2026-10-06 18:47 | _Answer3_ field click _v_ (down arrow) | _Answer3_ field fills with "5" | Success |
+| 2026-10-06 18:49 | _Submit_ link click |||
+|| ___test\_list.html___ |||
+||| _test\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+||| Message __The answer was updated__ | Success |
+| 2026-10-06 18:49 | _TestTest_ link click |||
+|| ___test\_detail.html___ |||
+||| _test\_detail.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:50 | Answer delete icon link click |||
+|| ___answer\_confirm\_delete.html___ |||
+||| _answer\_confirm\_delete.html_ loads | Success |
+||| CSS loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:51 | _Cancel_ link hover | CSS background & text colour | Success |
+| 2026-10-06 18:51 | _Cancel_ link click |||
+|| ___test\_detail.html___ |||
+||| _test\_detail.html.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:54 | Answer delete icon link click |||
+|| ___answer\_confirm\_delete.html___ |||
+||| _answer\_confirm\_delete.html_ loads | Success |
+||| CSS loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:55 | _Confirm delete_ link hover | CSS background & text colour | Success |
+| 2026-10-06 18:55 | _Confirm delete_ link click |||
+|| ___test\_list.html___ |||
+||| _test\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+||| Message __The answer was deleted__ | Success |
+| 2026-10-06 18:56 | _TestTest_ link click |||
+|| ___test\_detail.html___ |||
+||| _test\_detail.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:57 | Test delete icon link click |||
+|| ___test\_confirm\_delete.html___ |||
+||| _test\_confirm\_delete.html_ loads | Success |
+||| CSS loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:58 | _Cancel_ link hover | CSS background & text colour | Success |
+| 2026-10-06 18:58 | _Cancel_ link click |||
+|| ___test\_detail.html___ |||
+||| _test\_detail.html.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:59 | Test delete icon link click |||
+|| ___test\_confirm\_delete.html___ |||
+||| _test\_confirm\_delete.html_ loads | Success |
+||| CSS loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 18:59 | _Confirm delete_ link hover | CSS background & text colour | Success |
+| 2026-10-06 18:59 | _Confirm delete_ link click |||
+|| ___test\_list.html___ |||
+||| _test\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+||| Message __The test was deleted__ | Success |
+ |
 
 # Laptop
 
