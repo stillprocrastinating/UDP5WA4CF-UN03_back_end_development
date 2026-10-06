@@ -39,7 +39,7 @@ Although the Heroku build logs are daunting, they can be helpful.
     2.2. [Features](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#features)  
     2.3. [ERDs](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#entity-relationship-diagrams)  
 1. [Credits](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#credits)  
-    3.1. [Development](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#development)  
+    3.1. [Development & deployment](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#development-&-deployment)  
     3.2. [Libraries](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#libraries)  
     3.3. [Accessibility](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#accessibility)  
     3.4. [Images](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#images)  
@@ -114,7 +114,7 @@ Raghav Kovvuri, my tutor during my [Code Institute](https://codeinstitute.net) c
 - [main 220d7f8] fix url pathing
 
 
-### Development
+### Development & deployment
 
 This website was developed using HTML5, CSS3, JavaScript, and Python in [Visual Studio Code](https://code.visualstudio.com); SQLTools, Python, and PostgreSQL, [Visual Studio Code](https://code.visualstudio.com) extensions were also used. The terminal and source control were used to commit and push to [GitHub](https://github.com/dashboard). The code was pulled from [GitHub](https://github.com/dashboard) into [Heroku](https://id.heroku.com), which built the site.
 
