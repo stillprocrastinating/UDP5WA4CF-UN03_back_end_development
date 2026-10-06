@@ -2,6 +2,11 @@
 {% load static %}
 {% block question %}
 
+{% if user.is_authenticated %}
+{% else %}
+    <p class="center purpose">Welcome to <em>PiL certification</em>. Please use these pages for educational purposes: student revision and teacher refinement of Personal License courses for zebrafish and medaka.</p>
+{% endif %}
+
 <h1>Questions list</h1>
 {% for q in question_list %}
     <a href="{% url 'question_detail' q.slug %}" class="highlight-link">
