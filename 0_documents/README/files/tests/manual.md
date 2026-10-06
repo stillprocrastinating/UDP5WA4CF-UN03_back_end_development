@@ -10,7 +10,7 @@
 | Datetime | Test | Expectation | Completion |
 |-|-|-|-|
 || ___question\_list.html___ |||
-| 2026-10-06 08:24 | Website link click | _question\_list.html_ loads | Success |
+| 2026-10-06 08:24 | Website link click from external | _question\_list.html_ loads | Success |
 ||| CSS loads | Success |
 ||| User is not automatically logged in | Success |
 | 2026-10-06 08:29 | _E1 LO1 MC1_ link hover | CSS outline | Success |
@@ -78,6 +78,115 @@
 | 2026-10-06 09:13 | _Royal Society of Biology_ image link click | [RSB](https://www.rsb.org.uk/) link opens in a new tab | Success |
 | 2026-10-06 09:14 | _University College London_ image link click | [UCL](https://www.ucl.ac.uk/) link opens in a new tab | Success |
 | 2026-10-06 09:15 | _REAL Rating 1_ image link click | [REAL Good AI](https://www.realgoodai.org/real-rating#:~:text=Specialized%20AI%20tools,sound%2C%20or%20video) link opens in a new tab | Success |
+| 2026-10-06 14:45 | _Signup_ link click |||
+|| ___signup.html___ |||
+||| _signup.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is not automatically logged in | Success |
+| 2026-10-06 14:47 | _Sign Up »_ & _login_ & _signup_ link hover | CSS background & text colour | Success |
+| 2026-10-06 14:47 | _Sign Up »_ link click | "Please fill in this field." on _Username_ | Success |
+| 2026-10-06 14:49 | _Username_ field click | CSS outline colour (focus) | Success |
+| 2026-10-06 14:49 | _Username_ field type "TestUser" | _Username_ field fills with "TestUser" | Success |
+| 2026-10-06 14:49 | _Sign Up »_ link click | "Please fill in this field." on _Password_ | Success |
+| 2026-10-06 14:52 | _Password_ field click | CSS outline colour (focus) | Success |
+| 2026-10-06 14:52 | _Password_ field type "TestPassword" | _Password_ field fills with "************" | Success |
+| 2026-10-06 14:52 | _Sign Up »_ link click | "Please fill in this field." on _Password (again)_ | Success |
+| 2026-10-06 14:52 | _Password (again)_ field click | CSS outline colour (focus) | Success |
+| 2026-10-06 14:52 | _Password (again)_ field type "TestPassword" | _Password (again)_ field fills with "************" | Success |
+| 2026-10-06 14:52 | _Sign Up »_ link click | "Please fill in this field." on _Password (again)_ | Success |
+| 2026-10-06 14:59 | _Sign Up »_ link click |||
+|| ___question\_list.html___ |||
+||| _question\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| Message __Successfully signed in as TestUser__ | Success |
+| 2026-10-06 15:05 | _E1 LO1 MC1_ link hover | CSS outline | Success |
+| 2026-10-06 15:06 | _Questions_ & _Tests_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:06 | _Logout_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:06 | _Logout_ link click |||
+|| ___logout.html___ |||
+||| _logout.html_ loads | Success |
+||| CSS loads | Success |
+| 2026-10-06 15:07 | _Sign Out_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:08 | _Sign Out_ link click |||
+|| ___question\_list.html___ |||
+||| _question\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| Message __You have signed out.__ | Success |
+| 2026-10-06 15:10 | _Login_ link click |||
+|| ___login.html___ |||
+||| _login.html_ loads | Success |
+||| CSS loads | Success |
+| 2026-10-06 15:11 | _Sign In_ & _login_ & _signup_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:11 | _Sign In_ link click | "Please fill in this field." on _Username_ | Success |
+| 2026-10-06 15:12 | _Username_ field click | CSS outline colour (focus) | Success |
+| 2026-10-06 15:14 | _Username_ field type "TestUser" | _Username_ field fills with "TestUser" | Success |
+| 2026-10-06 15:14 | _Sign In_ link click | "Please fill in this field." on _Password_ | Success |
+| 2026-10-06 15:14 | _Password_ field click | CSS outline colour (focus) | Success |
+| 2026-10-06 15:14 | _Password_ field type "TestPassword" | _Password_ field fills with "************" | Success |
+| 2026-10-06 15:14 | _Sign In_ link click |||
+|| ___question\_list.html___ |||
+||| _question\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| Message __Successfully signed in as TestUser__ | Success |
+| 2026-10-06 15:17 | _E1 LO1 MC1_ link hover | CSS outline | Success |
+| 2026-10-06 15:17 | _Questions_ & _Tests_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:17 | _Logout_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:17 | _E1 LO1 MC1_ link click |||
+|| ___question\_detail.html___ |||
+||| _question\_detail.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+||| _Answer 2_ CSS font weight & decoration | Success |
+| 2026-10-06 15:18 | _Questions_ & _Tests_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:18 | _Logout_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:20 | _Questions_ link click |||
+|| ___question\_list.html___ |||
+||| _question\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 15:20 | _E1 LO3 MC1_ link click |||
+|| ___question\_detail.html___ |||
+||| _question\_detail.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+||| _Answer 5_ CSS font weight & decoration | Success |
+| 2026-10-06 15:22 | _Tests_ link click |||
+|| ___test\_list.html___ |||
+||| _test\_list.html_ loads | Success |
+||| CSS loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 15:22 | _E1/L PiLAB Oct 25_ link hover | CSS outline | Success |
+| 2026-10-06 15:23 | _Questions_ & _Tests_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:23 | _Logout_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:23 | _New_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:24 | _E1/L PiLAB Oct 25_ link click |||
+|| ___test\_detail.html___ |||
+||| _test\_detail.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 15:25 | _In history, how has social views affected the formation of legislation in regards to animals?_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:25 | _In history, how has social views affected the formation of legislation in regards to animals?_ link click | _test\_detail.html_ reloads at _In history, how has social views affected the formation of legislation in regards to animals?_ heading | Success |
+| 2026-10-06 15:27 | _Questions_ & _Tests_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:27 | _Logout_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:28 | _New_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:28 | _New_ link click |||
+|| ___answer/new.html___ |||
+||| _answer/new.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+| 2026-10-06 15:29 | _Cancel_ link hover | CSS background & text colour | Success |
+| 2026-10-06 15:30 | _Cancel_ link click |||
+|| ___test\_detail.html___ |||
+||| _test\_detail.html_ loads | Success |
+||| CSS loads | Success |
+||| JavaScript loads | Success |
+||| User is logged in | Success |
+
 
 
 
