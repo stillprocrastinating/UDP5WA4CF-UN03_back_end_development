@@ -7,6 +7,8 @@ This website is built for my ~~Back End~~ Data-Centric Development milestone pro
 
 Tracking of success rate for PiL course tests; possibility of teaching improvements via targetted understanding of strengths/weaknesses.
 
+If this project is accepted by the award body as a model they wish to adopt, additional security during user signup will be implemented for testers to avoid explaoitation by non-accredited users. This is likely to include email and tester id verification.
+
 
 ---
 
