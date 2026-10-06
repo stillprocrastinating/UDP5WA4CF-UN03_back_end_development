@@ -5,8 +5,7 @@
 
 ## Deploy
 
-1. validation
-1. manual testing
+1. someone sent across the criteria - check them!
 
 
 ## General

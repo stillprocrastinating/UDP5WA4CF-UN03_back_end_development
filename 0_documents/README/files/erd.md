@@ -11,13 +11,11 @@
 ||type|IntegerField(choices)|
 ||number|IntegerField()|
 ||question|TextField()|
-|TBC|image|CloudinaryField('image')|
+|Not included in this version of the app|image|CloudinaryField('image')|
 ||sub_number|IntegerField()|
 ||sub_answer_number_individual|IntegerField()|
 ||sub_correct_answer_individual|IntegerField()|
 |ForeignKey|author|User, related_name="question_author"|
-||difficulty|IntegerField(choices)|
-||warning|IntegerField(choices)|
 
 
 ## Tests
@@ -30,7 +28,6 @@
 ||type|IntegerField(choices)|
 ||participant_number|IntegerField()|
 |ForeignKey|tester|User, related_name="tester"|
-||difficulty|IntegerField(choices)|
 |ForeignKey(ManyToMany)|t_questions|Question|
 
 
@@ -41,10 +38,11 @@
 |PrimaryKey|id|AutoField()|
 |ForeignKey|question_id|Question, related_name="question_answers"|
 |ForeignKey|test_id|Test, related_name="test_answers"|
-||option|IntegerField()|
-||correct_option_frequency|IntegerField()|
-||incorrect_option_frequency|IntegerField()|
-|ForeignKey|tester|User, related_name="tester"|
+||answer1|IntegerField()|
+||answer2|IntegerField()|
+||answer3|IntegerField(blank=True)|
+||answer4|IntegerField(blank=True)|
+||answer5|IntegerField(blank=True)|
 
 ---
 ---
@@ -102,22 +100,3 @@ answers
 - [calculation] correct_option_percentage
 - [calculation] incorrect_option_percentage
 - [calculation] flag
-
-
-## URL patterns
-
-1. include('questions.urls')
-1. include('tests.urls')
-1. admin.site.urls
-
-
-### questions/urls.py
-
-1. views.QuestionList.as_view()
-1. views.AnswerList.as_view()     // dependent on structural availability
-
-
-### tests/urls.py
-
-1. views.TestList.as_view()
-1. views.FlagList.as_view()     // dependent on structural availability & CTE functionality
