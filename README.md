@@ -34,19 +34,19 @@ Although the Heroku build logs are daunting, they can be helpful.
 
 1. [Introduction](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#udp5wa4cf-un03_back_end_development)  
     1.1. [Justification](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#justification)  
-    1.2. [Visit the homepage](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#visit-the-homepage-here)  
+    1.2. [Visit the homepage](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#visit-the-homepage-here:~:text=Visit%20the%20homepage%20here.)  
     1.3. [Reflections](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#reflections)
 1. [Design](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#design)  
     2.1. [User Stories](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#user-stories)  
     2.2. [Features](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#features)  
     2.3. [ERDs](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#entity-relationship-diagrams)  
 1. [Credits](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#credits)  
-    3.1. [Development & deployment](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#development-&-deployment)  
+    3.1. [Development & deployment](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#development--deployment)  
     3.2. [Libraries](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#libraries)  
     3.3. [Accessibility](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#accessibility)  
     3.4. [Images](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#images)  
     3.5. [Fonts](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#fonts)  
-1. [Bugs & testing](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#bugs-&-testing) 
+1. [Bugs & testing](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/0_documents/README/files) 
 
 ---
 
