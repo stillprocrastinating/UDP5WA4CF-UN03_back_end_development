@@ -46,6 +46,7 @@ Although the Heroku build logs are daunting, they can be helpful.
     3.3. [Accessibility](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#accessibility)  
     3.4. [Images](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#images)  
     3.5. [Fonts](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#fonts)  
+1. [Bugs & testing](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main#bugs-&-testing) 
 
 ---
 
@@ -180,6 +181,12 @@ The test answer image SVGs were sourced from [Lucide](https://lucide.dev/).
 
 - [UCL Sans](https://imagestore.ucl.ac.uk/imagestore/start/ucl-new-templates/UCL/UCL%20Fonts?fc=browse&column=7&listview=overview&view=preview&fileid=1&fuid=UCL%20Sans.zip)  
 ![UCLSans Aa font demonstration as an image](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/blob/main/0_documents/README/images/fonts/UCLSans.png)
+
+---
+
+## Bugs & testing
+
+Files can be found under _0\_documents_ > _README_ > _[files](https://github.com/stillprocrastinating/UDP5WA4CF-UN03_back_end_development/tree/main/README/files)_.
 
 ---
 
