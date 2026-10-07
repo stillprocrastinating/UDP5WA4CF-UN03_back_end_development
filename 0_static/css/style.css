@@ -573,6 +573,10 @@ input {
             -ms-flex-order: initial;
                 order: initial;
     }
+
+    .flex-footer {
+        max-height: 8vh;
+    }
     
     .font-medium {
         font-size: medium;
