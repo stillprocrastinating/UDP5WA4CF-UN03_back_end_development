@@ -25,7 +25,7 @@
     src:
         local("UCLSans-Light"),
         url("UCLSans/UCLSans-Light.otf") format("opentype");
-    font-weight: lighter;
+    font-weight: 200;
 }
 
 @font-face {
@@ -572,6 +572,10 @@ input {
         -webkit-box-ordinal-group: initial;
             -ms-flex-order: initial;
                 order: initial;
+    }
+
+    .flex-footer {
+        max-height: 8vh;
     }
     
     .font-medium {
